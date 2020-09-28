@@ -23,6 +23,7 @@
   .block__content {
     width: 100%;
     height: auto;
+    overflow: scroll;
   }
   .block__tabNavigation {
     position: fixed;
@@ -71,6 +72,12 @@
   .block__content .blockContent__introduce {
     width: 100%;
     height: auto;
+  }
+  .blockContent__introduce::before {
+    display: none;
+  }
+  .block__content .myIntroduce__text {
+    text-align: center;
   }
 }
 /* DT XOAY NGANG */
