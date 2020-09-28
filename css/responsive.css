@@ -20,8 +20,9 @@
   }
   .myCV__block {
     flex-direction: column;
-    height: 100vh;
-    margin: 0px 0px 50px 0px;
+    height: auto;
+    padding : 0px 0px 50px 0px;
+    position: relative;
   }
   .block__content {
     width: 100%;
@@ -30,14 +31,14 @@
   }
   .block__tabNavigation {
     position: fixed;
-    bottom: 15px;
-    width: calc(100% - 30px);
+    bottom: 0px;
+    width: 101%;
     align-items: unset;
     left: 0;
     right: 0;
     margin: auto;
     align-items: unset;
-    border-radius: 30px;
+    border-radius: 0px;
     z-index: 999;
   }
   .tabNavigation__item {
@@ -75,6 +76,7 @@
   .block__content .blockContent__introduce {
     width: 100%;
     height: auto;
+    max-height: none;
   }
   .blockContent__introduce::before {
     display: none;
