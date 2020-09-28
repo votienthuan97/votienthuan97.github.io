@@ -12,13 +12,16 @@
 }
 /* IPAD TRỞ XUỐNG */
 @media screen and (max-width: 768px) {
+  .myCV {
+    background-color: #FFF;
+  }
   .myCV__container {
     padding: 0px;
   }
   .myCV__block {
     flex-direction: column;
     height: 100vh;
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 50px 0px;
   }
   .block__content {
     width: 100%;
