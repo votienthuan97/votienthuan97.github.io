@@ -18,6 +18,7 @@
   .myCV__block {
     flex-direction: column;
     height: 100vh;
+    margin: 0px 0px 100px 0px;
   }
   .block__content {
     width: 100%;
