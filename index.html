@@ -24,7 +24,17 @@
                         </div>
                     </div>
                     <div class="leftContent__sound">
-                        <img class="sound__icon" src="images/icons/icSound.png" />
+                        <input type="checkbox" id="soundPlayPause" />
+                        <audio loop src="audio/Magical-Piano.mp3" id="bgMusic"></audio>
+                        <div class="sound__icon">
+                            <div class="icon__item"></div>
+                            <div class="icon__item"></div>
+                            <div class="icon__item"></div>
+                            <div class="icon__item"></div>
+                            <div class="icon__item"></div>
+                            <div class="icon__item"></div>
+                        </div>
+                       
                     </div>
                 </div>
                 <div class="header__rightContent">
@@ -46,10 +56,12 @@
                     <div class="cursor__point">
                         <div class="point__default"></div>
                         <div class="point__hand"></div>
+                        <div class="point__music"></div>
                     </div>
                     <div class="cursor__border">
                         <div class="border__oval">
                             <div class="oval__textHand">don't be shy ^^</div>
+                            <div class="oval__textMusic">turn on/off music</div>
                         </div>
                     </div>
                 </div>
@@ -61,6 +73,7 @@
                     </video>
                 </div>
             </div>
+            
         </div>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>

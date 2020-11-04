@@ -49,12 +49,23 @@
     background-repeat: no-repeat;
     width: 1.75rem;
     height: 1.75em;
-    animation: hand 1s ease-in-out infinite;
+    animation: shake 1s linear infinite;
     transition: all 0.6s;
     display: none;
     opacity: 0;
 }
-@keyframes hand {
+.cursor .point__music {
+    background-image: url(../images/icons/icMusic.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.75rem;
+    height: 1.75em;
+    animation: rotateCircle 2s linear infinite;
+    transition: all 0.6s;
+    display: none;
+    opacity: 0;
+}
+@keyframes shake {
     0% {
         transform: rotate(0deg);
     }
@@ -69,6 +80,14 @@
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 /* -------- CURSOR CUSTOM BORDER -------- */
@@ -96,6 +115,15 @@
     opacity: 0;
     transition: 0.6s;
 }
+.cursor .oval__textMusic {
+    font-size: 1.2rem;
+    color : #000;
+    position: absolute;
+    right: -180px;
+    width: 150px;
+    opacity: 0;
+    transition: 0.6s;
+}
 /* -------------------------- VIDEO BACKGROUND -------------------------- */
 .video {
     z-index: 9;
@@ -109,6 +137,19 @@
 .video .homeVideo__bg {
     width: 500px;
     height: 500px;
+}
+/* -------------------------- MUSIC BACKGROUND -------------------------- */
+#bgMusic {
+    position: absolute;
+    top : 0;
+    left: 0;;
+}
+#soundPlayPause {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 11;
 }
 /* --------------------------- HEADER ---------------------------- */
 header {
@@ -127,8 +168,7 @@ header .header__leftContent {
     flex-direction: row;
     margin: 0px 0px 0px 50px;
 }
-header .leftContent__logo,
-header .leftContent__sound {
+header .leftContent__logo {
     width: 100px;
     height: 60px;
     display: flex;
@@ -156,9 +196,46 @@ header .linkContact__link {
     font-weight: 900;
     font-size: 1.2rem;
 }
+header .leftContent__sound {
+    position: relative;
+    width: 85px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 header .sound__icon {
     width: 25px;
     height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+header .sound__icon .icon__item {
+    width: 2px;
+    background-color: #CCC;
+    transition: 0.6s;
+}
+header .sound__icon .icon__item:nth-child(1) {
+    height: 5px;
+}
+header .sound__icon .icon__item:nth-child(2) {
+    height: 10px;
+}
+header .sound__icon .icon__item:nth-child(3) {
+    height: 20px;
+}
+header .sound__icon .icon__item:nth-child(4) {
+    height: 18px;
+}
+header .sound__icon .icon__item:nth-child(5) {
+    height: 10px;
+}
+header .sound__icon .icon__item:nth-child(6) {
+    height: 5px;
 }
 /* -------------------------- HOME WRAP -------------------------- */
 .home {
