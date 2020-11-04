@@ -35,8 +35,6 @@ $(document).ready(function () {
         $('.point__music').css("opacity", "0");
         $('.oval__textMusic').css("opacity", "0");
     });
-
-    
 });
 // SET POSITION CURSOR
 function setPosition(element, e) {
