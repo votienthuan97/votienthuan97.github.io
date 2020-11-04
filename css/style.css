@@ -166,7 +166,7 @@ header {
 header .header__leftContent {
     display: flex;
     flex-direction: row;
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 25px;
 }
 header .leftContent__logo {
     width: 60px;
@@ -185,11 +185,11 @@ header .logo__link {
     justify-content: center;
 }
 header .header__rightContent {
-    width: 150px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px 25px 0px 0px;
 }
 header .linkContact__link {
     font-family: Gilroy-Light;
@@ -198,7 +198,7 @@ header .linkContact__link {
 }
 header .leftContent__sound {
     position: relative;
-    width: 85px;
+    width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
