@@ -19,15 +19,16 @@
 }
 /*SS XOAY NGANG */
 @media screen and (width: 640px) {
-  header .header__leftContent {
-      margin: 0px 0px 0px 15px;
-  }
-  header .header__rightContent {
-    margin: 0px 15px 0px 0px;
-}
+  
 }
 /* IP 6/8 PLUS TRỞ XUỐNG */
 @media screen and (max-width: 640px) {
+  header .header__leftContent {
+    margin: 0px 0px 0px 15px;
+  }
+  header .header__rightContent {
+    margin: 0px 15px 0px 0px;
+  }
 }
 /* IP 5 XOAY NGANG */
 @media screen and (min-width: 568px) {
