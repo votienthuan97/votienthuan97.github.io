@@ -4,119 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Vo Tien Thuan</title>
+    <title>Thuan Vo - Frontend Developer</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="myCV">
-        <div class="myCV__container">
-            <div class="myCV__block">
-                <div class="block__content tab-content">
-                    <div id="about" class="tab-pane fade active in">
-                        <div class="content__title">
-                            <p class="title__text">About Me</p>
-                        </div>
-                        <div class="content__blockContent">
-                            <div class="blockContent__info">
-                                <div class="info__boxAvatar">
-                                    <div class="boxAvatar__img" style="background-image: url(images/avatars/2.png);">
-                                    </div>
-                                </div>
-                                <div class="info__myInfo">
-                                    <p class="myInfo__name">Vo Tien Thuan</p>
-                                    <p class="myInfo__job">Front End Developer</p>
-                                    <p class="myInfo__jobCate">Web - React Native</p>
-                                    <div class="myInfo__listSocial">
-                                        <a href="https://www.facebook.com/votienthuan97" class="listSocial__item"
-                                            target="_blank">
-                                            <img class="item__ic" src="images/icons/icFacebook.png" />
-                                        </a>
-                                        <a href="https://www.instagram.com/_thuan97/" class="listSocial__item"
-                                            target="_blank">
-                                            <img class="item__ic" src="images/icons/icInstagram.png" />
-                                        </a>
-                                        <a href="https://github.com/votienthuan97" class="listSocial__item"
-                                            target="_blank">
-                                            <img class="item__ic" src="images/icons/icGitHub.png" />
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="blockContent__introduce">
-                                <div class="introduce__myIntroduce">
-                                    <p class="myIntroduce__text">
-                                    Hello! I’m Vo Tien Thuan. Fresher Web Developer specializing in front end development. Experience with UI/UX development for dynamic web projects and apps.
-                                    My strong point is the meticulousness and thoroughness in every detail of the product before it reaches the client. In addition, I have a spirit of
-                                    eager to learn new things to improve product application to give customers a great experience. 
-                                    </p>
-                                </div>
-                            </div>
+    <div id="main">
+        <div class="fullContent">
+            <header>
+                <div class="header__leftContent">
+                    <div class="leftContent__logo">
+                        <div class="logo__link">
+                            <a href="">
+                                <img class="logo__img" src="images/logo/logo.png" />
+                            </a>
                         </div>
                     </div>
-                    <div id="experience" class="tab-pane fade">
-                        <div class="content__title">
-                            <p class="title__text">Experience</p>
-                        </div>
+                    <div class="leftContent__sound">
+                        <img class="sound__icon" src="images/icons/icSound.png" />
                     </div>
-                    <div id="project" class="tab-pane fade">
-                        <div class="content__title">
-                            <p class="title__text">Project</p>
-                        </div>
+                </div>
+                <div class="header__rightContent">
+                    <div class="rightContent__linkContact">
+                        <a href="#" class="linkContact__link">say hi.</a>
                     </div>
-                    <div id="contact" class="tab-pane fade">
-                        <div class="content__title">
-                            <p class="title__text">Contact</p>
+                </div>
+            </header>
+            <main>
+                <div class="home">
+                    <div class="home__wrap home__wrapPC">
+                      
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+            <div class="cursor">
+                <div class="cursor__wrap">
+                    <div class="cursor__point">
+                        <div class="point__default"></div>
+                        <div class="point__hand"></div>
+                    </div>
+                    <div class="cursor__border">
+                        <div class="border__oval">
+                            <div class="oval__textHand">don't be shy ^^</div>
                         </div>
                     </div>
                 </div>
-                <div class="block__tabNavigation">
-                    <ul class="tabNavigation__item">
-                        <li class="item__boxImg active" data-toggle="tab" href="#about">
-                            <div class="boxImg__icAboutUs"
-                                style="background-image: url(images/icons/icAbout-Normal.png);"></div>
-                            <div class="boxImg__note">
-                                <p class="note__text">About</p>
-                            </div>
-                        </li>
-                        <li class="item__boxImg" data-toggle="tab" href="#experience">
-                            <div class="boxImg__icExperience"
-                                style="background-image: url(images/icons/icExperience-Normal.png);">
-                            </div>
-                            <div class="boxImg__note">
-                                <p class="note__text">Experience</p>
-                            </div>
-                        </li>
-                        <li class="item__boxImg" data-toggle="tab" href="#project">
-                            <div class="boxImg__icProject"
-                                style="background-image: url(images/icons/icProject-Normal.png);">
-                            </div>
-                            <div class="boxImg__note">
-                                <p class="note__text">Projects</p>
-                            </div>
-                        </li>
-                        <li class="item__boxImg" data-toggle="tab" href="#contact">
-                            <div class="boxImg__icProject"
-                                style="background-image: url(images/icons/icProject-Normal.png);">
-                            </div>
-                            <div class="boxImg__note">
-                                <p class="note__text">Contact</p>
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+            <div class="video">
+                <div class="video__homeVideo">
+                    <video class="homeVideo__bg" autoplay muted loop>
+                        <source src="video/home.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cursor.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/img-ripple.js"></script>
 </body>
-
 </html>
