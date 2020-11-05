@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#soundPlayPause").click(function(){
         if($(this).prop("checked") == true){
             $(".icon__item").css("background-color", "#1A2743");
-            $(".icon__ani1").css("animation", "musicBar1 1.5s linear infinite");
+            $(".icon__ani1").css("animation", "musicBar1 3s linear infinite");
             $(".icon__ani2").css("animation", "musicBar2 2s linear infinite");
             btnPlayPause.play();
         }

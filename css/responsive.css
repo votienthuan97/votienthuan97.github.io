@@ -1,5 +1,11 @@
+@media screen and (max-width: 1024px) {
+  .cursor {
+    opacity: 0;
+  }
+}
 /* IPAD PRO + IPAD XOAY NGANG */
 @media screen and (min-width: 993px) and (max-width: 1267px) {
+  
 }
 /* IPAD PRO */
 @media screen and (width: 1024px) {
