@@ -7,13 +7,13 @@
     src: url("../font/Gilroy/Gilroy-Bold.otf");
 }
 .fullContent {
-    height: 100vh;
     position: relative;
-    overflow: hidden;
+    height: 100vh;
+    overflow-x: hidden;
 }
 /* -------------------------- CURSOR CUSTOM -------------------------- */
 .cursor {
-    position: absolute;
+    position: fixed;
     z-index: 99;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -102,7 +102,6 @@
     height: 100%;
     border-radius: 50%;
     border: 2px solid #F2DA87;
-    transform: translate(0px, 0px);
     display: flex;
     align-items: center;
 }
@@ -113,7 +112,7 @@
     left: -140px;
     width: 150px;
     opacity: 0;
-    transition: 0.6s;
+    transition: 0.8s;
 }
 .cursor .oval__textMusic {
     font-size: 1.2rem;
@@ -126,15 +125,63 @@
 }
 /* -------------------------- VIDEO BACKGROUND -------------------------- */
 .video {
-    z-index: 9;
-    position: fixed;
-    width: 100%;
-    height: 100%;
+    z-index: 8;
+    position: relative;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
 }
-.video .homeVideo__bg {
+/* VIDEO HOME LOOP */
+.video .video__homeLoopVideo {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    transition: 0s;
+    transition-delay : 0s;
+    transform: translate(0% , 70%);
+}
+.video .homeLoopVideo__bg {
+    width: 500px;
+    height: 500px;
+}
+/* VIDEO HOME TO CONTACT */
+.video .video__homeToContactVideo {
+    position: absolute;
+    visibility: hidden;
+    opacity: 1;
+    transition: 0s;
+    transition-delay : 0s;
+    transform: translate(0% , 70%);
+}
+.video .homeToContactVideo__bg {
+    width: 500px;
+    height: 500px;
+}
+/* VIDEO CONTACT LOOP */
+.video .video__contactLoopVideo {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+    transition-delay : 0s;
+    transform: translate(-70% , 70%);
+}
+.video .contactLoopVideo__bg {
+    width: 500px;
+    height: 500px;
+}
+/* VIDEO CONTACT TO HOME */
+.video .video__contacToHomeVideo {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-70% , 70%) scale(1.0);
+    transition: 0s;
+    transition-delay : 0s;
+}
+.video .contacToHomeVideo__bg {
     width: 500px;
     height: 500px;
 }
@@ -185,16 +232,42 @@ header .logo__link {
     justify-content: center;
 }
 header .header__rightContent {
+    width: 60px;
     height: 60px;
+    margin: 0px 25px 0px 0px;
+    position: relative;
+}
+header .rightContent__linkContact {
+    width: 100%;
+    height: 100%;
+}
+header .linkContact__link {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0px 25px 0px 0px;
 }
-header .linkContact__link {
+header .linkContact__link .link__text {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
     font-family: Gilroy-Light;
     font-weight: 900;
     font-size: 1.2rem;
+    z-index: 1;
+    transition: 0.6s;
+}
+header .linkContact__link .link__close {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transition: 0.6s;
+    width: 25px;
+    height: 25px;
 }
 header .leftContent__sound {
     position: relative;
@@ -243,7 +316,7 @@ header .sound__icon .icon__item:nth-child(6) {
         transform: scaleY(0.8);
     }
     50% {
-        transform: scaleY(0.7);
+        transform: scaleY(0.9);
     }
     75% {
         transform: scaleY(1.0);
@@ -254,34 +327,54 @@ header .sound__icon .icon__item:nth-child(6) {
 }
 @keyframes musicBar2 {
     0% {
-        transform: scaleY(0.8);
+        transform: scaleY(0.7);
     }
     50% {
-        transform: scaleY(0.9);
-    }
-    75% {
-        transform: scaleY(1.0);
-    }
-    100% {
         transform: scaleY(0.8);
     }
+    75% {
+        transform: scaleY(0.95);
+    }
+    100% {
+        transform: scaleY(0.7);
+    }
 }
-/* -------------------------- HOME WRAP -------------------------- */
-.home {
-    z-index: 2;
+/* MAIN WRAP */
+main {
     position: fixed;
+    z-index: 9;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow-y : auto;
+    overflow-x: hidden;
+}
+/* -------------------------- HOME -------------------------- */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    opacity: 1;
+    transition: 0.6s;
+}
+.home .home__listContent {
+    width: 250px;
+}
+.home .content__item {
+    font-family: Gilroy-Light;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 30px;
+}
+/* --------------------------- CONTACT ---------------------------- */
+#showHideContact {
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.home__wrap {
-    position: absolute;
-    height: 100%;
-    margin: auto;
-    z-index: 10;
-}
-.home__wrapPC {
-    width: 1025px;
+    opacity: 0;
+    z-index: 2;
 }

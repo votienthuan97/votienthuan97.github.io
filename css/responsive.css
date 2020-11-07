@@ -1,7 +1,5 @@
 @media screen and (max-width: 1024px) {
-  .cursor {
-    opacity: 0;
-  }
+  
 }
 /* IPAD PRO + IPAD XOAY NGANG */
 @media screen and (min-width: 993px) and (max-width: 1267px) {
@@ -29,6 +27,9 @@
 }
 /* IP 6/8 PLUS TRỞ XUỐNG */
 @media screen and (max-width: 640px) {
+  .cursor {
+    opacity: 0;
+  }
   header .header__leftContent {
     margin: 0px 0px 0px 15px;
   }

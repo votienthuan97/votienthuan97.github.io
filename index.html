@@ -39,16 +39,23 @@
                 </div>
                 <div class="header__rightContent">
                     <div class="rightContent__linkContact">
-                        <a href="#" class="linkContact__link">say hi.</a>
+                        <input type="checkbox" id="showHideContact" />
+                        <div class="linkContact__link">
+                            <div class="link__text">say hi.</div>
+                            <img class="link__close" src="images/icons/icClosePage.png" />
+                        </div>
                     </div>
                 </div>
             </header>
             <main>
-                <div class="home">
-                    <div class="home__wrap home__wrapPC">
-                      
+                <div class="home container">
+                    <div class="home__listContent">
+                        <p class="content__item" id="introChange">I'm Thuan Vo, a guy who loves designing frontend, writing and love cats</p>
                     </div>
                 </div>
+                <!-- <div class="contact wrapPC">
+                    <p class="hihi">kkk</p>
+                </div> -->
             </main>
             <footer></footer>
             <div class="cursor">
@@ -67,13 +74,27 @@
                 </div>
             </div>
             <div class="video">
-                <div class="video__homeVideo">
-                    <video class="homeVideo__bg" autoplay muted loop>
-                        <source src="video/home.mp4" type="video/mp4">
+                <div class="video__homeLoopVideo">
+                    <video class="homeLoopVideo__bg" id="vdHomeLoop" autoplay muted loop>
+                        <source src="video/home-loop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video__homeToContactVideo">
+                    <video class="homeToContactVideo__bg" id="vdHomeToContact" muted>
+                        <source src="video/home-contact.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video__contactLoopVideo">
+                    <video class="contactLoopVideo__bg" id="vdContactLoop" autoplay muted loop>
+                        <source src="video/contact-loop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video__contacToHomeVideo">
+                    <video class="contacToHomeVideo__bg" id="vdContactToHome" autoplay muted>
+                        <source src="video/contact-to-home.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
-            
         </div>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>

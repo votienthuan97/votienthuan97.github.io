@@ -65,3 +65,19 @@ html, body {
 :focus {
   cursor: none !important;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  opacity: 1;
+  transition: 0.4s;
+}
+::-webkit-scrollbar:hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+::-webkit-scrollbar-track {
+  background: #C5C7CD;
+}
+::-webkit-scrollbar-thumb {
+  background: #161F38;
+}
