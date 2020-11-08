@@ -15,6 +15,34 @@ $(document).ready(function () {
         $('.point__hand').css("display", "block");
         $('.point__hand').css("opacity", "1");
         $('.oval__textHand').css("opacity", "1");
+        $("#showHideContact").click(function() {
+            if($(this).prop("checked") == true) {
+                $('.oval__textHand').css("opacity", "0");
+                setTimeout(function() {
+                    $(".header__rightContent").hover(function() {
+                        $('.point__hand').css("display", "none");
+                        $('.point__hand').css("opacity", "0");
+                        $('.point__default').css("display", "block");
+                        $('.point__default').css("opacity", "1");
+                        $('.oval__textHand').css("opacity", "0");
+                    }, function (){
+                        $('.point__hand').css("display", "none");
+                        $('.point__hand').css("opacity", "0");
+                    });
+                }, 1700);
+            }
+            else if($(this).prop("checked") == false) {
+                $(".header__rightContent").hover(function() {
+                    $('.oval__textHand').css("opacity", "1");
+                    $('.point__hand').css("display", "block");
+                    $('.point__hand').css("opacity", "1");
+                    $('.point__default').css("display", "none");
+                    $('.point__default').css("opacity", "0");
+                }, function () {
+                    $('.oval__textHand').css("opacity", "0");
+                });
+            }
+        });
     }, function() {
         $('.point__default').css("display", "block");
         $('.point__default').css("opacity", "1");
