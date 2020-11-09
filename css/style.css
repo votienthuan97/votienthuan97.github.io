@@ -152,6 +152,7 @@
     transition: 0s;
     transition-delay : 0s;
     z-index: 2;
+    will-change: opacity, transform, visibility, z-index; 
 }
 .video .homeLoopVideo__bg {
     width: 550px;
@@ -166,6 +167,7 @@
     transition: 0s;
     transition-delay : 0s;
     z-index: 1;
+    will-change: opacity, transform, visibility, z-index; 
 }
 .video .homeToContactVideo__bg {
     width: 550px;
@@ -181,6 +183,7 @@
     transition-delay : 0s;
     transform: translate(-70% , 0%);
     z-index: 1;
+    will-change: opacity, transform, visibility, z-index; 
 }
 .video .contactLoopVideo__bg {
     width: 550px;
@@ -196,6 +199,7 @@
     transition: 0s;
     transition-delay : 0s;
     z-index: 1;
+    will-change: opacity, transform, visibility, z-index; 
 }
 .video .contacToHomeVideo__bg {
     width: 550px;
@@ -415,7 +419,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 .contact .listContent__title {
     margin: 0px 0px 30px 0px;
