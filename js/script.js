@@ -59,8 +59,10 @@ $(document).ready(function () {
              // HOME TO CONTACT
             setTimeout(function() {
                 changeStyleCSS(".video__homeToContactVideo" , {"z-index" : 2});
-            }, 0)
-            changeStyleCSS(".video__homeToContactVideo" , {visibility : "visible", opacity : 1 , "transition" : "0.8s"});
+            }, 0);
+            setTimeout(function() {
+                changeStyleCSS(".video__homeToContactVideo" , {visibility : "visible", opacity : 1 , "transition" : "0.8s"});
+            }, 350);
             videoHomeToContact.load();
             videoHomeToContact.play();
             setTimeout(function() {
@@ -72,17 +74,17 @@ $(document).ready(function () {
             }, 2600);
             setTimeout(function() {
                 $(".video__homeToContactVideo").css("z-index", "0");
-            }, 1700);
-            setTimeout(function() {
                 $(".video__homeToContactVideo").css("opacity", "0");
             }, 2000);
-             // CONTACT LOOP
+            // CONTACT LOOP
             setTimeout(function() {
                 $(".video__contactLoopVideo").css("visibility", "visible");
                 $(".video__contactLoopVideo").css("opacity", "1");
+            }, 1800);
+            setTimeout(function() {
                 videoContactLoop.load();
                 videoContactLoop.play();
-            }, 2000);
+            }, 1800);
         }
         else if($(this).prop("checked") == false) {
             // CONTENT HOME
@@ -127,25 +129,30 @@ $(document).ready(function () {
                 $(".video__homeToContactVideo").css("opacity", "1");
             }, 2000);
             // CONTACT LOOP
-            $(".video__contactLoopVideo").css("visibility", "hidden");
-            $(".video__contactLoopVideo").css("opacity", "0");
             $(".video__contactLoopVideo").css("z-index", "0");
+            setTimeout(function() {
+                $(".video__contactLoopVideo").css("visibility", "hidden");
+                $(".video__contactLoopVideo").css("opacity", "0");
+            }, 200);
             setTimeout(function() {
                 $(".video__contactLoopVideo").css("z-index", "1");
             }, 1000)
             // CONTACT TO HOME
-            $(".video__contacToHomeVideo").css("visibility", "visible");
-            $(".video__contacToHomeVideo").css("opacity", "1");
-            $(".video__contacToHomeVideo").css("transition", "0.8s");
-            $(".video__contacToHomeVideo").css("transform", "translate(0% , -4.5%) scale(0.95)");
-            videoContactToHome.load();
+            setTimeout(function() {
+                $(".video__contacToHomeVideo").css("visibility", "visible");
+                $(".video__contacToHomeVideo").css("opacity", "1");
+                $(".video__contacToHomeVideo").css("transition", "1.4s");
+                $(".video__contacToHomeVideo").css("transform", "translate(0% , -4.5%) scale(0.95)");
+                videoContactToHome.load();
+            }, 100);
             setTimeout(function() {
                 videoHomeLoop.load();
             }, 2200);
             setTimeout(function() {
                 $(".video__contacToHomeVideo").css("visibility", "hidden");
                 $(".video__contacToHomeVideo").css("opacity", "0");
-            }, 2300);
+                $(".video__contacToHomeVideo").css("transition", "0s");
+            }, 2500);
             setTimeout(function() {
                 $(".video__contacToHomeVideo").css("transform", "translate(-70% , 0%) scale(1.0)");
             }, 3000);
