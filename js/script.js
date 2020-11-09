@@ -42,13 +42,13 @@ $(document).ready(function () {
             // CONTENT CONTACT
             setTimeout(function() {
                 changeStyleCSS(".contact" , {visibility : "visible", opacity : 1});
-            }, 1500);
+            }, 1700);
             // TEXT CHECK
             changeStyleCSS(".link__text" , {visibility : "hidden", opacity : 0});
             changeStyleCSS("#showHideContact" , {width : "0px", height : "0px"});
             setTimeout(function() {
                 changeStyleCSS(".link__close" , {visibility : "visible", opacity : 1, transform : "scaleY(1.0)" });
-            }, 1700);
+            }, 2100);
             setTimeout(function() {
                 changeStyleCSS("#showHideContact" , {width : "100%", height : "100%"});
             }, 2400);
@@ -71,27 +71,27 @@ $(document).ready(function () {
             setTimeout(function() {
                 $(".video__homeToContactVideo").css("visibility", "hidden");
                 $(".video__homeToContactVideo").css("transform", "translate(0% , 0%)");
-            }, 2600);
+            }, 2900);
             setTimeout(function() {
                 $(".video__homeToContactVideo").css("z-index", "0");
                 $(".video__homeToContactVideo").css("opacity", "0");
-            }, 2000);
+            }, 2500);
             // CONTACT LOOP
             setTimeout(function() {
                 $(".video__contactLoopVideo").css("visibility", "visible");
                 $(".video__contactLoopVideo").css("opacity", "1");
-            }, 1800);
+            }, 2400);
             setTimeout(function() {
                 videoContactLoop.load();
                 videoContactLoop.play();
-            }, 1800);
+            }, 2400);
         }
         else if($(this).prop("checked") == false) {
             // CONTENT HOME
             setTimeout(function() {
                 $(".home").css("visibility", "visible");
                 $(".home").css("opacity", "1");
-            }, 2400);
+            }, 2200);
             // CONTENT CONTACT
             setTimeout(function() {
                 $(".contact").css("visibility", "hidden");
@@ -106,7 +106,7 @@ $(document).ready(function () {
             setTimeout(function() {
                 $(".link__text").css("visibility", "visible");
                 $(".link__text").css("opacity", "1");
-            }, 1700);
+            }, 2000);
             setTimeout(function() {
                 $("#showHideContact").css("width", "100%");
                 $("#showHideContact").css("height", "100%");
@@ -138,12 +138,13 @@ $(document).ready(function () {
                 $(".video__contactLoopVideo").css("z-index", "1");
             }, 1000)
             // CONTACT TO HOME
+            $(".video__contacToHomeVideo").css("visibility", "visible");
+            $(".video__contacToHomeVideo").css("opacity", "1");
+            videoContactToHome.load();
+            videoContactToHome.play();
             setTimeout(function() {
-                $(".video__contacToHomeVideo").css("visibility", "visible");
-                $(".video__contacToHomeVideo").css("opacity", "1");
-                $(".video__contacToHomeVideo").css("transition", "1.4s");
+                $(".video__contacToHomeVideo").css("transition", "0.8s");
                 $(".video__contacToHomeVideo").css("transform", "translate(0% , -4.5%) scale(0.95)");
-                videoContactToHome.load();
             }, 100);
             setTimeout(function() {
                 videoHomeLoop.load();
