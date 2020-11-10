@@ -36,14 +36,15 @@
   header .header__rightContent {
     margin: 0px 15px 0px 0px;
   }
-  .video .homeLoopVideo__bg {
-    width: 300px;
-    height: 300px;
-    background: transparent;
+  .video .homeLoopVideo__bg, 
+  .video__homeToContactVideo, 
+  .video__contactLoopVideo,
+  .video__contacToHomeVideo {
+      display: none;
   }
   .home {
-    align-items: flex-start;
-    overflow-y: hidden;
+    align-items: center;
+    padding: 0px 25px;
   }
   .home .home__listContent {
     width: 100%;
@@ -53,7 +54,7 @@
     text-align: center;
   }
   ::-webkit-scrollbar {
-    width: 1px;
+    width: 0px;
     opacity: 1;
   }
 }
