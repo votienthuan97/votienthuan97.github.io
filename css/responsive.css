@@ -36,9 +36,6 @@
   header .header__rightContent {
     margin: 0px 15px 0px 0px;
   }
-  .video {
-    display: none;
-  }
   .video .homeLoopVideo__bg {
     width: 300px;
     height: 300px;
