@@ -8,7 +8,6 @@
 }
 .fullContent {
     position: relative;
- 
     overflow : hidden;
 }
 /* -------------------------- CURSOR CUSTOM -------------------------- */
@@ -370,9 +369,11 @@ header .sound__icon .icon__item:nth-child(6) {
 /* MAIN WRAP */
 .wrapContent {
     position: fixed;
-    width: 100vw;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom: 0;
     height: 100vh;
-    padding: 0px 50px;
     z-index: 9;
     overflow: hidden;
 }
