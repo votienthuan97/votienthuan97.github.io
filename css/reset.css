@@ -68,7 +68,7 @@ html, body {
 
 ::-webkit-scrollbar {
   width: 10px;
-  opacity: 1;
+  /* opacity: 1; */
   transition: 0.4s;
 }
 ::-webkit-scrollbar:hover {
