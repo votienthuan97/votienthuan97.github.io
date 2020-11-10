@@ -55,8 +55,8 @@
     text-align: center;
   }
   ::-webkit-scrollbar {
-    width: 0px;
-    opacity: 0;
+    width: 1px;
+    opacity: 1;
   }
 }
 /* IP 5 XOAY NGANG */
