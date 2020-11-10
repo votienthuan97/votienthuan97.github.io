@@ -8,8 +8,8 @@
 }
 .fullContent {
     position: relative;
-    height: calc(100vh - 20px);
-    overflow-x: hidden;
+    max-height: calc(100vh);
+    overflow : hidden;
 }
 /* -------------------------- CURSOR CUSTOM -------------------------- */
 .cursor {
