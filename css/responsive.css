@@ -54,19 +54,14 @@
     text-align: center;
   }
   ::-webkit-scrollbar {
-    width: 1px;
-    opacity: 1;
-    transition: 0.4s;
-  }
-  ::-webkit-scrollbar:hover {
-    opacity: 1;
-    transition: 0.4s;
+    width: 0px;
+    opacity: 0;
   }
   ::-webkit-scrollbar-track {
-    background: #C5C7CD;
+    background: red;
   }
   ::-webkit-scrollbar-thumb {
-    background: #161F38;
+    background: blue;
   }
 }
 /* IP 5 XOAY NGANG */
