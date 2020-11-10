@@ -375,7 +375,7 @@ main {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    height: calc(100% - 20px);
+    min-height: -webkit-fill-available;
     width: 100%;
 }
 /* -------------------------- HOME -------------------------- */
