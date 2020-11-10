@@ -381,14 +381,15 @@ header .sound__icon .icon__item:nth-child(6) {
 .home {
     visibility: visible;
     opacity: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
     transition: 0.6s;
+    overflow-y : auto;
+    overflow-x: hidden;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .home .home__listContent {
     width: 250px;
