@@ -45,6 +45,7 @@
   .home {
     align-items: center;
     justify-content: flex-end;
+    height: auto;
   }
   .home .home__listContent {
     width: 100%;
