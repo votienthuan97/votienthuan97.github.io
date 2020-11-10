@@ -8,7 +8,7 @@
 }
 .fullContent {
     position: relative;
-    height: 100%;
+    height: 100vh;
     overflow : hidden;
 }
 /* -------------------------- CURSOR CUSTOM -------------------------- */
@@ -368,14 +368,17 @@ header .sound__icon .icon__item:nth-child(6) {
     }
 }
 /* MAIN WRAP */
+:root {
+    --app-height: 100%;
+}
 main {
-    position: fixed;
+    position: absolute;
     z-index: 9;
     overflow-y : auto;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    min-height: -webkit-fill-available;
+    height: 100vh;
     width: 100%;
 }
 /* -------------------------- HOME -------------------------- */
