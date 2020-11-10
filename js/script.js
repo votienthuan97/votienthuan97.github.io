@@ -2,11 +2,8 @@ $(document).ready(function () {
     // PLAY VIDEO MOBILE
     const videoHomeLoopMobile = document.getElementById("vdHomeLoopMobile");
     const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
-    setTimeout(function() {
-        videoHomeLoopMobile.load();
-        videoHomeLoopMobile.play();
-        videoContactLoopMobile.play();
-    }, 400)
+    videoHomeLoopMobile.play();
+    videoContactLoopMobile.play();
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
