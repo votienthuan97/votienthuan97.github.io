@@ -68,7 +68,6 @@ html, body {
 :focus {
   cursor: none !important;
 }
-
 ::-webkit-scrollbar {
   width: 10px;
   opacity: 1;
