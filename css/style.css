@@ -371,7 +371,7 @@ header .sound__icon .icon__item:nth-child(6) {
 :root {
     --app-height: 100%;
 }
-main {
+.main {
     position: fixed;
     z-index: 9;
     overflow-y : auto;
