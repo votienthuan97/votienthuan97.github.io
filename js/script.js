@@ -1,16 +1,20 @@
 $(document).ready(function () {
+    // PLAY VIDEO MOBILE
     const videoHomeLoopMobile = document.getElementById("vdHomeLoopMobile");
-    videoHomeLoopMobile.load();
-    videoHomeLoopMobile.play();
     const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
-    videoContactLoopMobile.play();
+    setTimeout(function() {
+        videoHomeLoopMobile.load();
+        videoHomeLoopMobile.play();
+        videoContactLoopMobile.load();
+        videoContactLoopMobile.play();
+    }, 400)
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
         if($(this).prop("checked") == true){
             $(".icSound").css("stroke", "#FF5500");
             $(".icon__ani1").css("animation", "musicBar1 2s linear infinite");
-            $(".icon__ani2").css("animation", "musicBar2 1s linear infinite");
+            $(".icon__ani2").css("animation", "musicBar2 4s linear infinite");
             btnPlayPause.play();
         }
         else if($(this).prop("checked") == false){
