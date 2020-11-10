@@ -57,25 +57,23 @@ $(document).ready(function () {
                 changeStyleCSS(".video__homeLoopVideo" , {visibility : "hidden", opacity : 0 , "z-index" : 0});
             }, 600);
              // HOME TO CONTACT
-            setTimeout(function() {
-                changeStyleCSS(".video__homeToContactVideo" , {"z-index" : 2});
-            }, 0);
-            setTimeout(function() {
-                changeStyleCSS(".video__homeToContactVideo" , {visibility : "visible", opacity : 1 , "transition" : "0.8s"});
-            }, 350);
+            changeStyleCSS(".video__homeToContactVideo" , {"z-index" : 2, "opacity" : 1});
             videoHomeToContact.load();
             videoHomeToContact.play();
+            setTimeout(function() {
+                changeStyleCSS(".video__homeToContactVideo" , {visibility : "visible", opacity : 1 , "transition" : "0.8s"});
+            }, 400);
             setTimeout(function() {
                 changeStyleCSS(".video__homeToContactVideo" , {transform : "translate(-70% , 0%)" });
             }, 1200);
             setTimeout(function() {
                 $(".video__homeToContactVideo").css("visibility", "hidden");
                 $(".video__homeToContactVideo").css("transform", "translate(0% , 0%)");
-            }, 2900);
+            }, 3000);
             setTimeout(function() {
                 $(".video__homeToContactVideo").css("z-index", "0");
                 $(".video__homeToContactVideo").css("opacity", "0");
-            }, 2500);
+            }, 2400);
             // CONTACT LOOP
             setTimeout(function() {
                 $(".video__contactLoopVideo").css("visibility", "visible");
@@ -128,12 +126,16 @@ $(document).ready(function () {
                 $(".video__homeToContactVideo").css("z-index", "0");
                 $(".video__homeToContactVideo").css("opacity", "1");
             }, 2000);
+            setTimeout(function() {
+                $(".video__homeToContactVideo").css("opacity", "0");
+            }, 2400);
             // CONTACT LOOP
             $(".video__contactLoopVideo").css("z-index", "0");
             setTimeout(function() {
-                $(".video__contactLoopVideo").css("visibility", "hidden");
                 $(".video__contactLoopVideo").css("opacity", "0");
-            }, 200);
+                $(".video__contactLoopVideo").css("visibility", "hidden");
+                
+            }, 400);
             setTimeout(function() {
                 $(".video__contactLoopVideo").css("z-index", "1");
             }, 1000)
@@ -145,7 +147,7 @@ $(document).ready(function () {
             setTimeout(function() {
                 $(".video__contacToHomeVideo").css("transition", "0.8s");
                 $(".video__contacToHomeVideo").css("transform", "translate(0% , -4.5%) scale(0.95)");
-            }, 100);
+            }, 400);
             setTimeout(function() {
                 videoHomeLoop.load();
             }, 2200);
@@ -153,7 +155,7 @@ $(document).ready(function () {
                 $(".video__contacToHomeVideo").css("visibility", "hidden");
                 $(".video__contacToHomeVideo").css("opacity", "0");
                 $(".video__contacToHomeVideo").css("transition", "0s");
-            }, 2500);
+            }, 2400);
             setTimeout(function() {
                 $(".video__contacToHomeVideo").css("transform", "translate(-70% , 0%) scale(1.0)");
             }, 3000);

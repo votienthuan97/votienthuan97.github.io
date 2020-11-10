@@ -163,7 +163,7 @@
 .video .video__homeToContactVideo {
     position: absolute;
     visibility: hidden;
-    opacity: 1;
+    opacity: 0;
     transition: 0s;
     transition-delay : 0s;
     z-index: 1;
