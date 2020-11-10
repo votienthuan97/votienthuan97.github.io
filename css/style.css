@@ -418,7 +418,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     transition: 0.4s;
 }
 .contact .listContent__title {
