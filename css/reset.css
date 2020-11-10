@@ -51,9 +51,6 @@ a:hover, a:focus {
 input[type=checkbox] {
   margin: 0px;
 }
-video { 
-  filter: brightness(108.5%);
-}
 /* ------------------------------ CUSTOM CSS -------------------------- */
 html, body {
   font-size: 14px !important;
