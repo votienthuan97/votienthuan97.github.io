@@ -135,13 +135,13 @@
 .home__videoMobile {
     display: none;
     visibility: hidden;
-    transition: 0.6s;
+    transition: 0.2s;
     background-color: #FFF;
 }
 .contact__videoMobile {
     display: none;
     visibility: hidden;
-    transition: 0.6s;
+    transition: 0.2s;
 }
 .videoMobile__homeLoop {
     width: 350px;
