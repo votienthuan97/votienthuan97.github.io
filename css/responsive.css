@@ -60,18 +60,24 @@
     align-items: center;
     padding: 0px 25px;
   }
+  .home .home__listContent {
+    text-align: center;
+    width: 100%;
+  }
   .home .content__item {
     text-align: center;
   }
   /* CONTACT */
   .contact {
     align-items: center;
+    padding: 0px 25px;
   }
   .contact .title__text {
     font-size: 1.4rem;
   }
   .contact .contact__listContent {
     text-align: center;
+    width: 100%;
   }
   .contact .item__label {
     font-size: 1rem;
