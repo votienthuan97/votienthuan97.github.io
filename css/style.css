@@ -379,7 +379,6 @@ header .sound__icon .icon__item:nth-child(6) {
 }
 /* -------------------------- HOME -------------------------- */
 .home {
-    position: absolute;
     visibility: visible;
     opacity: 1;
     display: flex;
