@@ -289,8 +289,8 @@ header .linkContact__link .link__close {
     z-index: 1;
     transform: scaleY(0);
     transition: 0.6s;
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
 }
 header .leftContent__sound {
     position: relative;
@@ -301,8 +301,8 @@ header .leftContent__sound {
     justify-content: center;
 }
 header .sound__icon {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -377,7 +377,6 @@ main {
     right: 0;
     bottom: 0;
     margin: auto;
-    overflow-y : auto;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
