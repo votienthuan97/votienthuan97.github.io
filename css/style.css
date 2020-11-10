@@ -173,6 +173,7 @@
     width: 550px;
     height: 550px;
     margin: 60px 0px 0px 0px;
+    background-clip: inherit;
 }
 /* VIDEO CONTACT LOOP */
 .video .video__contactLoopVideo {
@@ -390,7 +391,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    height: 100vh;
     transition: 0.6s;
 }
 .home .home__listContent {
