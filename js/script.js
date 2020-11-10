@@ -5,7 +5,6 @@ $(document).ready(function () {
     setTimeout(function() {
         videoHomeLoopMobile.load();
         videoHomeLoopMobile.play();
-        videoContactLoopMobile.load();
         videoContactLoopMobile.play();
     }, 400)
     // PLAY PAUSE MUSIC BACKGROUND
