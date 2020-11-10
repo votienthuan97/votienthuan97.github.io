@@ -27,9 +27,16 @@
 }
 /* IP 6/8 PLUS TRỞ XUỐNG */
 @media screen and (max-width: 640px) {
+  /* CUSTOM CSS */
+  ::-webkit-scrollbar {
+    width: 0px;
+    opacity: 1;
+  }
+  /* CURSOR */
   .cursor {
     display: none;
   }
+  /* HEADER */
   header {
     position: sticky;
     top : 60px;
@@ -41,26 +48,39 @@
   header .header__rightContent {
     margin: 0px 15px 0px 0px;
   }
-  .video .homeLoopVideo__bg, 
-  .video__homeToContactVideo, 
-  .video__contactLoopVideo,
-  .video__contacToHomeVideo {
-      display: none;
+  /* VIDEO */
+  .video__homeToContactVideo,
+  .video__homeLoopVideo, 
+  .video__contacToHomeVideo,
+  .video__contactLoopVideo {
+    display: none;
   }
+  /* HOME */
   .home {
     align-items: center;
     padding: 0px 25px;
   }
-  .home .home__listContent {
-    width: 100%;
-    margin: 125px 0px 100px 0px;
-  }
   .home .content__item {
     text-align: center;
   }
-  ::-webkit-scrollbar {
-    width: 0px;
-    opacity: 1;
+  /* CONTACT */
+  .contact {
+    align-items: center;
+  }
+  .contact .title__text {
+    font-size: 1.4rem;
+  }
+  .contact .contact__listContent {
+    text-align: center;
+  }
+  .contact .item__label {
+    font-size: 1rem;
+  }
+  .contact .item__text {
+    font-size: 1.2rem;
+  }
+  .contact .item__listLink {
+    justify-content: center;
   }
 }
 /* IP 5 XOAY NGANG */
