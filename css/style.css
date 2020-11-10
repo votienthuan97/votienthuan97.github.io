@@ -375,7 +375,7 @@ main {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    height: 200px;
+    height: calc(100% - 20px);
     width: 100%;
 }
 /* -------------------------- HOME -------------------------- */
