@@ -1,10 +1,4 @@
 $(document).ready(function () {
-    // PLAY VIDEO MOBILE
-    const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
-    setTimeout(function() {
-        videoContactLoopMobile.load();
-        videoContactLoopMobile.play();
-    }, 400);
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
@@ -39,8 +33,14 @@ $(document).ready(function () {
     const videoHomeToContact = document.getElementById("vdHomeToContact");
     const videoContactLoop = document.getElementById("vdContactLoop");
     const videoContactToHome = document.getElementById("vdContactToHome");
-    $("#showHideContact").click(function(){
-        if($(this).prop("checked") == true){
+    $("#showHideContact").click(function() {
+        if($(this).prop("checked") == true) {
+            // PLAY VIDEO MOBILE
+            const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
+            setTimeout(function() {
+                videoContactLoopMobile.load();
+                videoContactLoopMobile.play();
+            }, 400);
             // CONTENT HOME
             setTimeout(function() {
                 changeStyleCSS(".home" , {visibility : "hidden", opacity : 0});
