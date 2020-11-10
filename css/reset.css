@@ -60,6 +60,7 @@ html, body {
   font-weight: 900;
   font-family: Gilroy-Light;
   cursor: none !important;
+  touch-action: none;
 }
 :hover {
   cursor: none !important;
