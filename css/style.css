@@ -132,6 +132,21 @@
     transition: 0.6s;
 }
 /* -------------------------- VIDEO BACKGROUND -------------------------- */
+.home__videoMobile {
+    margin: 100px 0px 0px 0px;
+    transition: 0.6s;
+}
+.contact__videoMobile {
+    transition: 0.6s;
+}
+.videoMobile__homeLoop {
+    width: 350px;
+    height: 350px;
+}
+.videoMobile__contactLoop {
+    width: 250px;
+    height: 250px;
+}
 .video {
     z-index: 8;
     position: fixed;
@@ -373,6 +388,7 @@ header .sound__icon .icSound {
     overflow-x: hidden;
     padding: 70px 50px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
@@ -384,6 +400,8 @@ header .sound__icon .icSound {
     font-size: 1.25rem;
     font-weight: 900;
     line-height: 30px;
+    position: relative;
+    z-index: 9;
 }
 /* --------------------------- CONTACT ---------------------------- */
 #showHideContact {
@@ -403,6 +421,7 @@ header .sound__icon .icSound {
     overflow: hidden;
     padding: 0px 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

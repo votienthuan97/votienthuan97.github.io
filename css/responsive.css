@@ -76,6 +76,12 @@
   .video__contactLoopVideo {
     display: none;
   }
+  .content__videoMobile {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.6s;
+  }
   /* HOME */
   .home {
     align-items: center;
