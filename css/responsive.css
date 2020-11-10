@@ -53,6 +53,21 @@
   .home .content__item {
     text-align: center;
   }
+  ::-webkit-scrollbar {
+    width: 1;
+    opacity: 1;
+    transition: 0.4s;
+  }
+  ::-webkit-scrollbar:hover {
+    opacity: 1;
+    transition: 0.4s;
+  }
+  ::-webkit-scrollbar-track {
+    background: #C5C7CD;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #161F38;
+  }
 }
 /* IP 5 XOAY NGANG */
 @media screen and (min-width: 568px) {
