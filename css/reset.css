@@ -54,7 +54,7 @@ input[type=checkbox] {
 /* ------------------------------ CUSTOM CSS -------------------------- */
 html, body {
   font-size: 14px !important;
-  position: relative;
+  position: fixed;
   overflow-x: hidden;
   overflow-y: hidden;
   font-weight: 900;
