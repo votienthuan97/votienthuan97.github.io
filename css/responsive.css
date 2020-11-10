@@ -79,8 +79,8 @@
   .video__contactLoopVideo {
     display: none;
   }
-  .home__videoMobile,
-  .contact__videoMobile {
+  .home .home__videoMobile,
+  .contact .contact__videoMobile {
     display: block;
     visibility: visible;
     opacity: 1;
@@ -88,7 +88,7 @@
   }
   /* HOME */
   .home {
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     padding: 0px 25px;
@@ -97,6 +97,7 @@
     text-align: center;
     width: 100%;
     height: 100px;
+    margin: 0px 0px 150px 0px;
   }
   .home .content__item {
     text-align: center;
@@ -113,6 +114,7 @@
   .contact .contact__listContent {
     text-align: center;
     width: 100%;
+    margin: 0px 0px 50px 0px;
   }
   .contact .item__label {
     font-size: 1rem;
