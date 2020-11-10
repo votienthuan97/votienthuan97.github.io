@@ -30,6 +30,11 @@
   .cursor {
     display: none;
   }
+  header {
+    position: sticky;
+    top : 60px;
+    background-color: #FFF;
+  }
   header .header__leftContent {
     margin: 0px 0px 0px 15px;
   }
