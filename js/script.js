@@ -4,7 +4,7 @@ $(document).ready(function () {
     setTimeout(function() {
         videoContactLoopMobile.load();
         videoContactLoopMobile.play();
-    }, 200);
+    }, 400);
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
