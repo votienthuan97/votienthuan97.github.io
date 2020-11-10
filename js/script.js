@@ -1,8 +1,4 @@
 $(document).ready(function () {
-    document.body.addEventListener('touchmove', function(e){ 
-        document.getElementsByTagName('body')[0]. style .height = "100vh";
-        document.getElementsByTagName('body')[0]. style. overflow = "hidden";
-      });
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
