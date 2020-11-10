@@ -55,7 +55,7 @@ input[type=checkbox] {
 html, body {
   font-size: 14px !important;
   position: relative;
-  overflow-x: hidden;
+  overflow : hidden;
   font-weight: 900;
   font-family: Gilroy-Light;
   cursor: none !important;
