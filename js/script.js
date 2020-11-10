@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const videoHomeLoopMobile = document.getElementById("vdHomeLoopMobile");
+    videoHomeLoopMobile.load();
     videoHomeLoopMobile.play();
     const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
     videoContactLoopMobile.play();
