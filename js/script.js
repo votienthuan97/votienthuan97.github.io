@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    // PLAY VIDEO MOBILE
+    const videoContactLoopMobile = document.getElementById("vdContactLoopMobile");
+    setTimeout(function() {
+        videoContactLoopMobile.play();
+    }, 400);
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("bgMusic");
     $("#soundPlayPause").click(function(){
