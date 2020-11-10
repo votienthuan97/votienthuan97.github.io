@@ -6,10 +6,6 @@
     font-family: Gilroy-Bold;
     src: url("../font/Gilroy/Gilroy-Bold.otf");
 }
-body {
-    position: relative;
-    overflow-x:hidden
-}
 .fullContent {
     position: relative;
     height: 100vh;
