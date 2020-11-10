@@ -76,7 +76,8 @@
   .video__contactLoopVideo {
     display: none;
   }
-  .content__videoMobile {
+  .home__videoMobile,
+  .contact__videoMobile {
     display: block;
     visibility: visible;
     opacity: 1;
@@ -85,6 +86,7 @@
   /* HOME */
   .home {
     align-items: center;
+    flex-direction: column;
     padding: 0px 25px;
   }
   .home .home__listContent {
@@ -97,6 +99,7 @@
   /* CONTACT */
   .contact {
     align-items: center;
+    flex-direction: column;
     padding: 0px 25px;
   }
   .contact .title__text {

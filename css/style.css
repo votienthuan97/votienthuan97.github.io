@@ -133,10 +133,16 @@
 }
 /* -------------------------- VIDEO BACKGROUND -------------------------- */
 .home__videoMobile {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
     margin: 100px 0px 0px 0px;
     transition: 0.6s;
 }
 .contact__videoMobile {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
     transition: 0.6s;
 }
 .videoMobile__homeLoop {
@@ -388,7 +394,7 @@ header .sound__icon .icSound {
     overflow-x: hidden;
     padding: 70px 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
@@ -421,7 +427,7 @@ header .sound__icon .icSound {
     overflow: hidden;
     padding: 0px 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
