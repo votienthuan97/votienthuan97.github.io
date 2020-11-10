@@ -54,7 +54,7 @@
     text-align: center;
   }
   ::-webkit-scrollbar {
-    width: 1;
+    width: 1px;
     opacity: 1;
     transition: 0.4s;
   }
