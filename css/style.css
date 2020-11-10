@@ -136,7 +136,6 @@
     display: none;
     visibility: hidden;
     opacity: 0;
-    margin: 100px 0px 0px 0px;
     transition: 0.6s;
     background-color: #FFF;
 }
