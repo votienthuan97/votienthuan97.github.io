@@ -54,13 +54,11 @@ input[type=checkbox] {
 /* ------------------------------ CUSTOM CSS -------------------------- */
 html, body {
   font-size: 14px !important;
-  position: fixed;
   overflow-x: hidden;
   overflow-y: hidden;
   font-weight: 900;
   font-family: Gilroy-Light;
   cursor: none !important;
-  touch-action: none;
 }
 :hover {
   cursor: none !important;
