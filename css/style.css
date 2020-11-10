@@ -368,9 +368,6 @@ header .sound__icon .icon__item:nth-child(6) {
     }
 }
 /* MAIN WRAP */
-:root {
-    --app-height: 100%;
-}
 main {
     position: absolute;
     z-index: 9;
@@ -378,7 +375,7 @@ main {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 /* -------------------------- HOME -------------------------- */
