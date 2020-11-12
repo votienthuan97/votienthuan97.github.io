@@ -1,0 +1,43 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  
+}
+@media screen and (max-width: 1024px) {
+  
+}
+/* IPAD PRO + IPAD XOAY NGANG */
+@media screen and (min-width: 993px) and (max-width: 1267px) {
+  
+}
+/* IPAD PRO */
+@media screen and (width: 1024px) {
+}
+/* DT PLUS XOAY NGANG */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+}
+/* IPAD */
+@media screen and (width: 768px) {
+}
+/* IPAD TRỞ XUỐNG */
+@media screen and (max-width: 768px) {
+  
+}
+/* DT XOAY NGANG */
+@media screen and (min-width: 641px) and (max-width: 767px) {
+}
+/*SS XOAY NGANG */
+@media screen and (width: 640px) {
+  
+}
+/* IP 6/8 PLUS TRỞ XUỐNG */
+@media screen and (max-width: 640px) {
+  
+}
+/* IP 5 XOAY NGANG */
+@media screen and (min-width: 568px) {
+}
+/* SAMSUNG ĐỜI CŨ */
+@media screen and (max-width: 360px) {
+}
+/* IP 5 */
+@media screen and (max-width: 320px) {
+}
