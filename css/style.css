@@ -67,6 +67,7 @@ html, body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    pointer-events: none;
 }
 .headerWeb .logo__img {
     width: 35px;
@@ -124,10 +125,7 @@ html, body {
     padding: 0px 15px 0px 0px;
 }
 .headerWeb .rContent__contact {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.6s;
-    will-change: visibility, opacity, transition;
+    pointer-events: all;
 }
 .headerWeb .contact__text {
     font-size: 1.2rem;
@@ -148,6 +146,10 @@ html, body {
 /* ---------------------- FOOTER WEB > LEFT CONTENT */
 .footerWeb .footerWeb__lContent {
     padding: 0px 0px 0px 15px;
+    pointer-events: all;
+}
+.footerWeb .lContent__story {
+    pointer-events: all;
 }
 .footerWeb .story__text {
     font-weight: 900;
@@ -156,6 +158,9 @@ html, body {
 /* ---------------------- FOOTER WEB > RIGHT CONTENT */
 .footerWeb .footerWeb__rContent {
     padding: 0px 15px 0px 0px;
+}
+.footerWeb .rContent__project {
+    pointer-events: all;
 }
 .footerWeb .project__text {
     font-size: 1.2rem;
@@ -237,7 +242,7 @@ html, body {
     transition: 0s;
     transition-delay : 0s;
     margin: 60px 0px 0px 0px;
-    will-change: visibility, opacity, z-index;
+    will-change: visibility, opacity, z-index, transform;
 }
 .video__homeToContact {
     position: absolute;
@@ -254,8 +259,8 @@ html, body {
     opacity: 0;
     z-index: 0;
     transition: 0s;
-    transition-delay : 0s;
-    will-change: visibility, opacity, z-index;
+    transform: translate(-70%, 0%);
+    will-change: visibility, opacity, z-index, transform;
 }
 .video__contactToHome {
     position: absolute;
@@ -263,8 +268,8 @@ html, body {
     opacity: 0;
     z-index: 0;
     transition: 0s;
-    transition-delay : 0s;
-    will-change: visibility, opacity, z-index;
+    transform: translate(-70%, 0%) scale(1.0);
+    will-change: visibility, opacity, z-index, transform;
 }
 /* ---------------------- MAIN WEB ---------------------- */
 .mainWeb {
