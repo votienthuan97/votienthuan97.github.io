@@ -13,7 +13,6 @@ html, body {
     overflow: hidden;
     font-weight: 900;
     font-family: Gilroy-Light;
-    /* cursor: none !important; */
 }
 /* ---------------------- CUSTOM CSS ---------------------- */
 .fullWeb {
@@ -35,12 +34,12 @@ html, body {
 ::-webkit-scrollbar-thumb {
     background: #161F38;
 }
-:hover {
+/* :hover {
     cursor: none !important;
 }
 :focus {
     cursor: none !important;
-}
+} */
 /* ---------------------- HEADER WEB ---------------------- */
 .headerWeb {
     position: fixed;
