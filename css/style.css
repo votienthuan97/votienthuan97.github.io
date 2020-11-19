@@ -95,7 +95,8 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: all 0.2s;
+    -webkit-transition:all 0.2s ease-out;
+	transition: all 0.2s ease-out;
     will-change: transition;
 }
 .cursor .border__oval {
