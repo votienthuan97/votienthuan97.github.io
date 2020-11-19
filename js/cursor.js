@@ -1,18 +1,38 @@
 $(document).ready(function () {
-    // DISABLE HIGHTLIGHT TEXT 
+    // DISABLE CURSOR HIGHTLIGHT TEXT, COPY , ...
     document.onselectstart = new Function ("return false");
-    // CUSTOM CURSOR
-    const cursorPoint = document.getElementsByClassName('cursor__point');
-    const cursorBorder = document.getElementsByClassName('cursor__border');
-    window.addEventListener('mousemove', (e) => {
-        setPosition(cursorPoint, e);
-        setPosition(cursorBorder, e);
+    // ONLY HIDDEN CURSOR
+    document.documentElement.style.cursor = 'none';
+     // CUSTOM CURSOR POSITION
+     const cursorPoint = document.getElementsByClassName('cursor__point');
+     const cursorBorder = document.getElementsByClassName('cursor__border');
+     window.addEventListener('mousemove', (position) => {
+         setPosition(cursorPoint, position);
+         setPosition(cursorBorder, position);
+     });
+    // SET TIME SHOW CURSOR HOME
+    setTimeout(() => {
+        changeStyleCSS('.cursor' , {opacity : 1});
+        changeStyleCSS('.border__oval' , {border : '2px solid #EEE'});
+        changeStyleCSS('.border__loading' , {visibility : 'visible'});
+    }, 500);
+     // SET TIME SHOW LOADING CURSOR HOME
+    setInterval(() => {
+        changeStyleCSS('.border__oval' , {border : '2px solid #F2DA87'});
+        changeStyleCSS('.border__loading' , {visibility : 'hidden'});
+    }, 4200);
+    //  CLICK SCALE BORDER
+    $(document).click(function() {
+        changeStyleCSS('.cursor__border' , {transform : 'scale(1.25, 1.25)'});
+        setTimeout(() => {
+            changeStyleCSS('.cursor__border' , {transform : 'scale(1.0, 1.0)'});
+        }, 250);
     });
 });
 // SET POSITION CURSOR
-function setPosition(element, e) {
-    element[0].style.top = `${e.pageY}px`;
-    element[0].style.left = `${e.pageX}px`;
+function setPosition(cursor, position) {
+    cursor[0].style.top = `${position.pageY}px`;
+    cursor[0].style.left = `${position.pageX}px`;
 }
 
   

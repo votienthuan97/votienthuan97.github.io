@@ -14,8 +14,44 @@
 <body>
     <div id="root">
         <div id="fullWeb">
-            <div class="headerWeb"></div>
-            <div class="mainWeb"></div>
+            <div class="headerWeb">
+                <div class="headerWeb__contentLeft">
+                    <div class="contentLeft__logo">
+                        <input type="checkbox" id="pageHome" />
+                        <img class="logo__img" src="images/logo/logo.png" />
+                    </div>
+                    <div class="contentLeft__sound">
+                        <input type="checkbox" id="soundPlayPause" />
+                        <audio loop src="audio/Magical-Piano.mp3" id="bgMusic"></audio>
+                        <div class="sound__soundBar">
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerWeb__contentRight">
+                    <div class="contentRight__contact">
+                        <input type="checkbox" id="pageContact" />
+                        <p class="contact__text">say hi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainWeb">
+                <div class="home">
+                    <div class="container">
+                        <p>Trang Home</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="container">
+                        <p>Trang Contact</p>
+                    </div>
+                </div>
+            </div>
             <div class="footerWeb"></div>
             <div class="cursor">
                 <div class="cursor__wrap">
@@ -24,26 +60,25 @@
                     </div>
                     <div class="cursor__border">
                         <div class="border__oval"></div>
+                        <div class="border__loading"></div>
                     </div>
                 </div>
             </div>
             <div class="video">
-                <div class="video">
-                    <div class="video__intro">
-                        <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted playsInline />
-                    </div>
-                    <div class="video__homeLoop">
-                        <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop playsInline autoPlay  />
-                    </div>
-                    <div class="video__homeToContact">
-                        <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted playsInline />
-                    </div>
-                    <div class="video__contactLoop">
-                        <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop playsInline />
-                    </div>
-                    <div class="video__contactToHome">
-                        <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted playsInline />
-                    </div>
+                <div class="video__intro">
+                    <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted playsInline autoplay></video>
+                </div>
+                <div class="video__homeLoop">
+                    <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop playsInline></video>
+                </div>
+                <div class="video__homeToContact">
+                    <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted playsInline></video>
+                </div>
+                <div class="video__contactLoop">
+                    <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop playsInline></video>
+                </div>
+                <div class="video__contactToHome">
+                    <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted playsInline></video>
                 </div>
             </div>
         </div>

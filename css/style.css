@@ -9,11 +9,11 @@
 }
 /* ---------------------- HTML, BODY ---------------------- */
 html, body {
-    font-size: 14px !important;
+    font-size: 14px;
     overflow: hidden;
     font-weight: 900;
     font-family: Gilroy-Light;
-    cursor: none;
+    cursor: none !important;
 }
 /* ---------------------- CUSTOM CSS ---------------------- */
 .fullWeb {
@@ -41,23 +41,6 @@ html, body {
 :focus {
     cursor: none !important;
 }
-/* ---------------------- HEADER WEB ---------------------- */
-.headerWeb {
-    position: fixed;
-    top : 0px;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0px 25px;
-    z-index: 10;
-}
-/* ---------------------- FOOTER WEB > LEFT CONTENT */
-
-/* ---------------------- FOOTER WEB > RIGHT CONTENT */
-
 /* ---------------------- CURSOR ---------------------- */
 .cursor {
     position: fixed;
@@ -65,6 +48,7 @@ html, body {
     transform: translate(-50%, -50%);
     pointer-events: none;
     will-change: transform;
+    opacity: 0;
 }
 .cursor .cursor__wrap {
     position: relative;
@@ -95,8 +79,8 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-    -webkit-transition:all 0.2s ease-out;
-	transition: all 0.2s ease-out;
+    -webkit-transition:all 0.3s ease-out;
+	transition: all 0.3s ease-out;
     will-change: transition;
 }
 .cursor .border__oval {
@@ -106,6 +90,37 @@ html, body {
     border: 2px solid #F2DA87;
     display: flex;
     align-items: center;
+}
+.cursor .border__loading {
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #F2DA87;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    align-items: center;
+    animation: circleLoading 1.25s linear infinite;
+    visibility: hidden;
+}
+@keyframes circleLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /* ---------------------- VIDEO ---------------------- */
 .video {
@@ -118,9 +133,10 @@ html, body {
     align-items: center;
     justify-content: center;
     align-self: center;
+    pointer-events: none;
 }
 /* ---------------------- VIDEO ITEM */
-#vdIntro
+#vdIntro,
 #vdHomeLoop,
 #vdHomeToContact,
 #vdContactLoop,
@@ -141,7 +157,7 @@ html, body {
 }
 .video__homeLoop {
     position: absolute;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
     z-index: 0;
     transition: 0s;
@@ -176,6 +192,159 @@ html, body {
     transform: translate(-70%, 0%) scale(1.0);
     will-change: visibility, opacity, z-index, transform;
 }
+/* ---------------------- HEADER WEB ---------------------- */
+.headerWeb {
+    position: fixed;
+    top : 0px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 50px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 1;
+    transition: all 0.6s;
+}
+.headerWeb #pageHome,
+.headerWeb #pageContact {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+/* ---------------------- HEADER WEB > CONTENT LEFT ---------------------- */
+.headerWeb .headerWeb__contentLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 90px;
+}
+.headerWeb .contentLeft__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.headerWeb .logo__img {
+    width: 35px;
+    height: 35px;
+    outline: none;
+}
+.headerWeb .contentLeft__sound {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+.headerWeb .sound__soundBar {
+    width: 22px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.headerWeb #soundPlayPause {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.headerWeb .soundBar__item {
+    width: 2px;
+    background-color: #CCC;
+    transition: all 0.2s ease-in-out;
+    animation-play-state: paused !important;
+}
+.headerWeb .soundBar__item:nth-child(1) {
+    height: 12px;
+    animation: sbAnimation1 3s linear infinite;
+}
+.headerWeb .soundBar__item:nth-child(2) {
+    height: 8px;
+    animation: sbAnimation2 4s linear infinite;
+}
+.headerWeb .soundBar__item:nth-child(3) {
+    height: 16px;
+    animation: sbAnimation3 1.5s linear infinite;
+}
+.headerWeb .soundBar__item:nth-child(4) {
+    height: 16px;
+    animation: sbAnimation4 3.5s linear infinite;
+}
+.headerWeb .soundBar__item:nth-child(5) {
+    height: 16px;
+    animation: sbAnimation1 2s linear infinite;
+}
+.headerWeb .soundBar__item:nth-child(6) {
+    height: 16px;
+    animation: sbAnimation4 3s linear infinite;
+}
+.headerWeb .playSoundBar {
+    animation-play-state: running !important;
+}
+@keyframes sbAnimation1 {
+    0% { height: 8px; }
+    25% { height: 14px; }
+    50% { height: 6px; }
+    75% { height: 2px; }
+    100% { height: 8px; }
+}
+@keyframes sbAnimation2 {
+    0% { height: 14px; }
+    25% { height: 8px; }
+    50% { height: 2px; }
+    75% { height: 6px; }
+    100% { height: 14px; }
+}
+@keyframes sbAnimation3 {
+    0% { height: 4px; }
+    25% { height: 7px; }
+    50% { height: 12px; }
+    75% { height: 5px; }
+    100% { height: 4px; }
+}
+@keyframes sbAnimation4 {
+    0% { height: 12px; }
+    25% { height: 8px; }
+    50% { height: 4px; }
+    75% { height: 6px; }
+    100% { height: 12px; }
+}
+/* ---------------------- HEADER WEB > CONTENT LEFT ---------------------- */
+.headerWeb .contentRight__contact {
+    width: 90px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+.headerWeb .contact__text {
+    font-size: 1.2rem;
+}
+/* ---------------------- FOOTER WEB  ---------------------- */
+.footerWeb {
+    position: fixed;
+    bottom : 0px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px 25px;
+    z-index: 10;
+}
 /* ---------------------- MAIN WEB ---------------------- */
 .mainWeb {
     position: fixed;
@@ -184,6 +353,26 @@ html, body {
     right: 0;
     bottom: 0;
     height: 100vh;
-    z-index: 9;
+    z-index: 7;
 }
 /* ---------------------- MAIN WEB > HOME */
+.home {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    overflow: hidden;
+}
+/* ---------------------- MAIN WEB > CONTACT */
+.contact {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
