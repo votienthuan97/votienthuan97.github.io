@@ -1,21 +1,70 @@
+/* ---------------------- FONT WEB ---------------------- */
 @font-face {
     font-family: Gilroy-Light;
-    src: url("../font/Gilroy/Gilroy-Light.otf");
+    src: url("../font//Gilroy/Gilroy-Light.otf");
 }
 @font-face {
     font-family: Gilroy-Bold;
     src: url("../font/Gilroy/Gilroy-Bold.otf");
 }
-.fullContent {
-    position: relative;
-    overflow : hidden;
+/* ---------------------- HTML, BODY ---------------------- */
+html, body {
+    font-size: 14px !important;
+    overflow: hidden;
+    font-weight: 900;
+    font-family: Gilroy-Light;
+    cursor: none;
 }
-/* -------------------------- CURSOR CUSTOM -------------------------- */
+/* ---------------------- CUSTOM CSS ---------------------- */
+.fullWeb {
+    position: relative;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    opacity: 1;
+    transition: 0.4s;
+  }
+::-webkit-scrollbar:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+::-webkit-scrollbar-track {
+    background: #C5C7CD;
+}
+::-webkit-scrollbar-thumb {
+    background: #161F38;
+}
+:hover {
+    cursor: none !important;
+}
+:focus {
+    cursor: none !important;
+}
+/* ---------------------- HEADER WEB ---------------------- */
+.headerWeb {
+    position: fixed;
+    top : 0px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 25px;
+    z-index: 10;
+}
+/* ---------------------- FOOTER WEB > LEFT CONTENT */
+
+/* ---------------------- FOOTER WEB > RIGHT CONTENT */
+
+/* ---------------------- CURSOR ---------------------- */
 .cursor {
     position: fixed;
     z-index: 99;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    will-change: transform;
 }
 .cursor .cursor__wrap {
     position: relative;
@@ -23,7 +72,7 @@
     height: 4rem;
     opacity: 1;
 }
-/* -------- CURSOR CUSTOM POINT -------- */
+/* ---------------------- CURSOR POINT */
 .cursor .cursor__point {
     position: absolute;
     width: 4rem;
@@ -31,79 +80,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.05s;
 }
 .cursor .point__default {
     width: 1rem;
     height: 1rem;
     background-color: #F2DA87;
     border-radius: 100%;
-    transition: all 0.6s;
     display: block;
     opacity: 1;
     position: relative;
 }
-.cursor .point__hand {
-    background-image: url(../images/icons/icHand.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1.75rem;
-    height: 1.75em;
-    animation: shake 1s linear infinite;
-    transition: all 0.6s;
-    display: none;
-    opacity: 0;
-}
-.cursor .point__music {
-    background-image: url(../images/icons/icMusic.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1.75rem;
-    height: 1.75em;
-    animation: rotateCircle 2s linear infinite;
-    transition: all 0.6s;
-    display: none;
-    opacity: 0;
-}
-.cursor .point__close {
-    position: absolute;
-    width: 2px;
-    height: 35px;
-    background-color: #F2DA87;
-    transform: rotate(45deg);
-    opacity: 0;
-}
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-20deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-@keyframes rotateCircle {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-/* -------- CURSOR CUSTOM BORDER -------- */
+/* ---------------------- CURSOR BORDER */
 .cursor .cursor__border {
     width: 100%;
     height: 100%;
-    transition: all 0.2s;
     position: relative;
+    transition: all 0.2s;
+    will-change: transition;
 }
 .cursor .border__oval {
     width: 100%;
@@ -113,357 +106,83 @@
     display: flex;
     align-items: center;
 }
-.cursor .oval__textHand {
-    font-size: 1.2rem;
-    color : #000;
-    position: absolute;
-    left: -140px;
-    width: 150px;
-    opacity: 0;
-    transition: 0.8s;
-}
-.cursor .oval__textMusic {
-    font-size: 1.2rem;
-    color : #000;
-    position: absolute;
-    right: -180px;
-    width: 150px;
-    opacity: 0;
-    transition: 0.6s;
-}
-/* -------------------------- VIDEO BACKGROUND -------------------------- */
-.home__videoMobile {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.6s;
-    background-color: #FFF;
-}
-.videoMobile__homeLoop {
-    width: 350px;
-    height: 350px;
-}
+/* ---------------------- VIDEO ---------------------- */
 .video {
-    z-index: 8;
     position: fixed;
+    margin: auto;
+    z-index: 8;
     width: 100%;
     height: 100%;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
 }
-/* VIDEO HOME LOOP */
-.video .video__homeLoopVideo {
+/* ---------------------- VIDEO ITEM */
+#vdIntro
+#vdHomeLoop,
+#vdHomeToContact,
+#vdContactLoop,
+#vdContactToHome {
+    width: 550px;
+    height: 550px;
+}
+/* ---------------------- BLOCK VIDEO SCREEN */
+.video__intro {
     position: absolute;
     visibility: visible;
     opacity: 1;
-    transition: 0s;
-    transition-delay : 0s;
-    z-index: 2;
-    will-change: opacity, transform, visibility, z-index; 
-}
-.video .homeLoopVideo__bg {
-    width: 550px;
-    height: 550px;
-    margin: 60px 0px 0px 0px;
-}
-/* VIDEO HOME TO CONTACT */
-.video .video__homeToContactVideo {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0s;
-    transition-delay : 0s;
     z-index: 1;
-    will-change: opacity, transform, visibility, z-index; 
-}
-.video .homeToContactVideo__bg {
-    width: 550px;
-    height: 550px;
-    margin: 60px 0px 0px 0px;
-}
-/* VIDEO CONTACT LOOP */
-.video .video__contactLoopVideo {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
     transition: 0s;
     transition-delay : 0s;
-    transform: translate(-70% , 0%);
-    z-index: 1;
-    will-change: opacity, transform, visibility, z-index; 
-}
-.video .contactLoopVideo__bg {
-    width: 550px;
-    height: 550px;
     margin: 60px 0px 0px 0px;
+    will-change: visibility, opacity, z-index, transform;
 }
-/* VIDEO CONTACT TO HOME */
-.video .video__contacToHomeVideo {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    transform: translate(-70% , 0%) scale(1.0);
-    transition: 0s;
-    transition-delay : 0s;
-    z-index: 1;
-    will-change: opacity, transform, visibility, z-index; 
-}
-.video .contacToHomeVideo__bg {
-    width: 550px;
-    height: 550px;
-    margin: 60px 0px 0px 0px;
-}
-/* -------------------------- MUSIC BACKGROUND -------------------------- */
-#bgMusic {
-    position: absolute;
-    top : 0;
-    left: 0;;
-}
-#soundPlayPause {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 11;
-}
-/* --------------------------- HEADER ---------------------------- */
-header {
-    position: fixed;
-    top : 0px;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
-    margin: 10px 0px 0px 0px;
-}
-header .header__leftContent {
-    display: flex;
-    flex-direction: row;
-    margin: 0px 0px 0px 25px;
-}
-header .leftContent__logo {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .logo__img {
-    width: 35px;
-    height: 35px;
-}
-header .logo__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .header__rightContent {
-    width: 60px;
-    height: 60px;
-    margin: 0px 25px 0px 0px;
-    position: relative;
-}
-header .rightContent__linkContact {
-    width: 100%;
-    height: 100%;
-}
-header .linkContact__link {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .linkContact__link .link__text {
+.video__homeLoop {
     position: absolute;
     visibility: visible;
-    opacity: 1;
-    font-family: Gilroy-Bold;
-    font-weight: 900;
-    font-size: 1.2rem;
-    z-index: 1;
-    transition: 0.6s;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transition-delay : 0s;
+    margin: 60px 0px 0px 0px;
+    will-change: visibility, opacity, z-index, transform;
 }
-header .linkContact__link .link__close {
+.video__homeToContact {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    z-index: 1;
-    transform: scaleY(0);
-    transition: 0.6s;
-    width: 30px;
-    height: 30px;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(0%, 0%) scale(0.95);
+    will-change: visibility, opacity, z-index, transform;
 }
-header .leftContent__sound {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.video__contactLoop {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(-70%, 0%);
+    will-change: visibility, opacity, z-index, transform;
 }
-header .sound__icon {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 10;
+.video__contactToHome {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(-70%, 0%) scale(1.0);
+    will-change: visibility, opacity, z-index, transform;
 }
-header .sound__icon .icSound {
-    stroke: #CCC;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-    transform: rotate(-90deg);
-}
-@keyframes musicBar1 {
-    0% {
-        transform: scaleX(0.8);
-    }
-    25% {
-        transform: scaleX(0.9);
-    }
-    50% {
-        transform: scaleX(1.0);
-    }
-    75% {
-        transform: scaleX(0.9);
-    }
-    100% {
-        transform: scaleX(0.8);
-    }
-}
-@keyframes musicBar2 {
-    0% {
-        transform: scaleX(0.7);
-    }
-    25% {
-        transform: scaleX(0.8);
-    }
-    50% {
-        transform: scaleX(0.9);
-    }
-    75% {
-        transform: scaleX(0.8);
-    }
-    100% {
-        transform: scaleX(0.7);
-    }
-}
-/* MAIN WRAP */
-.wrapContent {
+/* ---------------------- MAIN WEB ---------------------- */
+.mainWeb {
     position: fixed;
-    top : 0;
-    left : 0;
-    right : 0;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     height: 100vh;
     z-index: 9;
-    overflow: hidden;
 }
-/* -------------------------- HOME -------------------------- */
-.home {
-    position: absolute;
-    visibility: visible;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    transition: 0.6s;
-    overflow-y : auto;
-    overflow-x: hidden;
-    padding: 70px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-.home .home__listContent {
-    width: 250px;
-}
-.home .content__item {
-    font-family: Gilroy-Light;
-    font-size: 1.25rem;
-    font-weight: 900;
-    line-height: 30px;
-    position: relative;
-    z-index: 9;
-}
-/* --------------------------- CONTACT ---------------------------- */
-#showHideContact {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2;
-}
-.contact {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.6s;
-    overflow: hidden;
-    padding: 0px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.contact .listContent__title {
-    margin: 0px 0px 30px 0px;
-}
-.contact .title__text {
-    font-size: 2.2rem;
-    font-family: Gilroy-Bold;
-    text-transform: uppercase;
-}
-.contact .listContent__item {
-    margin: 0px 0px 25px 0px;
-}
-.contact .item__label {
-    font-size: 1.2rem;
-    margin: 0px 0px 10px 0px;
-}
-.contact .item__text {
-    font-size: 1.6rem;
-    font-family: Gilroy-Bold;
-}
-.contact .item__listLink {
-    margin: 20px 0px 0px 0px;
-    display: flex;
-    flex-direction: row;
-}
-.contact .listLink__item {
-    width: 35px;
-    height: 35px;
-    background-color: rgba(0,0,0,0.08);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 10px 0px 0px;
-    transition: 0.6s;
-}
-.contact .listLink__item:last-child {
-    margin: 0px;
-}
-.contact .item__img {
-    width: 20px;
-    height: 20px;
-}
-.contact .listLink__item:hover {
-    background-color: rgba(242,218,135,0.75);
-    transition: 0.6s;
-}
+/* ---------------------- MAIN WEB > HOME */

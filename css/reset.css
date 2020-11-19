@@ -51,32 +51,7 @@ a:hover, a:focus {
 input[type=checkbox] {
   margin: 0px;
 }
-/* ------------------------------ CUSTOM CSS -------------------------- */
-html, body {
-  font-size: 14px !important;
-  overflow: hidden;
-  font-weight: 900;
+.text {
   font-family: Gilroy-Light;
-  cursor: none !important;
-}
-:hover {
-  cursor: none !important;
-}
-:focus {
-  cursor: none !important;
-}
-::-webkit-scrollbar {
-  width: 10px;
-  opacity: 1;
-  transition: 0.4s;
-}
-::-webkit-scrollbar:hover {
-  opacity: 1;
-  transition: 0.4s;
-}
-::-webkit-scrollbar-track {
-  background: #C5C7CD;
-}
-::-webkit-scrollbar-thumb {
-  background: #161F38;
+  font-size: 1.5rem;
 }

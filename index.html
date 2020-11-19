@@ -12,116 +12,38 @@
 </head>
 
 <body>
-    <div id="main">
-        <div class="fullContent">
-            <header>
-                <div class="header__leftContent">
-                    <div class="leftContent__logo">
-                        <div class="logo__link">
-                            <img class="logo__img" src="images/logo/logo.png" />
-                        </div>
-                    </div>
-                    <div class="leftContent__sound">
-                        <input type="checkbox" id="soundPlayPause" />
-                        <audio loop src="audio/Magical-Piano.mp3" id="bgMusic"></audio>
-                        <div class="sound__icon">
-                            <svg width="30" height="30" class="icSound">
-                                <line x1="3" y1="3" x2="12" y2="3" class="icon__ani2"></line>
-                                <line x1="3" y1="8" x2="16" y2="8" class="icon__ani1"></line>
-                                <line x1="3" y1="13" x2="14" y2="13" class="icon__ani2"></line>
-                                <line x1="3" y1="18" x2="20" y2="18" class="icon__ani2"></line>
-                                <line x1="3" y1="23" x2="16" y2="23" class="icon__ani1"></line>
-                                <line x1="3" y1="28" x2="13" y2="28" class="icon__ani2"></line>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="header__rightContent">
-                    <div class="rightContent__linkContact">
-                        <input type="checkbox" id="showHideContact" />
-                        <div class="linkContact__link">
-                            <div class="link__text">say hi.</div>
-                            <img class="link__close" src="images/icons/icClosePage.png" />
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <div class="wrapContent">
-                <div class="home">
-                    <div class="home__videoMobile">
-                        <video class="videoMobile__homeLoop" id="vdHomeLoopMobile" src="video/home-loop.mp4" autoplay="autoplay" muted="muted" loop="loop">
-                        </video>
-                    </div>
-                    <div class="home__listContent">
-                        <p class="content__item" id="introChange">I'm Thuan Vo, a guy who loves designing frontend, writing</p>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact__listContent">
-                        <div class="listContent__title">
-                            <p class="title__text">Contact for work</p>
-                        </div>
-                        <div class="listContent__item">
-                            <p class="item__label">email</p>
-                            <p class="item__text">votienthuan97@gmail.com</p>
-                        </div>
-                        <div class="listContent__item">
-                            <p class="item__label">phone numbers</p>
-                            <p class="item__text">(+84) 0398637036</p>
-                        </div>
-                        <div class="listContent__item">
-                            <p class="item__label">social network</p>
-                            <div class="item__listLink">
-                                <a href="https://www.facebook.com/votienthuan97" target="blank" class="listLink__item">
-                                    <img class="item__img" src="images/icons/icFacebook.png" />
-                                </a>
-                                <a href="https://www.instagram.com/vtt71197/" target="blank" class="listLink__item">
-                                    <img class="item__img" src="images/icons/icInstagram.png" />
-                                </a>
-                                <a href="https://github.com/votienthuan97/" target="blank" class="listLink__item"> 
-                                    <img class="item__img" src="images/icons/icGitHub.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="root">
+        <div id="fullWeb">
+            <div class="headerWeb"></div>
+            <div class="mainWeb"></div>
+            <div class="footerWeb"></div>
             <div class="cursor">
                 <div class="cursor__wrap">
                     <div class="cursor__point">
                         <div class="point__default"></div>
-                        <div class="point__hand"></div>
-                        <div class="point__music"></div>
-                        <div class="point__close"></div>
                     </div>
                     <div class="cursor__border">
-                        <div class="border__oval">
-                            <div class="oval__textHand">don't be shy ^^</div>
-                            <div class="oval__textMusic">turn on/off music</div>
-                        </div>
+                        <div class="border__oval"></div>
                     </div>
                 </div>
             </div>
             <div class="video">
-                <div class="video__homeLoopVideo">
-                    <video class="homeLoopVideo__bg" id="vdHomeLoop" autoplay muted loop>
-                        <source src="video/home-loop.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video__homeToContactVideo">
-                    <video class="homeToContactVideo__bg" id="vdHomeToContact" muted>
-                        <source src="video/home-contact.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video__contactLoopVideo">
-                    <video class="contactLoopVideo__bg" id="vdContactLoop" muted loop>
-                        <source src="video/contact-loop.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video__contacToHomeVideo">
-                    <video class="contacToHomeVideo__bg" id="vdContactToHome" muted>
-                        <source src="video/contact-to-home.mp4" type="video/mp4">
-                    </video>
+                <div class="video">
+                    <div class="video__intro">
+                        <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted playsInline />
+                    </div>
+                    <div class="video__homeLoop">
+                        <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop playsInline autoPlay  />
+                    </div>
+                    <div class="video__homeToContact">
+                        <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted playsInline />
+                    </div>
+                    <div class="video__contactLoop">
+                        <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop playsInline />
+                    </div>
+                    <div class="video__contactToHome">
+                        <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted playsInline />
+                    </div>
                 </div>
             </div>
         </div>
