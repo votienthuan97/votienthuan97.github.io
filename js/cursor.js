@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 $(document).ready(function () {
     // DISABLE HIGHTLIGHT TEXT 
     document.onselectstart = new Function ("return false");
