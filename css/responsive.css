@@ -53,11 +53,11 @@
         display: none;
     }
     .home .home__listContent {
-        align-items: flex-start;
+        align-items: flex-end;
         max-width: 100%;
         min-width: 100%;
         justify-content: center;
-        margin: 90px 0px 0px 0px;
+        margin: 0px 0px 100px 0px;
     }
     .home .content__item {
         text-align: center;
