@@ -34,16 +34,30 @@ $(document).ready(function () {
     const videoContactLoop = document.getElementById("vdContactLoop");
     const videoContactToHome = document.getElementById("vdContactToHome");
     const videoHomeToProject = document.getElementById("vdHomeToProject");
+    const videoProjectLoop = document.getElementById("vdProjectLoop");
+    const videoProjectToHome = document.getElementById("vdProjectToHome");
     // INTRO > HOME
-    setTimeout(() => {
-        changeStyleCSS('.video__homeLoop' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
-        changeStyleCSS('.video__intro' , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
-        changeStyleCSS('.home' , {visibility : 'visible', opacity : 1});
-        changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
-        changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
-        showPage('#pageHome');
-        videoHomeLoop.play();
-    }, 4400);
+    if($(window).width() > '1200') {
+        setTimeout(() => {
+            changeStyleCSS('.video__homeLoop' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
+            changeStyleCSS('.video__intro' , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
+            changeStyleCSS('.home' , {visibility : 'visible', opacity : 1});
+            changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            showPage('#pageHome');
+            videoHomeLoop.play();
+        }, 4500);
+    }
+    else {
+        setTimeout(() => {
+            changeStyleCSS('.video__homeLoop' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
+            changeStyleCSS('.home' , {visibility : 'visible', opacity : 1});
+            changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            showPage('#pageHome');
+            videoHomeLoop.play();
+        }, 1500);
+    }
     // X PAGE TO HOME
     $(".logo__img").click(function() {
         showPage('#pageHome');
@@ -61,7 +75,7 @@ $(document).ready(function () {
                 changeStyleCSS(".video__contactToHome" , {transform: 'translate(0%, 0%) scale(0.95)', transition : '0.8s'});
             }, 200);
             setTimeout(function() {
-                changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
+                changeStyleCSS('.headerWeb' , {transform: 'translateY(30px)'});
                 changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
                 changeStyleCSS(".video__homeLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1});
                 changeStyleCSS(".video__contactToHome" , {visibility : 'hidden',  opacity : 0 , 'z-index' : 0 });
@@ -97,14 +111,13 @@ $(document).ready(function () {
             changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
             videoHomeToContact.play();
             setTimeout(function() {
-                changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
+                changeStyleCSS('.headerWeb' , {transform: 'translateY(-30px)'});
                 changeStyleCSS('.contact__text' , {visibility : 'hidden', opacity : 0});
                 changeStyleCSS(".video__homeToContact" , { transform: 'translate(-70%, 0%)', transition : '0.8s' });
             }, 1200); 
             setTimeout(function() {
                 changeStyleCSS(".video__homeToContact" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(0.95)', transition : '0s' });
                 changeStyleCSS(".video__contactLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
-                videoHomeToContact.load();
                 videoContactLoop.play();
                 videoContactToHome.load();
                 changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
@@ -131,10 +144,24 @@ $(document).ready(function () {
             changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
             videoHomeToProject.play();
             setTimeout(function() {
-                changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
+                changeStyleCSS(".video__homeToProject" , { transform: 'translate(-100%, 0%) scale(1.0)', transition : '1s' });
+            }, 1000);
+            setTimeout(function() {
+                changeStyleCSS('.headerWeb' , {transform: 'translateY(-30px)'});
                 changeStyleCSS('.project__text' , {visibility : 'hidden', opacity : 0});
-            }, 1200); 
-            // changeStyleCSS(".video__homeToContact" , { transform: 'translate(-70%, 0%)', transition : '0.8s' });
+            }, 1200);
+            setTimeout(function() {
+                videoProjectLoop.load();
+                videoProjectLoop.play();
+            }, 2100);
+            setTimeout(function() {
+                changeStyleCSS(".video__homeToProject" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(1.25)', transition : '0s' });
+                changeStyleCSS(".video__projectLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
+                videoHomeToProject.load();
+                videoProjectToHome.load();
+                changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+                changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            }, 2200);
         } 
         else if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');

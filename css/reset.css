@@ -55,3 +55,7 @@ input[type=checkbox] {
   font-family: Gilroy-Light;
   font-size: 1.5rem;
 }
+video {
+  outline: none;
+  box-shadow: none;
+}

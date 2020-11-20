@@ -1,8 +1,8 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  
+    video{ -webkit-filter: brightness(102%); }
 }
 @media screen and (max-width: 1024px) {
-  
+    
 }
 /* IPAD PRO + IPAD XOAY NGANG */
 @media screen and (min-width: 993px) and (max-width: 1267px) {
@@ -30,7 +30,28 @@
 }
 /* IP 6/8 PLUS TRỞ XUỐNG */
 @media screen and (max-width: 640px) {
-  
+    .cursor {
+        display: none;
+    }
+    .headerWeb {
+        padding: 0px 15px;
+    }
+    .footerWeb {
+        padding: 0px 15px;
+    }
+    #vdHomeLoop {
+        width: 350px;
+        height: 350px;
+    }
+    #vdIntro,
+    #vdHomeToContact,
+    #vdContactLoop,
+    #vdContactToHome,
+    #vdHomeToProject,
+    #vdProjectLoop,
+    #vdProjectToHome {
+        display: none;
+    }
 }
 /* IP 5 XOAY NGANG */
 @media screen and (min-width: 568px) {
