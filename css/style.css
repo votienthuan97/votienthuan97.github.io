@@ -140,7 +140,10 @@ html, body {
 #vdHomeLoop,
 #vdHomeToContact,
 #vdContactLoop,
-#vdContactToHome {
+#vdContactToHome,
+#vdHomeToProject,
+#vdProjectLoop,
+#vdProjectToHome {
     width: 550px;
     height: 550px;
 }
@@ -183,6 +186,33 @@ html, body {
     will-change: visibility, opacity, z-index, transform;
 }
 .video__contactToHome {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(-70%, 0%) scale(1.0);
+    will-change: visibility, opacity, z-index, transform;
+}
+.video__homeToProject {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(-25%, 0%) scale(0.95);
+    will-change: visibility, opacity, z-index, transform;
+}
+.video__projectLoop {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: 0s;
+    transform: translate(-70%, 0%);
+    will-change: visibility, opacity, z-index, transform;
+}
+.video__projectToHome {
     position: absolute;
     visibility: hidden;
     opacity: 0;

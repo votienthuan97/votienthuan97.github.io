@@ -33,6 +33,7 @@ $(document).ready(function () {
     const videoHomeToContact = document.getElementById("vdHomeToContact");
     const videoContactLoop = document.getElementById("vdContactLoop");
     const videoContactToHome = document.getElementById("vdContactToHome");
+    const videoHomeToProject = document.getElementById("vdHomeToProject");
     // INTRO > HOME
     setTimeout(() => {
         changeStyleCSS('.video__homeLoop' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
@@ -46,6 +47,9 @@ $(document).ready(function () {
     // X PAGE TO HOME
     $(".logo__img").click(function() {
         showPage('#pageHome');
+        setTimeout(function() {
+            changeStyleCSS(".home" , {visibility : 'visible', opacity : 1});
+        }, 2700);
         if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
             changeStyleCSS(".video__contactLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0 });
@@ -86,6 +90,7 @@ $(document).ready(function () {
         showPage('#pageContact');
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
+            changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
             changeStyleCSS(".video__homeLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
             changeStyleCSS(".video__homeToContact" , { visibility : 'visible', opacity : 1, 'z-index' : 1 });
             changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
@@ -118,6 +123,18 @@ $(document).ready(function () {
         showPage('#pageProject');
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
+            hiddenPage('#pageHome');
+            changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
+            changeStyleCSS(".video__homeLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
+            changeStyleCSS(".video__homeToProject" , { visibility : 'visible', opacity : 1, 'z-index' : 1 });
+            changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
+            changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
+            videoHomeToProject.play();
+            setTimeout(function() {
+                changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
+                changeStyleCSS('.project__text' , {visibility : 'hidden', opacity : 0});
+            }, 1200); 
+            // changeStyleCSS(".video__homeToContact" , { transform: 'translate(-70%, 0%)', transition : '0.8s' });
         } 
         else if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
