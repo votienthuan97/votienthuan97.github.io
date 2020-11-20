@@ -56,7 +56,7 @@ $(document).ready(function () {
             changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
             showPage('#pageHome');
             videoHomeLoop.play();
-        }, 1500);
+        }, 2000);
     }
     // X PAGE TO HOME
     $(".logo__img").click(function() {
