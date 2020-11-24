@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // 
+    // PERCENT LOADING PAGE
     $('.backgroundIntro__percent[data-percent]').each(function () {
         var progress = $(this);
         var percentage = Math.ceil($(this).attr('data-percent'));
