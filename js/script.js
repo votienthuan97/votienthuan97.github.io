@@ -6,7 +6,7 @@ $(document).ready(function () {
         var progress = $(this);
         var percentage = Math.ceil($(this).attr('data-percent'));
         $({countNum: 1}).animate({countNum: percentage}, {
-          duration: 2500,
+          duration: 3000,
           easing:'linear',
           step: function() {
             var pct = Math.floor(this.countNum) + ' %';
@@ -57,7 +57,7 @@ $(document).ready(function () {
         changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
         videoIntro.play();
         videoHomeLoop.load();
-    }, 2500);
+    }, 3000);
     // INTRO > HOME
     if($(window).width() > '1200') {
         setTimeout(() => {
