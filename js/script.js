@@ -172,9 +172,11 @@ $(document).ready(function () {
                 videoProjectLoop.load();
             }, 1200);
             setTimeout(function() {
+                videoProjectLoop.play();
+            }, 2150);
+            setTimeout(function() {
                 changeStyleCSS(".video__homeToProject" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(1.25)', transition : '0s' });
                 changeStyleCSS(".video__projectLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
-                videoProjectLoop.play();
                 videoHomeToProject.load();
                 videoProjectToHome.load();
                 changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
