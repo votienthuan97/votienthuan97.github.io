@@ -1,4 +1,12 @@
 $(document).ready(function () {
+   // GET TIME LOADING ALL WEB
+    var beforeload = (new Date()).getTime();
+    function getPageLoadTime() {
+        var afterload = (new Date()).getTime();
+        seconds = (afterload - beforeload) / 100;
+        $("#load_time").text('Load mất ' + seconds + ' giây');
+    }
+    window.onload = getPageLoadTime;
     // PERCENT LOADING PAGE
     $('.backgroundIntro__percent[data-percent]').each(function () {
         var progress = $(this);
