@@ -169,14 +169,12 @@ $(document).ready(function () {
             setTimeout(function() {
                 changeStyleCSS('.headerWeb' , {transform: 'translateY(-30px)'});
                 changeStyleCSS('.project__text' , {visibility : 'hidden', opacity : 0});
-            }, 1200);
-            setTimeout(function() {
                 videoProjectLoop.load();
-                videoProjectLoop.play();
-            }, 2100);
+            }, 1200);
             setTimeout(function() {
                 changeStyleCSS(".video__homeToProject" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(1.25)', transition : '0s' });
                 changeStyleCSS(".video__projectLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
+                videoProjectLoop.play();
                 videoHomeToProject.load();
                 videoProjectToHome.load();
                 changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
