@@ -57,7 +57,7 @@ $(document).ready(function () {
         videoHomeLoop.load();
     }, );
     // LOADING > INTRO
-    setTimeout(() => {
+    setInterval(() => {
         changeStyleCSS('.point__backgroundIntro' , {transform : 'scale(0)'});
         changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
         videoIntro.play();
