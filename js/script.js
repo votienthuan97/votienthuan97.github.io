@@ -1,6 +1,6 @@
 $(document).ready(function () {
    // GET TIME LOADING ALL WEB
-    window.onload = getPageLoadTime();
+  
     // PERCENT LOADING PAGE
     $('.backgroundIntro__percent[data-percent]').each(function () {
         var progress = $(this);
@@ -220,10 +220,4 @@ function showPage (elm) {
 }
 function hiddenPage (elm) {
     $(elm).prop('checked', false);
-}
-function getPageLoadTime() {
-    var afterload = (new Date()).getTime();
-    var beforeload = (new Date()).getTime();
-    seconds = (afterload - beforeload);
-    $("#load_time").text('Load mất ' + seconds + ' giây');
 }
