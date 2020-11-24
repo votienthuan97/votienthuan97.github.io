@@ -3,7 +3,7 @@ $(document).ready(function () {
     var beforeload = (new Date()).getTime();
     function getPageLoadTime() {
         var afterload = (new Date()).getTime();
-        seconds = (afterload - beforeload) / 100;
+        seconds = (afterload - beforeload) / 1000;
         $("#load_time").text('Load mất ' + seconds + ' giây');
     }
     window.onload = getPageLoadTime;
