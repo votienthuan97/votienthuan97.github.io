@@ -74,6 +74,17 @@ html, body {
     opacity: 1;
     position: relative;
 }
+.cursor .point__backgroundIntro {
+    width: 1000px;
+    height: 1000px;
+    background-color: #F2DA87;
+    visibility: visible;
+    border-radius: 100%;
+    opacity: 1;
+    position: absolute;
+    transform: scale(3.0);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 /* ---------------------- CURSOR BORDER */
 .cursor .cursor__border {
     width: 100%;

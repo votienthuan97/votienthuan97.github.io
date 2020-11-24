@@ -23,12 +23,12 @@ $(document).ready(function () {
         changeStyleCSS('.cursor' , {opacity : 1});
         changeStyleCSS('.border__oval' , {border : '2px solid #EEE'});
         changeStyleCSS('.border__loading' , {visibility : 'visible'});
-    }, 500);
+    }, 0);
      // SET TIME SHOW LOADING CURSOR HOME
     setInterval(() => {
         changeStyleCSS('.border__oval' , {border : '2px solid #F2DA87'});
         changeStyleCSS('.border__loading' , {visibility : 'hidden'});
-    }, 4200);
+    }, 6500);
 });
 // SET POSITION CURSOR
 function setPosition(cursor, position) {

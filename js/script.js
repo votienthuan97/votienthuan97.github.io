@@ -1,6 +1,5 @@
 $(document).ready(function () {
     // INTRO TEXT CHANGE
-    // CHANGE TEXT
     setTimeout(() => {
     (function(){
         var words = [
@@ -29,6 +28,7 @@ $(document).ready(function () {
             btnPlayPause.pause();
         }
     });
+    const videoIntro = document.getElementById("vdIntro");
     const videoHomeLoop = document.getElementById("vdHomeLoop");
     const videoHomeToContact = document.getElementById("vdHomeToContact");
     const videoContactLoop = document.getElementById("vdContactLoop");
@@ -36,6 +36,11 @@ $(document).ready(function () {
     const videoHomeToProject = document.getElementById("vdHomeToProject");
     const videoProjectLoop = document.getElementById("vdProjectLoop");
     const videoProjectToHome = document.getElementById("vdProjectToHome");
+    // LOADING > INTRO
+    setTimeout(() => {
+        changeStyleCSS('.point__backgroundIntro' , {transform : 'scale(0)'});
+        videoIntro.play();
+    }, 2000);
     // INTRO > HOME
     if($(window).width() > '1200') {
         setTimeout(() => {
@@ -44,9 +49,10 @@ $(document).ready(function () {
             changeStyleCSS('.home' , {visibility : 'visible', opacity : 1});
             changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
             changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+            changeStyleCSS('.point__backgroundIntro' , {visibility : 'hidden', opacity : 0});
             showPage('#pageHome');
             videoHomeLoop.play();
-        }, 4500);
+        }, 6250);
     }
     else {
         setTimeout(() => {
@@ -56,7 +62,7 @@ $(document).ready(function () {
             changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
             showPage('#pageHome');
             videoHomeLoop.play();
-        }, 2000);
+        }, 1000);
     }
     // X PAGE TO HOME
     $(".logo__img").click(function() {
@@ -73,6 +79,7 @@ $(document).ready(function () {
             changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
             setTimeout(function() {
                 changeStyleCSS(".video__contactToHome" , {transform: 'translate(0%, 0%) scale(0.95)', transition : '0.8s'});
+                videoHomeLoop.load();
             }, 200);
             setTimeout(function() {
                 changeStyleCSS('.headerWeb' , {transform: 'translateY(30px)'});
@@ -80,7 +87,6 @@ $(document).ready(function () {
                 changeStyleCSS(".video__homeLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1});
                 changeStyleCSS(".video__contactToHome" , {visibility : 'hidden',  opacity : 0 , 'z-index' : 0 });
                 videoContactLoop.load();
-                videoHomeLoop.load();
                 videoHomeLoop.play();
             }, 1900);
             setTimeout(function() {
@@ -135,7 +141,6 @@ $(document).ready(function () {
     $(".project__text").click(function() {
         showPage('#pageProject');
         if($('#pageHome').prop("checked") == true) {
-            hiddenPage('#pageHome');
             hiddenPage('#pageHome');
             changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
             changeStyleCSS(".video__homeLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
