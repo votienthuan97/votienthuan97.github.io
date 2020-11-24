@@ -6,7 +6,7 @@ $(document).ready(function () {
         var progress = $(this);
         var percentage = Math.ceil($(this).attr('data-percent'));
         $({countNum: 1}).animate({countNum: percentage}, {
-          duration: 3000,
+          duration: 4000,
           easing:'linear',
           step: function() {
             var pct = Math.floor(this.countNum) + ' %';
@@ -51,13 +51,17 @@ $(document).ready(function () {
     const videoHomeToProject = document.getElementById("vdHomeToProject");
     const videoProjectLoop = document.getElementById("vdProjectLoop");
     const videoProjectToHome = document.getElementById("vdProjectToHome");
+    // LOAD INTRO
+    setTimeout(() => {
+        videoIntro.load();
+        videoHomeLoop.load();
+    }, );
     // LOADING > INTRO
     setTimeout(() => {
         changeStyleCSS('.point__backgroundIntro' , {transform : 'scale(0)'});
         changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
         videoIntro.play();
-        videoHomeLoop.load();
-    }, 3000);
+    }, 4000);
     // INTRO > HOME
     if($(window).width() > '1200') {
         setTimeout(() => {
@@ -69,7 +73,7 @@ $(document).ready(function () {
             changeStyleCSS('.point__backgroundIntro' , {visibility : 'hidden', opacity : 0});
             showPage('#pageHome');
             videoHomeLoop.play();
-        }, 6800);
+        }, 8250);
     }
     else {
         setTimeout(() => {
