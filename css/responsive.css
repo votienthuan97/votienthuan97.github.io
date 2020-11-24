@@ -34,10 +34,12 @@
         display: none;
     }
     .headerWeb {
-        padding: 0px 15px;
+        padding: 0px 20px;
+        align-items: center;
     }
     .footerWeb {
-        padding: 0px 15px;
+        padding: 0px 20px;
+        align-items: flex-end;
     }
     #vdHomeLoop {
         width: 300px;
@@ -65,9 +67,6 @@
         text-align: center;
         margin: 0px 0px 120px 0px;
     }
-    .headerWeb {
-        align-items: center;
-    }
     .headerWeb .headerWeb__contentLeft {
         justify-content: flex-start;
     }
@@ -78,14 +77,12 @@
     .headerWeb .contentRight__contact {
         justify-content: flex-end;
     }
-    .footerWeb {
-        align-items: flex-end;
-    }
+  
     .footerWeb .footerWeb__contentLeft {
-        justify-content: center;
+        justify-content: flex-start;
     }
     .footerWeb .footerWeb__contentRight {
-        justify-content: center;
+        justify-content: flex-end;
     }
 }
 /* IP 5 XOAY NGANG */

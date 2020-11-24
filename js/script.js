@@ -1,6 +1,4 @@
 $(document).ready(function () {
-   // GET TIME LOADING ALL WEB
-  
     // PERCENT LOADING PAGE
     $('.backgroundIntro__percent[data-percent]').each(function () {
         var progress = $(this);
@@ -55,11 +53,12 @@ $(document).ready(function () {
     setTimeout(() => {
         videoIntro.load();
         videoHomeLoop.load();
-    }, );
+    }, 0);
     // LOADING > INTRO
-    setInterval(() => {
+    setTimeout(() => {
         changeStyleCSS('.point__backgroundIntro' , {transform : 'scale(0)'});
         changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
+        changeStyleCSS('.video__intro' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
         videoIntro.play();
     }, 4000);
     // INTRO > HOME
@@ -78,6 +77,7 @@ $(document).ready(function () {
     else {
         setTimeout(() => {
             changeStyleCSS('.video__homeLoop' , {visibility : 'visible', opacity : 1, 'z-index' : 1});
+            changeStyleCSS('.video__intro' , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
             changeStyleCSS('.home' , {visibility : 'visible', opacity : 1});
             changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
             changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
@@ -93,6 +93,7 @@ $(document).ready(function () {
         }, 2700);
         if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
+            changeStyleCSS(".contact" , {visibility : 'hidden', opacity : 0});
             changeStyleCSS(".video__contactLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0 });
             changeStyleCSS(".video__contactToHome" , {visibility : 'visible',  opacity : 1 , 'z-index' : 1});
             videoContactToHome.play();
@@ -121,6 +122,29 @@ $(document).ready(function () {
         }
         else if($('#pageProject').prop("checked") == true) {
             hiddenPage('#pageProject');
+            changeStyleCSS(".project" , {visibility : 'hidden', opacity : 0});
+            changeStyleCSS(".video__projectLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0 });
+            changeStyleCSS(".video__projectToHome" , {visibility : 'visible',  opacity : 1 , 'z-index' : 1, });
+            changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
+            changeStyleCSS('.footerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(30px)'});
+            videoProjectToHome.play();
+            setTimeout(function() {
+                changeStyleCSS(".video__projectToHome" , { transform: 'translate(-25.5%, -0.7%) scale(1.22)' , transition : '1s'});
+                videoHomeLoop.load();
+            }, 500);
+            setTimeout(function() {
+                changeStyleCSS(".video__homeLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1});
+                changeStyleCSS(".video__projectToHome" , {visibility : 'hidden',  opacity : 0 , 'z-index' : 0 });
+                videoHomeLoop.play();
+            }, 2050);
+            setTimeout(function() {
+                changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+                changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+                changeStyleCSS('.project__text' , {visibility : 'visible', opacity : 1});
+            }, 2600);
+            setTimeout(function() {
+                changeStyleCSS(".video__projectToHome" , { transform: 'translate(-100%, 0.75%) scale(1.0)' , transition : '0s'});
+            }, 3000);
         }
         else if($('#pageStory').prop("checked") == true) {
             hiddenPage('#pageStory');
@@ -143,13 +167,14 @@ $(document).ready(function () {
                 changeStyleCSS(".video__homeToContact" , { transform: 'translate(-70%, 0%)', transition : '0.8s' });
             }, 1200); 
             setTimeout(function() {
+                changeStyleCSS(".contact" , {visibility : 'visible', opacity : 1});
                 changeStyleCSS(".video__homeToContact" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(0.95)', transition : '0s' });
                 changeStyleCSS(".video__contactLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
                 videoContactLoop.play();
                 videoContactToHome.load();
                 changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
                 changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
-            }, 2600);
+            }, 2500);
         } 
         else if($('#pageProject').prop("checked") == true) {
             hiddenPage('#pageProject');
@@ -164,6 +189,7 @@ $(document).ready(function () {
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
             changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
+            changeStyleCSS(".project" , {visibility : 'visible', opacity : 1});
             changeStyleCSS(".video__homeLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
             changeStyleCSS(".video__homeToProject" , { visibility : 'visible', opacity : 1, 'z-index' : 1 });
             changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
@@ -181,7 +207,7 @@ $(document).ready(function () {
                 videoProjectLoop.play();
             }, 2150);
             setTimeout(function() {
-                changeStyleCSS(".video__homeToProject" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(0%, 0%) scale(1.25)', transition : '0s' });
+                changeStyleCSS(".video__homeToProject" , {visibility : 'hidden', opacity : 0, 'z-index' : 0, transform: 'translate(-25%, 0%) scale(1.25)', transition : '0s' });
                 changeStyleCSS(".video__projectLoop" , {visibility : 'visible', opacity : 1, 'z-index' : 1 });
                 videoHomeToProject.load();
                 videoProjectToHome.load();

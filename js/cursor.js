@@ -28,7 +28,7 @@ $(document).ready(function () {
     setInterval(() => {
         changeStyleCSS('.border__oval' , {border : '2px solid #F2DA87'});
         changeStyleCSS('.border__loading' , {visibility : 'hidden'});
-    }, 6500);
+    }, 8500);
 });
 // SET POSITION CURSOR
 function setPosition(cursor, position) {
