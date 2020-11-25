@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Thuan Vo - Frontend Developer</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
@@ -36,7 +38,7 @@
                 <div class="headerWeb__contentRight">
                     <div class="contentRight__contact">
                         <input type="checkbox" id="pageContact" />
-                        <p class="contact__text">say hi.</p>
+                        <p class="contact__text">contact.</p>
                     </div>
                 </div>
             </div>
@@ -83,9 +85,100 @@
                 </div>
                 <div class="project">
                     <div class="container">
-                        <p>project nek</p>
+                        <div class="project__listContent">
+                            <div class="listContent__listSkill">
+                                <div class="listSkill__title">
+                                    <p class="title__text">Hard Skills</p>
+                                </div>
+                                <div class="listSkill__content">
+                                    <div class="content__item">
+                                        <p class="item__text">HTML5/CSS3</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">JavaScript</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">React Native</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">ReactJS</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">Responsive Design</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">PSD To HTML</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">Bootstrap</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">UX/UI Design</p>
+                                    </div>
+                                </div>
+                                <div class="listSkill__title">
+                                    <p class="title__text">Soft skills</p>
+                                </div>
+                                <div class="listSkill__content">
+                                    <div class="content__item">
+                                        <p class="item__text">Teamwork</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">Creativity</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">Willingness To Learn</p>
+                                    </div>
+                                    <div class="content__item">
+                                        <p class="item__text">Problem Solving</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listContent__listProject">
+                                <div class="listProject__title">
+                                    <p class="title__text">Project</p>
+                                </div>
+                                <div class="listProject__project">
+                                    <div class="project__item" data-toggle="modal" data-target="#project__ticketfy">
+                                        <div class="item__number">01.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">Ticketfy App</p>
+                                            <p class="infoProject__language">React Native</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/ticketfy/1.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project__item" data-toggle="modal" data-target="#project__fargoAUApp">
+                                        <div class="item__number">02.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">FargoAU App</p>
+                                            <p class="infoProject__language">React Native</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/fargo-app/1.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project__item" data-toggle="modal" data-target="#project__fargoAUApp">
+                                        <div class="item__number">02.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">FargoAU Web</p>
+                                            <p class="infoProject__language">HTML5/CSS3 , Javascript</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <video class="box__thumbnail" src="https://cdn.dribbble.com/users/2007356/screenshots/14637965/media/e5d2623721ea63ae2934856d553232be.mp4" muted loop playInside autoplay></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- <div class="story">
+                    <div class="container">
+                        <p>Page Story</p>
+                    </div>
+                </div> -->
             </div>
             <div class="footerWeb">
                 <div class="footerWeb__contentLeft">
@@ -97,7 +190,7 @@
                 <div class="footerWeb__contentRight">
                     <div class="contentRight__project">
                         <input type="checkbox" id="pageProject" />
-                        <p class="project__text">project.</p>
+                        <p class="project__text">experience.</p>
                     </div>
                 </div>
             </div>
@@ -145,11 +238,77 @@
                     <div class="boxTransparentAfter"></div>
                 </div>
             </div>
+            <div class="modalWeb">
+                <div class="listProjectModal">
+                    <div class="modal fade" role="dialog" id="project__ticketfy">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">Ticketfy App</p>
+                                       <p class="info__note">An application used to book movie tickets online built using react native</p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/ticketfy/1.png" />
+                                        </div>
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/ticketfy/2.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" role="dialog" id="project__fargoAUApp">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">FargoAU App</p>
+                                       <p class="info__note">A step count app that records your physical activities and converts them into coins.</p>
+                                       <p class="info__note">Download
+                                           <a class="note__link" href="https://play.google.com/store/apps/details?id=com.fargo" target="blank">Android</a>
+                                           <span> or</span>
+                                           <a class="note__link" href="https://apps.apple.com/vn/app/fargo-au/id1520603723" target="blank">IOS</a>
+                                       </p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/fargo-app/1.png" />
+                                        </div>
+                                        <div class="projectContent">
+                                            <video class="item__project" src="images/projects/fargo-app/1.mp4" muted loop playInside autoplay></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listStoryModal"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/cursor.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+

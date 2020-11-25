@@ -1,4 +1,15 @@
 $(document).ready(function () {
+     // SET SLICK TO MODAL
+    $('.modal').on('shown.bs.modal', function (e) {
+        $('.content__project').addClass('open');
+        $('.content__project').slick('setPosition');
+    })
+    // SLIDE PROJECT
+    $('.content__project').slick({
+		speed: 800,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
     // PERCENT LOADING PAGE
     $('.backgroundIntro__percent[data-percent]').each(function () {
         var progress = $(this);
@@ -91,6 +102,7 @@ $(document).ready(function () {
         setTimeout(function() {
             changeStyleCSS(".home" , {visibility : 'visible', opacity : 1});
         }, 2700);
+        // CONTACT TO HOME
         if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
             changeStyleCSS(".contact" , {visibility : 'hidden', opacity : 0});
@@ -120,6 +132,7 @@ $(document).ready(function () {
                 changeStyleCSS(".video__contactToHome" , { transform: 'translate(-70%, 0%) scale(1.0)' , transition : '0s'});
             }, 2700);
         }
+        // PROJECT TO HOME
         else if($('#pageProject').prop("checked") == true) {
             hiddenPage('#pageProject');
             changeStyleCSS(".project" , {visibility : 'hidden', opacity : 0});
@@ -146,6 +159,7 @@ $(document).ready(function () {
                 changeStyleCSS(".video__projectToHome" , { transform: 'translate(-100%, 0.75%) scale(1.0)' , transition : '0s'});
             }, 3000);
         }
+        // STORY TO HOME
         else if($('#pageStory').prop("checked") == true) {
             hiddenPage('#pageStory');
         }
@@ -153,6 +167,7 @@ $(document).ready(function () {
     // X PAGE TO CONTACT
     $(".contact__text").click(function() {
         showPage('#pageContact');
+        // HOME TO CONTACT
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
             changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
@@ -176,9 +191,11 @@ $(document).ready(function () {
                 changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
             }, 2500);
         } 
+        // PROJECT TO CONTACT
         else if($('#pageProject').prop("checked") == true) {
             hiddenPage('#pageProject');
         }
+        // STORY TO CONTACT
         else if($('#pageStory').prop("checked") == true) {
             hiddenPage('#pageStory');
         }
@@ -186,10 +203,10 @@ $(document).ready(function () {
     //  X PAGE TO PROJECT
     $(".project__text").click(function() {
         showPage('#pageProject');
+        // HOME TO PROJECT
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
             changeStyleCSS(".home" , {visibility : 'hidden', opacity : 0});
-            changeStyleCSS(".project" , {visibility : 'visible', opacity : 1});
             changeStyleCSS(".video__homeLoop" , {visibility : 'hidden', opacity : 0, 'z-index' : 0});
             changeStyleCSS(".video__homeToProject" , { visibility : 'visible', opacity : 1, 'z-index' : 1 });
             changeStyleCSS('.headerWeb' , {visibility : 'hidden', opacity : 0, transform: 'translateY(-30px)'});
@@ -213,11 +230,14 @@ $(document).ready(function () {
                 videoProjectToHome.load();
                 changeStyleCSS('.headerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
                 changeStyleCSS('.footerWeb' , {visibility : 'visible', opacity : 1, transform: 'translateY(0px)'});
+                changeStyleCSS(".project" , {visibility : 'visible', opacity : 1});
             }, 2200);
         } 
+        // CONTACT TO PROJECT
         else if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
         }
+        // STORY TO PROJECT
         else if($('#pageStory').prop("checked") == true) {
             hiddenPage('#pageStory');
         }
@@ -225,16 +245,20 @@ $(document).ready(function () {
     //  X PAGE TO STORY
     $(".story__text").click(function() {
         showPage('#pageStory');
+        // HOME TO STORY
         if($('#pageHome').prop("checked") == true) {
             hiddenPage('#pageHome');
         } 
+        // CONTACT TO STORY
         else if($('#pageContact').prop("checked") == true) {
             hiddenPage('#pageContact');
         }
+        // PROJECT TO STORY
         else if($('#pageProject').prop("checked") == true) {
             hiddenPage('#pageProject');
         }
     });
+    
 })
 function changeStyleCSS (elm , styles) {
     $(elm).css(styles);
