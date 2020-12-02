@@ -583,45 +583,9 @@ html, body {
     height: auto;
     margin: 80px 50px;
 }
-.project .listContent__listSkill {
-    width: 60%;
-}
-.project .listSkill__title {
-    margin: 0px 0px 15px 0px;
-}
-.project .title__text {
-    font-family: Gilroy-Bold;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-.project .listSkill__content {
-    display: flex;
-    flex-flow: wrap row;
-    margin: 0px 0px 15px 0px;
-}
-.project .content__item {
-    padding: 10px 15px;
-    background-color: #EEEFF2;
-    border-radius: 25px;
-    margin: 0px 7.5px 10px 0px;
-    transition: 0.6s ease-in-out;
-}
-.project .item__text {
-    font-family: Gilroy-Bold;
-    font-size: 0.9rem;
-    transition: 0.6s ease-in-out;
-}
-.project .content__item:hover {
-    background-color: #000;
-    transition: 0.6s ease-in-out;
-}
-.project .content__item:hover .item__text {
-    color : #FFF;
-    transition: 0.6s ease-in-out;
-}
 .project .listContent__listProject {
     width: 60%;
-    margin: 25px 0px 0px 0px;
+    margin: 0px 0px 100px 0px;
     position: relative;
 }
 .project .listProject__title {
@@ -662,8 +626,8 @@ html, body {
 .project .item__box {
     visibility: hidden;
     opacity: 0;
-    top : -200px;
-    left: -400px;
+    top : -100px;
+    left: -450px;
     width: 350px;
     height: 350px;
     position: absolute;
@@ -696,7 +660,7 @@ html, body {
 }
 .boxContentTool {
     position: sticky;
-    height: 30px;
+    height: 40px;
     width: 100%;
     top : 0px;
     background-color: #000;
@@ -707,8 +671,8 @@ html, body {
     padding: 0px 10px;
 }
 .boxContentTool .close__img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 .boxContentModal {
     background: #FFF;
@@ -733,8 +697,8 @@ html, body {
     font-family: Gilroy-Bold;
 }
 .boxContentModal .info__note {
-    color : #888;
     padding: 15px 0px 0px 0px;
+    line-height: 2rem;
 }
 .boxContentModal .note__link {
     font-family: Gilroy-Bold;
@@ -743,7 +707,7 @@ html, body {
     text-transform: uppercase;
 }
 .boxContentModal .boxContentModal__content {
-    width: 80%;
+    width: 75%;
 }
 .boxContentModal .item__project {
     width: 100%;
