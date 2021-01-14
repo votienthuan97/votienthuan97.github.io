@@ -11,24 +11,13 @@ $(document).ready(function () {
     document.onselectstart = new Function ("return false");
     // ONLY HIDDEN CURSOR
     document.documentElement.style.cursor = 'none';
-     // CUSTOM CURSOR POSITION
-     const cursorPoint = document.getElementsByClassName('cursor__point');
-     const cursorBorder = document.getElementsByClassName('cursor__border');
-     window.addEventListener('mousemove', (position) => {
-         setPosition(cursorPoint, position);
-         setPosition(cursorBorder, position);
-     });
-    // SET TIME SHOW CURSOR HOME
-    setTimeout(() => {
-        changeStyleCSS('.cursor' , {opacity : 1});
-        changeStyleCSS('.border__oval' , {border : '2px solid #EEE'});
-        changeStyleCSS('.border__loading' , {visibility : 'visible'});
-    }, 0);
-     // SET TIME SHOW LOADING CURSOR HOME
-    setInterval(() => {
-        changeStyleCSS('.border__oval' , {border : '2px solid #F2DA87'});
-        changeStyleCSS('.border__loading' , {visibility : 'hidden'});
-    }, 8500);
+    // CUSTOM CURSOR POSITION
+    const cursorPoint = document.getElementsByClassName('cursor__point');
+    const cursorBorder = document.getElementsByClassName('cursor__border');
+    window.addEventListener('mousemove', (position) => {
+        setPosition(cursorPoint, position);
+        setPosition(cursorBorder, position);
+    });
 });
 // SET POSITION CURSOR
 function setPosition(cursor, position) {

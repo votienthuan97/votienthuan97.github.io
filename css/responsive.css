@@ -1,96 +1,36 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     video{ -webkit-filter: brightness(102%); }
 }
-@media screen and (max-width: 1024px) {
-    
+/* LARGE SCREEN */
+@media screen and (min-width: 1824px) {
+    #vdHomeLoop {
+        width: 572px;
+        object-fit: cover;
+    }
 }
-/* IPAD PRO + IPAD XOAY NGANG */
-@media screen and (min-width: 993px) and (max-width: 1267px) {
-  
+/* NORMAL SCREEN */
+@media screen and (min-width: 1200px) {
+   
 }
-/* IPAD PRO */
-@media screen and (width: 1024px) {
-}
-/* DT PLUS XOAY NGANG */
-@media screen and (min-width: 769px) and (max-width: 992px) {
-}
-/* IPAD */
-@media screen and (width: 768px) {
-}
-/* IPAD TRỞ XUỐNG */
-@media screen and (max-width: 768px) {
-  
-}
-/* DT XOAY NGANG */
-@media screen and (min-width: 641px) and (max-width: 767px) {
-}
-/*SS XOAY NGANG */
-@media screen and (width: 640px) {
-  
-}
-/* IP 6/8 PLUS TRỞ XUỐNG */
-@media screen and (max-width: 640px) {
+/* MEDIUM SCREEN */
+@media screen and (max-width: 1200px) {
     .cursor {
         display: none;
     }
     .headerWeb {
-        padding: 0px 20px;
-        align-items: center;
+        padding: 0px 15px 0px 5px;
     }
     .footerWeb {
-        padding: 0px 20px;
-        align-items: flex-end;
+        padding: 0px 15px;
     }
-    #vdHomeLoop {
-        width: 300px;
-        height: 300px;
+    .headerWeb,
+    .headerWeb__left .left__home,
+    .headerWeb__left .home__logo,
+    .headerWeb__left .left__sound,
+    .headerWeb__right .right__contact,
+    .footerWeb, 
+    .footerWeb__left .left__story,
+    .footerWeb__right .right__project {
+        height: 60px;
     }
-    #vdIntro,
-    #vdHomeToContact,
-    #vdContactLoop,
-    #vdContactToHome,
-    #vdHomeToProject,
-    #vdProjectLoop,
-    #vdProjectToHome {
-        display: none;
-    }
-    .video__homeLoop {
-        margin: -60px 0px 0px 0px;
-    }
-    .home .home__listContent {
-        align-items: flex-end;
-        max-width: 100%;
-        min-width: 100%;
-        justify-content: center;
-    }
-    .home .content__item {
-        text-align: center;
-        margin: 0px 0px 120px 0px;
-    }
-    .headerWeb .headerWeb__contentLeft {
-        justify-content: flex-start;
-    }
-    .headerWeb .contentLeft__logo {
-        justify-content: flex-start;
-        width: 40px;
-    }
-    .headerWeb .contentRight__contact {
-        justify-content: flex-end;
-    }
-  
-    .footerWeb .footerWeb__contentLeft {
-        justify-content: flex-start;
-    }
-    .footerWeb .footerWeb__contentRight {
-        justify-content: flex-end;
-    }
-}
-/* IP 5 XOAY NGANG */
-@media screen and (min-width: 568px) {
-}
-/* SAMSUNG ĐỜI CŨ */
-@media screen and (max-width: 360px) {
-}
-/* IP 5 */
-@media screen and (max-width: 320px) {
 }

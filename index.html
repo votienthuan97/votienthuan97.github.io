@@ -17,129 +17,55 @@
     <div id="root">
         <div id="fullWeb">
             <div class="headerWeb">
-                <div class="headerWeb__contentLeft">
-                    <div class="contentLeft__logo">
-                        <input type="checkbox" id="pageHome" />
-                        <img class="logo__img" src="images/logo/logo.png" />
+                <div class="headerWeb__left">
+                    <div class="left__home">
+                        <input type="checkbox" id="homePage" class="checkPage" />
+                        <svg viewBox="0 0 440 100" class="home__logo">
+                            <text class="logo__text" x="60" y="175">t</text>
+                        </svg>
                     </div>
-                    <div class="contentLeft__sound">
-                        <input type="checkbox" id="soundPlayPause" />
-                        <audio loop src="audio/Magical-Piano.mp3" id="bgMusic"></audio>
-                        <div class="sound__soundBar">
-                            <div class="soundBar__item"></div>
-                            <div class="soundBar__item"></div>
-                            <div class="soundBar__item"></div>
-                            <div class="soundBar__item"></div>
-                            <div class="soundBar__item"></div>
-                            <div class="soundBar__item"></div>
-                        </div>
+                    <div class="left__sound">
+                        <input type="checkbox" class="sound__playPause" />
+                        <audio loop src="audio/Magical-Piano.mp3" id="sound__music"></audio>
+                        <svg viewBox="0 0 24 24" class="sound__soundBar" >
+                            <path d="M12 7L12 17" />
+                            <path d="M15 10L15 14" />
+                            <path d="M18 8L18 16" />
+                            <path d="M21 13L21 11" />
+                            <path d="M9 4L9 20" />
+                            <path d="M6 9L6 15" />
+                            <path d="M3 13L3 11" />
+                        </svg>
                     </div>
                 </div>
-                <div class="headerWeb__contentRight">
-                    <div class="contentRight__contact">
-                        <input type="checkbox" id="pageContact" />
-                        <p class="contact__text">contact.</p>
+                <div class="headerWeb__right">
+                    <div class="right__contact">
+                        <input type="checkbox" id="contactPage" class="checkPage" />
+                        <p class="contact__link">contact.</p>
                     </div>
                 </div>
             </div>
             <div class="mainWeb">
                 <div class="home">
-                    <div class="container">
-                        <div class="home__listContent">
-                            <p class="content__item" id="introChange">I'm Thuan Vo, a guy who loves designing frontend, writing and love cats</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact">
-                    <div class="container">
-                        <div class="contact__listContent">
-                            <div class="listContent__listItem">
-                                <div class="listItem__title">
-                                    <p class="title__text">Contact for work</p>
-                                </div>
-                                <div class="listItem__item">
-                                    <p class="item__label">email</p>
-                                    <p class="item__text">votienthuan97@gmail.com</p>
-                                </div>
-                                <div class="listItem__item">
-                                    <p class="item__label">phone numbers</p>
-                                    <p class="item__text">(+84) 0398637036</p>
-                                </div>
-                                <div class="listItem__item">
-                                    <p class="item__label">social network</p>
-                                    <div class="item__listLink">
-                                        <a href="https://www.facebook.com/votienthuan97" target="blank" class="listLink__item">
-                                            <img class="item__img" src="images/icons/icFacebook.png">
-                                        </a>
-                                        <a href="https://www.instagram.com/vtt71197/" target="blank" class="listLink__item">
-                                            <img class="item__img" src="images/icons/icInstagram.png">
-                                        </a>
-                                        <a href="https://github.com/votienthuan97/" target="blank" class="listLink__item"> 
-                                            <img class="item__img" src="images/icons/icGitHub.png">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="project">
-                    <div class="container">
-                        <div class="project__listContent">
-                            <div class="listContent__listProject">
-                                <div class="listProject__project">
-                                    <div class="project__item" data-toggle="modal" data-target="#project__ticketfy">
-                                        <div class="item__number">01.</div>
-                                        <div class="item__infoProject">
-                                            <p class="infoProject__name">Ticketfy App</p>
-                                            <p class="infoProject__language">React Native</p>
-                                        </div>
-                                        <div class="item__box">
-                                            <div class="box__thumbnail" style="background-image: url(images/projects/ticketfy/1.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="project__item" data-toggle="modal" data-target="#project__fargoAUApp">
-                                        <div class="item__number">02.</div>
-                                        <div class="item__infoProject">
-                                            <p class="infoProject__name">FargoAU App</p>
-                                            <p class="infoProject__language">React Native</p>
-                                        </div>
-                                        <div class="item__box">
-                                            <div class="box__thumbnail" style="background-image: url(images/projects/fargo-app/1.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="project__item" data-toggle="modal" data-target="#project__fargoAUApp">
-                                        <div class="item__number">03.</div>
-                                        <div class="item__infoProject">
-                                            <p class="infoProject__name">FargoAU Web</p>
-                                            <p class="infoProject__language">HTML5/CSS3 , Javascript</p>
-                                        </div>
-                                        <div class="item__box">
-                                            <video class="box__thumbnail" src="https://cdn.dribbble.com/users/2007356/screenshots/14637965/media/e5d2623721ea63ae2934856d553232be.mp4" muted loop playInside autoplay></video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <!-- <div class="story">
-                    <div class="container">
-                        <p>Page Story</p>
-                    </div>
-                </div> -->
+                <div class="story">
+                </div>
             </div>
             <div class="footerWeb">
-                <div class="footerWeb__contentLeft">
-                    <div class="contentLeft__story">
-                        <input type="checkbox" id="pageStory" />
-                        <p class="story__text">story.</p>
+                <div class="footerWeb__left">
+                    <div class="left__story">
+                        <input type="checkbox" id="storyPage" class="checkPage" />
+                        <p class="story__link">story.</p>
                     </div>
                 </div>
-                <div class="footerWeb__contentRight">
-                    <div class="contentRight__project">
-                        <input type="checkbox" id="pageProject" />
-                        <p class="project__text">project.</p>
+                <div class="footerWeb__right">
+                    <div class="right__project">
+                        <input type="checkbox" id="projectPage" class="checkPage" />
+                        <p class="project__link">project.</p>
                     </div>
                 </div>
             </div>
@@ -147,9 +73,6 @@
                 <div class="cursor__wrap">
                     <div class="cursor__point">
                         <div class="point__default"></div>
-                        <div class="point__backgroundIntro">
-                            <div class="backgroundIntro__percent" data-percent="100"></div>
-                        </div>
                     </div>
                     <div class="cursor__border">
                         <div class="border__oval"></div>
@@ -158,106 +81,16 @@
                 </div>
             </div>
             <div class="video">
-                <div class="video__intro">
-                    <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted playsInline></video>
-                </div>
                 <div class="video__homeLoop">
-                    <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop playsInline></video>
-                </div>
-                <div class="video__homeToContact">
-                    <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted playsInline></video>
-                </div>
-                <div class="video__contactLoop">
-                    <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop playsInline></video>
-                </div>
-                <div class="video__contactToHome">
-                    <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted playsInline></video>
-                </div>
-                <div class="video__homeToProject">
-                    <video id="vdHomeToProject" src="video/home-project.mp4" type="video/mp4" muted playsInline></video>
-                    <div class="boxTransparentBefore"></div>
-                    <div class="boxTransparentAfter"></div>
-                </div>
-                <div class="video__projectLoop">
-                    <video id="vdProjectLoop" src="video/project-loop.mp4" type="video/mp4" muted loop playsInline></video>
-                </div>
-                <div class="video__projectToHome">
-                    <video id="vdProjectToHome" src="video/project-home.mp4" type="video/mp4" muted playsInline></video>
-                    <div class="boxTransparentBefore"></div>
-                    <div class="boxTransparentAfter"></div>
-                </div>
-            </div>
-            <div class="modalWeb">
-                <div class="listProjectModal">
-                    <div class="modal fade" role="dialog" id="project__ticketfy">
-                        <div class="modal-dialog boxFullModal">
-                            <div class="boxContentTool">
-                                <div class="boxContentTool__close" data-dismiss="modal">
-                                    <img class="close__img" src="images/icons/icClose.png" />
-                                </div>
-                            </div>
-                            <div class="boxContentModal">
-                                <div class="boxContentModal__title">
-                                   <div class="title__info">
-                                       <p class="info__name">Ticketfy App</p>
-                                       <p class="info__note">Ticketfy là dự án demo về ý tưởng một ứng dụng đặt vé xem phim cho các phòng vé và các cụm rạp theo khu vực trong toàn quốc cho khách hàng. Khách hàng có thể xem trailer, xem thông tin, đặt vé cho bộ phim mình muốn xem và thanh toán trực tuyến thông qua thẻ ngân hàng được liên kết hoặc các ví điện tử như Momo, Airpay, ... Ngoài ra nó còn cung cấp một số tính năng chuyên nghiệp như : chọn chỗ ngồi, booking thức ăn, quản lí vé đã mua, đặt trước vé cho các bộ phim chưa khởi chiếu.</p>
-                                   </div>
-                                </div>
-                                <div class="boxContentModal__content">
-                                    <div class="content__project">
-                                        <div class="projectContent">
-                                            <img class="item__project" src="images/projects/ticketfy/1.png" />
-                                        </div>
-                                        <div class="projectContent">
-                                            <img class="item__project" src="images/projects/ticketfy/2.png" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" role="dialog" id="project__fargoAUApp">
-                        <div class="modal-dialog boxFullModal">
-                            <div class="boxContentTool">
-                                <div class="boxContentTool__close" data-dismiss="modal">
-                                    <img class="close__img" src="images/icons/icClose.png" />
-                                </div>
-                            </div>
-                            <div class="boxContentModal">
-                                <div class="boxContentModal__title">
-                                   <div class="title__info">
-                                       <p class="info__name">FargoAU App</p>
-                                       <p class="info__note">FargoAu là một ứng dụng đếm bước chân người sử dụng khi họ di chuyển và tập luyện thể thao. Số bước chân có thể dùng để quy đổi sang AU khi hoàn thành các thử thách mỗi ngày và thử thách nhóm. AU có thể dùng để quy đổi sang các phần thưởng hoặc tích luỹ để tham gia vào hệ sinh thái tiền điện tử Fargo. Người dùng có thể quản lí số bước chân mỗi ngày, quản lí ví thưởng, nâng cấp gói package để hưởng nhiều phần thưởng lợi ích hơn, ...</p>
-                                       <p class="info__note">Hiện tại đã có thể tải xuống ứng dụng từ cửa hàng GooglePlay và Apple Store - Download  
-                                           <a class="note__link" href="https://play.google.com/store/apps/details?id=com.fargo" target="blank">Android</a>
-                                           <span> hoặc</span>
-                                           <a class="note__link" href="https://apps.apple.com/vn/app/fargo-au/id1520603723" target="blank">IOS</a>
-                                       </p>
-                                   </div>
-                                </div>
-                                <div class="boxContentModal__content">
-                                    <div class="content__project">
-                                        <div class="projectContent">
-                                            <img class="item__project" src="images/projects/fargo-app/1.png" />
-                                        </div>
-                                        <div class="projectContent">
-                                            <video class="item__project" src="images/projects/fargo-app/1.mp4" muted loop playInside autoplay></video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listStoryModal"></div>
+                    <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop autoplay></video>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/cursor.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
-</html>
 
+</html>
