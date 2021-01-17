@@ -145,8 +145,8 @@ html, body {
 	0% {
         fill: transparent;
         stroke: #111;
-        stroke-dashoffset: 70%;
-        stroke-dasharray: 0 70%;
+        stroke-dashoffset: 50%;
+        stroke-dasharray: 0 50%;
         stroke-width: 15;
 	}
     50% {
@@ -157,8 +157,8 @@ html, body {
 	100% {
         fill: #111;
         stroke: #111; 
-        stroke-dashoffset: -70%;
-        stroke-dasharray: 70% 0;
+        stroke-dashoffset: -50%;
+        stroke-dasharray: 50% 0;
         stroke-width: 15;
 	}
 }
