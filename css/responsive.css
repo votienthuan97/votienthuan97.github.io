@@ -34,3 +34,15 @@
         height: 60px;
     }
 }
+/* SMALL DEVICE */
+@media screen and (max-width: 480px) {
+    #vdHomeLoop {
+        width: 300px;
+    }
+}
+/* VERY SMALL */
+@media screen and (max-width: 374px) {
+    #vdHomeLoop {
+        width: 250px;
+    }
+}
