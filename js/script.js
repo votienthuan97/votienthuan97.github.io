@@ -21,12 +21,8 @@ $(document).ready(function () {
             btnPlayPause.pause();
         }
     });
-    // ONLY PAGE SHOW IN WEB
-     $('.checkPage').click(function(){
-        $('.checkPage').not(this).each(function(index, elm){
-            elm.checked = false;
-        });
-    });
+    // ONLY SHOW PAGE HOME
+    showPage('#homePage');
 })
 function changeStyleCSS (elm , styles) {
     $(elm).css(styles);

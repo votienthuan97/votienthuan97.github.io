@@ -34,12 +34,19 @@
         height: 60px;
     }
 }
+/* SMALL DEVICE ROTATE */
+@media screen and (orientation:landscape) and (max-width: 992px) {
+    #vdHomeLoop {
+        width: 200px;
+    }
+}
 /* SMALL DEVICE */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     #vdHomeLoop {
         width: 300px;
     }
 }
+
 /* VERY SMALL */
 @media screen and (max-width: 374px) {
     #vdHomeLoop {

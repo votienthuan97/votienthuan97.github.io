@@ -126,11 +126,12 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 2;
+    z-index: -1;
 }
 .headerWeb__left .home__logo {
     width: 60px;
     height: 100px;
+    position: relative;
 }
 .headerWeb__left .logo__text {
     font-family: 'Gilroy-Light';
@@ -206,19 +207,22 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
+    position: relative;
 }
 .headerWeb__right #contactPage {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 2;
+    z-index: -1;
 }
 .headerWeb__right .contact__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
     color : #151E37;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 /* ---------------------- FOOTERWEB ---------------------- */
 .footerWeb {
@@ -254,12 +258,15 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 2;
+    z-index: -1;
 }
 .footerWeb__left .story__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
     color : #151E37;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 /* ---------------------- FOOTERWEB > RIGHT */
 .footerWeb__right {
@@ -281,12 +288,15 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    z-index: 2;
+    z-index: -1;
 }
 .footerWeb__right .project__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
     color : #151E37;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 /* ---------------------- VIDEO ---------------------- */
 .video {
@@ -332,15 +342,11 @@ html, body {
     justify-content: center;
     visibility: hidden;
     opacity: 0;
-    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-    will-change: transition;
 }
 /* ---------------------- BACKGROUNDLOAD RESIZE */
 .backgroundLoad .backgroundLoad__resize {
     visibility: hidden;
     opacity: 0;
-    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-    will-change: transition;
 }
 .backgroundLoad .backgroundLoad__resize .content__text {
     font-size: 2.5rem;
