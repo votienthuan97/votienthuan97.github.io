@@ -4,7 +4,20 @@
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
     #vdHomeLoop {
-        width: 572px;
+        width: 575px;
+        object-fit: cover;
+        margin: 80px 0px 0px 0px;
+    }
+    #vdHomeToContact {
+        width: 630px;
+        object-fit: cover;
+    }
+    #vdContactLoop {
+        width: 630px;
+        object-fit: cover;
+    }
+    #vdContactToHome {
+        width: 630px;
         object-fit: cover;
     }
 }
@@ -32,6 +45,15 @@
     .footerWeb__left .left__story,
     .footerWeb__right .right__project {
         height: 60px;
+    }
+    .video__homeLoop {
+        z-index: 1 !important;
+        transition: 0.8s;
+    }
+    .video__homeToContact,
+    .video__contactLoop,
+    .video__contactToHome {
+        display: none;
     }
 }
 /* SMALL DEVICE ROTATE */

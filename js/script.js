@@ -45,6 +45,15 @@ function showPage (elm) {
 function hiddenPage (elm) {
     $(elm).prop('checked', false);
 }
+function upIndex (elm) {
+    $(elm).css({ 'z-index' : 1 });;
+}
+function downIndex (elm) {
+    $(elm).css({ 'z-index' : 0 });;
+}
+function hiddenPage (elm) {
+    $(elm).prop('checked', false);
+}
 function resizePage() {
     var w = window.innerWidth;
     var h = window.innerHeight;
