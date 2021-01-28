@@ -4,6 +4,7 @@ $(".left__home").click(function() {
     // ---------------------- CONTACT TO HOME
     if($('#contactPage').prop("checked") == true) {
         hiddenPage('#contactPage');
+        
     }
     // ---------------------- STORY TO HOME
     else if($('#storyPage').prop("checked") == true) {

@@ -137,7 +137,7 @@ html, body {
     font-family: 'Gilroy-Light';
 	animation: buildLogo 5s infinite alternate;
 	stroke-width: 15;
-    stroke: #151E37;
+    stroke: #161f38;
     font-size: 45rem;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -145,19 +145,19 @@ html, body {
 @keyframes buildLogo {
 	0% {
         fill: transparent;
-        stroke: #151E37;
+        stroke: #161f38;
         stroke-dashoffset: 50%;
         stroke-dasharray: 0 50%;
         stroke-width: 15;
 	}
     50% {
         fill: transparent;
-        stroke:#151E37;
+        stroke:#161f38;
         stroke-width: 15;
     }
 	100% {
-        fill: #151E37;
-        stroke: #151E37; 
+        fill: #161f38;
+        stroke: #161f38; 
         stroke-dashoffset: -50%;
         stroke-dasharray: 50% 0;
         stroke-width: 15;
@@ -219,7 +219,7 @@ html, body {
 .headerWeb__right .contact__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
-    color : #151E37;
+    color : #161f38;
     height: 100%;
     display: flex;
     align-items: center;
@@ -263,7 +263,7 @@ html, body {
 .footerWeb__left .story__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
-    color : #151E37;
+    color : #161f38;
     height: 100%;
     display: flex;
     align-items: center;
@@ -293,7 +293,7 @@ html, body {
 .footerWeb__right .project__link {
     font-size: 1.8rem;
     font-family: 'Gilroy-Bold';
-    color : #151E37;
+    color : #161f38;
     height: 100%;
     display: flex;
     align-items: center;
