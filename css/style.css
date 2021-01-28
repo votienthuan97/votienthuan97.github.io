@@ -349,6 +349,11 @@ html, body {
     margin: 55px 0px 0px 0px;
     will-change: transform;
 }
+#vdHomeLoopMobile {
+    width: 380px;
+    object-fit: cover;
+    will-change: transform;
+}
 #vdHomeToContact {
     width: 415px;
     object-fit: cover;

@@ -23,7 +23,9 @@
 }
 /* NORMAL SCREEN */
 @media screen and (min-width: 1200px) {
-   
+    #vdHomeLoopMobile {
+        display: none;
+    }
 }
 /* MEDIUM SCREEN */
 @media screen and (max-width: 1200px) {
@@ -46,32 +48,36 @@
     .footerWeb__right .right__project {
         height: 60px;
     }
-    .video__homeLoop {
-        z-index: 1 !important;
-        transition: 0.8s;
-    }
+    .video__homeLoop #vdHomeLoop,
     .video__homeToContact,
     .video__contactLoop,
     .video__contactToHome {
         display: none;
     }
+    .video__homeLoop {
+        transition: 0.4s ease-in-out;
+    }
+    .video__homeLoop #vdHomeLoopMobile {
+        margin: 0px;
+        display: block;
+    }
 }
 /* SMALL DEVICE ROTATE */
 @media screen and (orientation:landscape) and (max-width: 992px) {
-    #vdHomeLoop {
+    #vdHomeLoopMobile {
         width: 200px;
     }
 }
 /* SMALL DEVICE */
 @media screen and (max-width: 479px) {
-    #vdHomeLoop {
+    #vdHomeLoopMobile {
         width: 300px;
     }
 }
 
 /* VERY SMALL */
 @media screen and (max-width: 374px) {
-    #vdHomeLoop {
+    #vdHomeLoopMobile {
         width: 250px;
     }
 }
