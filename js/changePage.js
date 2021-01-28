@@ -3,6 +3,8 @@ const vdHomeLoop = document.getElementById("vdHomeLoop");
 const vdHomeToContact = document.getElementById("vdHomeToContact");
 const vdContactLoop = document.getElementById("vdContactLoop");
 const vdContactToHome = document.getElementById("vdContactToHome");
+const vdHomeToProject = document.getElementById("vdHomeToProject");
+const vdProjectLoop = document.getElementById("vdProjectLoop");
 // ---------------------- X PAGE TO HOME
 $(".left__home").click(function() {
     showPage('#homePage');
@@ -128,6 +130,35 @@ $(".right__project").click(function() {
     if($('#homePage').prop("checked") == true) {
         hiddenPage('#homePage');
         hiddenElm('.home');
+        vdHomeToProject.load();
+        showElm('.video__homeToProject');
+        vdHomeToProject.play();
+        setTimeout(function(){ 
+            downIndex('.video__homeLoop');
+            upIndex('.video__homeToProject');
+            hiddenElm('.video__homeLoop');
+            changeStyleCSS(vdHomeToProject , {'transition' : '0.8s ease-in-out 0.25s'});
+            changeStyleCSS($('.removeBackgroundBefore') , {'transition' : '0.8s ease-in-out 0.25s'});
+            changeStyleCSS($('.removeBackgroundAfter') , {'transition' : '0.8s ease-in-out 0.25s'});
+        }, 150);
+        setTimeout(function(){ 
+            changeStyleCSS(vdHomeToProject , {'transform' : 'translate(-80%, -5px)'});
+            changeStyleCSS($('.removeBackgroundBefore') , {'transform' : 'translate(-75%, -5px)'});
+            changeStyleCSS($('.removeBackgroundAfter') , {'transform' : 'translate(-80%, -5px)'});
+            vdProjectLoop.load();
+        }, 450);
+        setTimeout(function(){ 
+            showElm('.video__projectLoop');
+        }, 1250);
+        setTimeout(function(){
+            downIndex('.video__homeToProject');
+            upIndex('.video__projectLoop');
+            hiddenElm('.video__homeToProject');
+            vdProjectLoop.play();
+        }, 2500);
+        setTimeout(function(){
+            changeStyleCSS(vdHomeToProject , {'transform' : 'translate(-130px, -5px)'});
+        }, 2600);
     }
     // ---------------------- CONTACT TO PROJECT
     else  if($('#contactPage').prop("checked") == true) {

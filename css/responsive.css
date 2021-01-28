@@ -20,6 +20,28 @@
         width: 630px;
         object-fit: cover;
     }
+    #vdHomeToProject {
+        width: 940px;
+        object-fit: cover;
+        transform: translate(-195px, -7px);
+    }
+    .video__homeToProject .removeBackgroundBefore {
+        width: 940px;
+        height: 726px;
+        border-right : 55px solid #FFF;
+        transform: translate(-180px, -5px);
+    }
+    .video__homeToProject .removeBackgroundAfter {
+        width: 940px;
+        height: 726px;
+        border-left : 55px solid #FFF;
+        transform: translate(-220px, -5px);
+    }
+    #vdProjectLoop {
+        width: 505px;
+        object-fit: cover;
+        transform: translate(-107.5%, 3px);
+    }
 }
 /* NORMAL SCREEN */
 @media screen and (min-width: 1200px) {
@@ -55,7 +77,7 @@
         display: none;
     }
     .video__homeLoop {
-        transition: 0.4s ease-in-out;
+        transition: 0.8s ease-in-out;
     }
     .video__homeLoop #vdHomeLoopMobile {
         margin: 0px;

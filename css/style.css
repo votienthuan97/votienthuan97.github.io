@@ -308,11 +308,37 @@ html, body {
     height: 100%;
     pointer-events: none;
 }
+.video__homeToProject .removeBackgroundBefore {
+    content: "";
+    width: 650px;
+    height: 482px;
+    border-right : 30px solid #FFF;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-115px, -5px);
+}
+.video__homeToProject .removeBackgroundAfter {
+    content: "";
+    width: 650px;
+    height: 482px;
+    border-left : 20px solid #FFF;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-120px, -5px);
+}
 /* ---------------------- VIDEO SCREEN  */
 .video__homeLoop,
 .video__homeToContact,
 .video__contactLoop,
-.video__contactToHome {
+.video__contactToHome,
+.video__homeToProject,
+.video__projectLoop {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -330,15 +356,11 @@ html, body {
     visibility: visible;
     opacity: 1;
 }
-.video__homeToContact {
-    z-index: 0;
-}
-.video__contactLoop {
-    z-index: 0;
-    visibility: hidden;
-    opacity: 0;
-}
-.video__contactToHome {
+.video__homeToContact,
+.video__contactLoop,
+.video__contactToHome,
+.video__homeToProject,
+.video__projectLoop  {
     z-index: 0;
     visibility: hidden;
     opacity: 0;
@@ -370,6 +392,18 @@ html, body {
     object-fit: cover;
     transform : translate(-80%, 0%);
     will-change: transform;
+}
+#vdHomeToProject {
+    width: 625px;
+    object-fit: cover;
+    will-change: transform;
+    transform: translate(-130px, -5px);
+}
+#vdProjectLoop {
+    width: 335px;
+    object-fit: cover;
+    will-change: transform;
+    transform: translate(-107.5%, 0px);
 }
 /* ---------------------- BACKGROUNDLOAD ---------------------- */
 .backgroundLoad {
