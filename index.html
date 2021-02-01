@@ -83,6 +83,9 @@
                 </div>
             </div>
             <div class="video">
+                <div class="video__intro">
+                    <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted autoplay playinside></video>
+                </div>
                 <div class="video__homeLoop">
                     <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop autoplay></video>
                     <video id="vdHomeLoopMobile" src="video/home-loop.mp4" type="video/mp4" muted loop autoplay playinside></video>
@@ -104,11 +107,21 @@
                 <div class="video__projectLoop">
                     <video id="vdProjectLoop" src="video/project-loop.mp4" type="video/mp4" muted loop></video>
                 </div>
+                <div class="video__projectToHome">
+                    <video id="vdProjectToHome" src="video/project-home.mp4" type="video/mp4" muted></video>
+                    <div class="removeBackgroundBefore"></div>
+                    <div class="removeBackgroundAfter"></div>
+                </div>
             </div>
             <div class="backgroundLoad">
                 <div class="backgroundLoad__resize">
                     <div class="resize__content">
-                        <p class="content__text" data-percent="100">Resizing ...</p>
+                        <p class="content__text">Resizing ...</p>
+                    </div>
+                </div>
+                <div class="backgroundLoad__loadWeb">
+                    <div class="loadWeb__content">
+                        <p class="content__text" data-percent="100"></p>
                     </div>
                 </div>
             </div>

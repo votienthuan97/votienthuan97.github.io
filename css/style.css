@@ -79,9 +79,9 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-    -webkit-transition:all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
-    will-change: transition;
+    will-change: transition, transform;
     z-index: 3;
 }
 .cursor .border__oval {
@@ -105,6 +105,9 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    visibility: visible;
+    opacity: 1;
+    will-change: transform;
 }
 /* ---------------------- HEADERWEB > LEFT */
 .headerWeb__left {
@@ -332,13 +335,39 @@ html, body {
     z-index: 1;
     transform: translate(-120px, -5px);
 }
+.video__projectToHome .removeBackgroundBefore {
+    content: "";
+    width: 650px;
+    height: 482px;
+    border-right : 30px solid #FFF;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-77%, -6px);
+}
+.video__projectToHome .removeBackgroundAfter {
+    content: "";
+    width: 650px;
+    height: 482px;
+    border-left : 20px solid #FFF;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-80%, -6px);
+}
 /* ---------------------- VIDEO SCREEN  */
+.video__intro,
 .video__homeLoop,
 .video__homeToContact,
 .video__contactLoop,
 .video__contactToHome,
 .video__homeToProject,
-.video__projectLoop {
+.video__projectLoop,
+.video__projectToHome {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -351,19 +380,23 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-.video__homeLoop {
-    z-index: 1;
-    visibility: visible;
-    opacity: 1;
-}
+.video__intro,
+.video__homeLoop,
 .video__homeToContact,
 .video__contactLoop,
 .video__contactToHome,
 .video__homeToProject,
-.video__projectLoop  {
+.video__projectLoop,
+.video__projectToHome  {
     z-index: 0;
     visibility: hidden;
     opacity: 0;
+}
+#vdIntro {
+    width: 380px;
+    object-fit: cover;
+    margin: 55px 0px 0px 0px;
+    will-change: transform;
 }
 #vdHomeLoop {
     width: 380px;
@@ -405,6 +438,12 @@ html, body {
     will-change: transform;
     transform: translate(-107.5%, 0px);
 }
+#vdProjectToHome {
+    width: 625px;
+    object-fit: cover;
+    will-change: transform;
+    transform: translate(-80%, 0px);
+}
 /* ---------------------- BACKGROUNDLOAD ---------------------- */
 .backgroundLoad {
     position: fixed;
@@ -414,7 +453,7 @@ html, body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-color: #F2DA87;
+  
     z-index: 99;
     display: flex;
     align-items: center;
@@ -424,10 +463,36 @@ html, body {
 }
 /* ---------------------- BACKGROUNDLOAD RESIZE */
 .backgroundLoad .backgroundLoad__resize {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     visibility: hidden;
     opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    background-color: #F2DA87;
 }
 .backgroundLoad .backgroundLoad__resize .content__text {
+    font-size: 2.5rem;
+    font-family: 'Gilroy-Bold';
+    text-transform: uppercase;
+}
+/* ---------------------- BACKGROUNDLOAD LOADWEB */
+.backgroundLoad .backgroundLoad__loadWeb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: #F2DA87;
+}
+.backgroundLoad .backgroundLoad__loadWeb .content__text {
     font-size: 2.5rem;
     font-family: 'Gilroy-Bold';
     text-transform: uppercase;
