@@ -5,27 +5,22 @@
 @media screen and (min-width: 1824px) {
     #vdIntro {
         width: 575px;
-        object-fit: cover;
         margin: 80px 0px 0px 0px;
     }
     #vdHomeLoop {
         width: 575px;
-        object-fit: cover;
         margin: 80px 0px 0px 0px;
     }
     #vdHomeToContact {
         width: 630px;
-        object-fit: cover;
     }
     #vdContactLoop {
         width: 630px;
-        object-fit: cover;
     }
     #vdContactToHome {
         width: 630px;
-        object-fit: cover;
     }
-    #vdHomeToProject {
+    /* #vdHomeToProject {
         width: 948px;
         object-fit: cover;
         transform: translate(-197px, -6px);
@@ -40,7 +35,7 @@
         object-fit: cover;
         will-change: transform;
         transform: translate(-80%, 0px);
-    }
+    } */
 }
 /* NORMAL SCREEN */
 @media screen and (min-width: 1200px) {

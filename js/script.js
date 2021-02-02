@@ -14,7 +14,7 @@ $(document).ready(function () {
             duration: 5000,
             easing:'linear',
             step: function() {
-                var pct = Math.floor(this.countNum) + ' %';
+                var pct = 'Loading ' + Math.floor(this.countNum) + '%';
                 progress.text(pct) && progress.siblings().children().css('width',pct);
             }
         });

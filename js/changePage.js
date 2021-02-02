@@ -34,7 +34,7 @@ setTimeout(function(){
     showElm('.video__homeLoop');
     hiddenElm('.video__intro');
     vdHomeLoop.play();
-}, 9000);
+}, 9400);
 // ---------------------- X PAGE TO HOME
 $(".left__home").click(function() {
     showPage('#homePage');
@@ -217,15 +217,15 @@ $(".right__project").click(function() {
             upIndex('.video__projectLoop');
             hiddenElm('.video__homeToProject');
             vdProjectLoop.play();
-            showLinkPage();
         }, 2300);
         setTimeout(function(){
+            showLinkPage();
             vdHomeToProject.load();
             changeStyleCSS(vdHomeToProject , {'transition' : '0s'});
             changeStyleCSS(vdHomeToProject , {'transform' : 'translate(-130px, -5px)'});
             changeStyleCSS($('.video__homeToProject .removeBackground') , {'transform' : 'translate(-125px, -5px)'});
             changeStyleCSS($('.video__homeToProject .removeBackground') , {'transition' : '0s'});
-        }, 2400);
+        }, 2450);
     }
     // ---------------------- CONTACT TO PROJECT
     else  if($('#contactPage').prop("checked") == true) {
