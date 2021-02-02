@@ -3,6 +3,11 @@
 }
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
+    #vdIntro {
+        width: 575px;
+        object-fit: cover;
+        margin: 80px 0px 0px 0px;
+    }
     #vdHomeLoop {
         width: 575px;
         object-fit: cover;
@@ -21,26 +26,20 @@
         object-fit: cover;
     }
     #vdHomeToProject {
-        width: 940px;
+        width: 948px;
         object-fit: cover;
-        transform: translate(-195px, -7px);
-    }
-    .video__homeToProject .removeBackgroundBefore {
-        width: 940px;
-        height: 726px;
-        border-right : 55px solid #FFF;
-        transform: translate(-180px, -5px);
-    }
-    .video__homeToProject .removeBackgroundAfter {
-        width: 940px;
-        height: 726px;
-        border-left : 55px solid #FFF;
-        transform: translate(-220px, -5px);
+        transform: translate(-197px, -6px);
     }
     #vdProjectLoop {
         width: 504px;
         object-fit: cover;
         transform: translate(-107.5%, 3px);
+    }
+    #vdProjectToHome {
+        width: 941px;
+        object-fit: cover;
+        will-change: transform;
+        transform: translate(-80%, 0px);
     }
 }
 /* NORMAL SCREEN */
@@ -70,6 +69,7 @@
     .footerWeb__right .right__project {
         height: 60px;
     }
+    .video__intro,
     .video__homeLoop #vdHomeLoop,
     .video__homeToContact,
     .video__contactLoop,
@@ -85,20 +85,15 @@
         margin: 0px;
         display: block;
     }
-    #vdIntro {
-        margin: 0px;
-    }
 }
 /* SMALL DEVICE ROTATE */
 @media screen and (orientation:landscape) and (max-width: 992px) {
-    #vdIntro,
     #vdHomeLoopMobile {
         width: 200px;
     }
 }
 /* SMALL DEVICE */
 @media screen and (max-width: 479px) {
-    #vdIntro,
     #vdHomeLoopMobile {
         width: 300px;
     }
@@ -106,7 +101,6 @@
 
 /* VERY SMALL */
 @media screen and (max-width: 374px) {
-    #vdIntro,
     #vdHomeLoopMobile {
         width: 250px;
     }

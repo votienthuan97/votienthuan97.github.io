@@ -311,53 +311,31 @@ html, body {
     height: 100%;
     pointer-events: none;
 }
-.video__homeToProject .removeBackgroundBefore {
+.video__homeToProject .removeBackground {
     content: "";
-    width: 650px;
+    width: 640px;
     height: 482px;
-    border-right : 30px solid #FFF;
+    border-right : 15px solid #FFF;
+    border-left : 15px solid #FFF;
     top: 0px;
     bottom: 0px;
     margin: auto;
     position: absolute;
     z-index: 1;
-    transform: translate(-115px, -5px);
+    transform: translate(-125px, -6px);
 }
-.video__homeToProject .removeBackgroundAfter {
+.video__projectToHome .removeBackground {
     content: "";
-    width: 650px;
+    width: 640px;
     height: 482px;
-    border-left : 20px solid #FFF;
+    border-right : 15px solid #FFF;
+    border-left : 15px solid #FFF;
     top: 0px;
     bottom: 0px;
     margin: auto;
     position: absolute;
     z-index: 1;
-    transform: translate(-120px, -5px);
-}
-.video__projectToHome .removeBackgroundBefore {
-    content: "";
-    width: 650px;
-    height: 482px;
-    border-right : 30px solid #FFF;
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
-    position: absolute;
-    z-index: 1;
-    transform: translate(-77%, -6px);
-}
-.video__projectToHome .removeBackgroundAfter {
-    content: "";
-    width: 650px;
-    height: 482px;
-    border-left : 20px solid #FFF;
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
-    position: absolute;
-    z-index: 1;
-    transform: translate(-80%, -6px);
+    transform: translate(-78.5%, -6px);
 }
 /* ---------------------- VIDEO SCREEN  */
 .video__intro,
@@ -379,6 +357,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .video__intro,
 .video__homeLoop,
@@ -453,8 +432,7 @@ html, body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-  
-    z-index: 99;
+    z-index: 98;
     display: flex;
     align-items: center;
     justify-content: center;

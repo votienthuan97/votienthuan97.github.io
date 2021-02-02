@@ -8,6 +8,20 @@ const vdHomeToProject = document.getElementById("vdHomeToProject");
 const vdProjectLoop = document.getElementById("vdProjectLoop");
 const vdProjectToHome = document.getElementById("vdProjectToHome");
 // ---------------------- LOAD PAGE INTRO
+if($(window).width() <= '1200') {
+    setTimeout(function(){
+        showElm('.video__homeLoop');
+        upIndex('.video__homeLoop');
+        vdHomeLoop.load();
+    }, 5000);
+    setTimeout(function(){
+        showLinkPage();
+        vdHomeLoop.play();
+    }, 5100);
+}
+setTimeout(function(){
+    vdIntro.load();
+}, 4800);
 setTimeout(function(){
     showElm('.video__intro');
     vdIntro.play();
@@ -15,22 +29,19 @@ setTimeout(function(){
 }, 5000);
 setTimeout(function(){
     showLinkPage();
-    showElm('.video__homeLoop');
-    upIndex('.video__homeLoop');
-    vdHomeLoop.play();
-}, 9380);
-setTimeout(function(){
     downIndex('.video__intro');
+    upIndex('.video__homeLoop');
+    showElm('.video__homeLoop');
     hiddenElm('.video__intro');
-    showLinkPage();
-}, 9400);
+    vdHomeLoop.play();
+}, 9000);
 // ---------------------- X PAGE TO HOME
 $(".left__home").click(function() {
     showPage('#homePage');
     showElm('.home');
     // ---------------------- CONTACT TO HOME
     if($('#contactPage').prop("checked") == true) {
-        vdContactToHome.load(); 
+        hiddenLinkPage();
         hiddenPage('#contactPage');
         hiddenElm('.contact');
         downIndex('.video__contactLoop');
@@ -39,10 +50,9 @@ $(".left__home").click(function() {
         vdContactToHome.play(); 
         setTimeout(function() {
             hiddenElm('.video__contactLoop');
-            changeStyleCSS(vdContactToHome , {'transition' : '0.8s ease-in-out'});
         }, 150);
-        setTimeout(function(){ 
-            changeStyleCSS(vdContactToHome , {'transform' : 'translate(0%, 0%)'});
+        setTimeout(function(){
+            changeStyleCSS(vdContactToHome , {'transform' : 'translate(0%, 0%)', 'transition' : '0.8s ease-in-out'});
         }, 450);
         setTimeout(function(){ 
             showElm('.video__homeLoop');
@@ -52,11 +62,12 @@ $(".left__home").click(function() {
             upIndex('.video__homeLoop');
             vdHomeLoop.load();
             vdHomeLoop.play();
+            showLinkPage();
         }, 2250);
         setTimeout(function(){
             hiddenElm('.video__contactToHome');
-            downIndex('.video__homeToContact');
-            changeStyleCSS(vdContactToHome , {'transform' : 'translate(-80%, 0%)'});
+            showElm('.video__homeToContact');
+            changeStyleCSS(vdContactToHome , {'transform' : 'translate(-80%, 0%)', 'transition' : '0s'});
         }, 2350);
     }
     // ---------------------- STORY TO HOME
@@ -64,8 +75,9 @@ $(".left__home").click(function() {
         hiddenPage('#storyPage');
         hiddenElm('.story');
     }
-    // ---------------------- PROJECT TO HOME
+    //---------------------- PROJECT TO HOME
     else if($('#projectPage').prop("checked") == true) {
+        hiddenLinkPage();
         hiddenPage('#projectPage');
         hiddenElm('.project');
         showElm('.video__projectToHome');
@@ -75,14 +87,11 @@ $(".left__home").click(function() {
             upIndex('.video__homeToProject');
             downIndex('.video__projectLoop');
             hiddenElm('.video__projectLoop');
-            changeStyleCSS(vdProjectToHome , {'transition' : '0.8s ease-in-out 0.25s'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundBefore') , {'transition' : '0.8s ease-in-out 0.25s'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundAfter') , {'transition' : '0.8s ease-in-out 0.25s'});
+            changeStyleCSS(vdProjectToHome , {});
         }, 150);
         setTimeout(function(){ 
-            changeStyleCSS(vdProjectToHome , {'transform' : 'translate(-20.75%, -6px)'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundBefore') , {'transform' : 'translate(-17.5%, -6px)'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundAfter') , {'transform' : 'translate(-20.5%, -6px)'});
+            changeStyleCSS(vdProjectToHome , {'transform' : 'translate(-20.75%, -6px)', 'transition' : '0.8s ease-in-out 0.25s'});
+            changeStyleCSS($('.video__projectToHome .removeBackground') , {'transform' : 'translate(-19.25%, -6px)', 'transition' : '0.8s ease-in-out 0.25s'});
         }, 450);
         setTimeout(function(){ 
             showElm('.video__homeLoop');
@@ -94,15 +103,14 @@ $(".left__home").click(function() {
         }, 2400);
         setTimeout(function(){
             vdHomeLoop.play();
-        }, 2500);
+            showLinkPage();
+        }, 2450);
         setTimeout(function(){
             hiddenElm('.video__projectToHome');
-            showElm('.video__homeToProject');
             downIndex('.video__homeToProject');
-            changeStyleCSS(vdProjectToHome , {'transform' : 'translate(-80%, 0px)'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundBefore'), {'transform' : 'translate(-77%, -6px)'});
-            changeStyleCSS($('.video__projectToHome .removeBackgroundAfter'), {'transform' : 'translate(-80%, -6px)'});
-        }, 2600);
+            changeStyleCSS(vdProjectToHome , {'transform' : 'translate(-80%, 0px)', 'transition' : '0s'});
+            changeStyleCSS($('.video__projectToHome .removeBackground'), {'transform' : 'translate(-78.5%, -6px)', 'transition' : '0s'});
+        }, 2550);
     }
 });
 
@@ -113,18 +121,19 @@ $(".right__contact").click(function() {
     showElm('.contact');
     // ---------------------- HOME TO CONTACT
     if($('#homePage').prop("checked") == true) {
+        hiddenLinkPage();
         hiddenPage('#homePage');
         hiddenElm('.home');
+        hiddenElm('.video__homeToProject');
+        downIndex('.video__homeLoop');
+        upIndex('.video__homeToContact');
         showElm('.video__homeToContact');
         vdHomeToContact.play();
-        setTimeout(function(){
-            upIndex('.video__homeToContact');
-            hiddenElm('.video__homeLoop');
-            hiddenElm('.video__homeToProject');
-            changeStyleCSS(vdHomeToContact , {'transition' : '0.8s ease-in-out 0.25s'});
-        }, 50);
         setTimeout(function(){ 
-            changeStyleCSS(vdHomeToContact , {'transform' : 'translate(-80%, 0%)'});
+            hiddenElm('.video__homeLoop');
+        }, 150);
+        setTimeout(function(){
+            changeStyleCSS(vdHomeToContact , {'transform' : 'translate(-80%, 0%)', 'transition' : '0.8s ease-in-out 0.25s'});
             vdContactLoop.load();
         }, 450);
         setTimeout(function(){ 
@@ -135,9 +144,10 @@ $(".right__contact").click(function() {
             upIndex('.video__contactLoop');
             hiddenElm('.video__homeToContact');
             vdContactLoop.play();
-        }, 2400);
+            showLinkPage();
+        }, 2500);
         setTimeout(function(){
-            changeStyleCSS(vdHomeToContact , {'transform' : 'translate(0%, 0%)'});
+            changeStyleCSS(vdHomeToContact , {'transform' : 'translate(0%, 0%)', 'transition' : '0s'});
         }, 2600);
     }
     // ---------------------- STORY TO CONTACT
@@ -181,22 +191,22 @@ $(".right__project").click(function() {
     showElm('.project');
     // ---------------------- HOME TO PROJECT
     if($('#homePage').prop("checked") == true) {
+        hiddenLinkPage();
         hiddenPage('#homePage');
         hiddenElm('.home');
+        hiddenElm('.video__homeToContact');
         showElm('.video__homeToProject');
         downIndex('.video__homeLoop');
         upIndex('.video__homeToProject'); 
         setTimeout(function(){
             vdHomeToProject.play();
             hiddenElm('.video__homeLoop');
-            changeStyleCSS(vdHomeToProject , {'transition' : '0.8s ease-in-out 0.25s'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundBefore') , {'transition' : '0.8s ease-in-out 0.25s'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundAfter') , {'transition' : '0.8s ease-in-out 0.25s'});
+            changeStyleCSS(vdHomeToProject , {'transition' : '0.8s ease-in-out'});
+            changeStyleCSS($('.video__homeToProject .removeBackground') , {'transition' : '0.8s ease-in-out'});
         }, 150);
         setTimeout(function(){ 
             changeStyleCSS(vdHomeToProject , {'transform' : 'translate(-80%, -5px)'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundBefore') , {'transform' : 'translate(-75%, -5px)'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundAfter') , {'transform' : 'translate(-80%, -5px)'});
+            changeStyleCSS($('.video__homeToProject .removeBackground') , {'transform' : 'translate(-78%, -5px)'});
             vdProjectLoop.load();
         }, 450);
         setTimeout(function(){ 
@@ -207,12 +217,14 @@ $(".right__project").click(function() {
             upIndex('.video__projectLoop');
             hiddenElm('.video__homeToProject');
             vdProjectLoop.play();
+            showLinkPage();
         }, 2300);
         setTimeout(function(){
             vdHomeToProject.load();
+            changeStyleCSS(vdHomeToProject , {'transition' : '0s'});
             changeStyleCSS(vdHomeToProject , {'transform' : 'translate(-130px, -5px)'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundBefore') , {'transform' : 'translate(-115px, -5px)'});
-            changeStyleCSS($('.video__homeToProject .removeBackgroundAfter') , {'transform' : 'translate(-120px, -5px)'});
+            changeStyleCSS($('.video__homeToProject .removeBackground') , {'transform' : 'translate(-125px, -5px)'});
+            changeStyleCSS($('.video__homeToProject .removeBackground') , {'transition' : '0s'});
         }, 2400);
     }
     // ---------------------- CONTACT TO PROJECT
