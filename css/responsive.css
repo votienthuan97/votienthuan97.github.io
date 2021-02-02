@@ -1,9 +1,9 @@
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    /* video {
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
+    video {
         filter: brightness(101%); 
         -webkit-filter: brightness(101%);
-    } */
-}
+    }
+} */
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
     #vdIntro {
@@ -81,6 +81,7 @@
     }
     .video__homeLoop {
         transition: 0.8s ease-in-out;
+        -webkit-filter:brightness(102%);
     }
     .video__homeLoop #vdHomeLoopMobile {
         margin: 0px;
