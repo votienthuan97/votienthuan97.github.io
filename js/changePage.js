@@ -14,7 +14,7 @@ if($(window).width() <= '1200') {
     vdHomeLoop.play();
     setTimeout(function(){
         showLinkPage();
-    }, 5000);
+    }, 4000);
 }
 setTimeout(function(){
     vdIntro.load();
