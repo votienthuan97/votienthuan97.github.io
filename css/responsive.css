@@ -2,7 +2,7 @@
     video {
         filter: brightness(102%); 
         -webkit-filter: brightness(102%);
-        background-color: #FFF;
+        background-color: transparent;
     }
 }
 /* LARGE SCREEN */
