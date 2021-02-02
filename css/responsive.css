@@ -77,12 +77,11 @@
         z-index: 0 !important;
     }
     .video__homeLoop {
-        visibility: visible !important;
-        opacity: 1 !important;
-        z-index: 1 !important;
+        transition: 0.8s ease-in-out;
     }
     .video__homeLoop #vdHomeLoopMobile {
         margin: 0px;
+        display: block;
     }
 }
 /* SMALL DEVICE ROTATE */

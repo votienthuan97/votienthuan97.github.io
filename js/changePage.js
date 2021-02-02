@@ -11,7 +11,6 @@ const vdProjectToHome = document.getElementById("vdProjectToHome");
 if($(window).width() <= '1200') {
     setTimeout(function(){
         showElm('.video__homeLoop');
-        upIndex('.video__homeLoop');
         vdHomeLoop.load();
     }, 5000);
     setTimeout(function(){
