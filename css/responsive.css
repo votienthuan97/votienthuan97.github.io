@@ -1,8 +1,8 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    video {
+    /* video {
         filter: brightness(101%); 
         -webkit-filter: brightness(101%);
-    }
+    } */
 }
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
