@@ -1,8 +1,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     video {
-        filter: brightness(102%); 
-        -webkit-filter: brightness(102%);
-        background-color: transparent;
+        filter: brightness(101%); 
+        -webkit-filter: brightness(101%);
     }
 }
 /* LARGE SCREEN */
@@ -69,16 +68,16 @@
         height: 60px;
     }
     .video__intro,
-    #vdHomeLoop,
     .video__homeToContact,
     .video__contactLoop,
     .video__contactToHome,
     .video__homeToProject,
-    .video__projectLoop {
+    .video__projectLoop,
+    .video__homeToProject {
         display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        z-index: 0 !important;
+    }
+    .video__homeLoop #vdHomeLoop {
+        display: none !important;
     }
     .video__homeLoop {
         transition: 0.8s ease-in-out;

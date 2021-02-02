@@ -10,28 +10,31 @@ const vdProjectToHome = document.getElementById("vdProjectToHome");
 // ---------------------- LOAD PAGE INTRO
 if($(window).width() <= '1200') {
     showElm('.video__homeLoop');
+    upIndex('.video__homeLoop');
     vdHomeLoop.load();
     vdHomeLoop.play();
     setTimeout(function(){
         showLinkPage();
     }, 4000);
 }
-setTimeout(function(){
-    vdIntro.load();
-}, 4800);
-setTimeout(function(){
-    showElm('.video__intro');
-    vdIntro.play();
-    vdHomeLoop.load();
-}, 5000);
-setTimeout(function(){
-    showLinkPage();
-    downIndex('.video__intro');
-    upIndex('.video__homeLoop');
-    showElm('.video__homeLoop');
-    hiddenElm('.video__intro');
-    vdHomeLoop.play();
-}, 9400);
+else {
+    setTimeout(function(){
+        vdIntro.load();
+    }, 4800);
+    setTimeout(function(){
+        showElm('.video__intro');
+        vdIntro.play();
+        vdHomeLoop.load();
+    }, 5000);
+    setTimeout(function(){
+        showLinkPage();
+        downIndex('.video__intro');
+        upIndex('.video__homeLoop');
+        showElm('.video__homeLoop');
+        hiddenElm('.video__intro');
+        vdHomeLoop.play();
+    }, 9250);
+}
 // ---------------------- X PAGE TO HOME
 $(".left__home").click(function() {
     showPage('#homePage');
@@ -60,6 +63,7 @@ $(".left__home").click(function() {
             vdHomeLoop.load();
             vdHomeLoop.play();
             showLinkPage();
+            showElm('.right__contact');
         }, 2250);
         setTimeout(function(){
             hiddenElm('.video__contactToHome');
@@ -101,6 +105,7 @@ $(".left__home").click(function() {
         setTimeout(function(){
             vdHomeLoop.play();
             showLinkPage();
+            showElm('.right__project');
         }, 2450);
         setTimeout(function(){
             hiddenElm('.video__projectToHome');
@@ -142,6 +147,7 @@ $(".right__contact").click(function() {
             hiddenElm('.video__homeToContact');
             vdContactLoop.play();
             showLinkPage();
+            hiddenElm('.right__contact');
         }, 2500);
         setTimeout(function(){
             changeStyleCSS(vdHomeToContact , {'transform' : 'translate(0%, 0%)', 'transition' : '0s'});
@@ -214,6 +220,7 @@ $(".right__project").click(function() {
             upIndex('.video__projectLoop');
             hiddenElm('.video__homeToProject');
             vdProjectLoop.play();
+            hiddenElm('.right__project');
         }, 2300);
         setTimeout(function(){
             showLinkPage();
