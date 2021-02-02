@@ -65,7 +65,7 @@
         height: 60px;
     }
     .video__intro,
-    .video__homeLoop #vdHomeLoop,
+    #vdHomeLoop,
     .video__homeToContact,
     .video__contactLoop,
     .video__contactToHome,

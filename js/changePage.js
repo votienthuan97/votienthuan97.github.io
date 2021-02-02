@@ -9,14 +9,12 @@ const vdProjectLoop = document.getElementById("vdProjectLoop");
 const vdProjectToHome = document.getElementById("vdProjectToHome");
 // ---------------------- LOAD PAGE INTRO
 if($(window).width() <= '1200') {
-    setTimeout(function(){
-        showElm('.video__homeLoop');
-        vdHomeLoop.load();
-    }, 5000);
+    showElm('.video__homeLoop');
+    vdHomeLoop.load();
+    vdHomeLoop.play();
     setTimeout(function(){
         showLinkPage();
-        vdHomeLoop.play();
-    }, 5100);
+    }, 5000);
 }
 setTimeout(function(){
     vdIntro.load();
