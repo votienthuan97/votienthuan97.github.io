@@ -71,7 +71,10 @@
     .video__contactToHome,
     .video__homeToProject,
     .video__projectLoop {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        z-index: 0 !important;
     }
     .video__homeLoop {
         transition: 0.8s ease-in-out;
