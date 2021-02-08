@@ -8,10 +8,10 @@ const vdHomeToProject = document.getElementById("vdHomeToProject");
 const vdProjectLoop = document.getElementById("vdProjectLoop");
 const vdProjectToHome = document.getElementById("vdProjectToHome");
 // ---------------------- LOAD PAGE INTRO
+vdHomeLoop.load();
 if($(window).width() <= '1200') {
     showElm('.video__homeLoop');
     upIndex('.video__homeLoop');
-    vdHomeLoop.load();
     vdHomeLoop.play();
 }
 else {
@@ -53,14 +53,11 @@ $(".left__home").click(function() {
         }, 450);
         setTimeout(function(){ 
             showElm('.video__homeLoop');
-            vdHomeLoop.load();
         }, 1250);
-        setTimeout(function(){ 
-            vdHomeLoop.load();
-        }, 2000);
         setTimeout(function(){
             downIndex('.video__contactToHome');
             upIndex('.video__homeLoop');
+            vdHomeLoop.load();
             vdHomeLoop.play();
             showLinkPage();
             showElm('.right__contact');

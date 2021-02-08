@@ -2,12 +2,6 @@ $(document).ready(function () {
     // PERCENT LOADING PAGE
     if($(window).width() <= '1200') {
         showLinkPage();
-        showElm('.backgroundLoad');
-        showElm('.backgroundLoad__loadWeb');
-        setTimeout(function() {
-            hiddenElm('.backgroundLoad');
-            hiddenElm('.backgroundLoad__loadWeb');
-        }, 5000);
     }
     else {
         hiddenLinkPage();
