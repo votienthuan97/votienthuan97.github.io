@@ -13,9 +13,6 @@ if($(window).width() <= '1200') {
     upIndex('.video__homeLoop');
     vdHomeLoop.load();
     vdHomeLoop.play();
-    setTimeout(function(){
-        showLinkPage();
-    }, 4000);
 }
 else {
     setTimeout(function(){

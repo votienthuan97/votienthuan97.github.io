@@ -1,6 +1,11 @@
 $(document).ready(function () {
     // PERCENT LOADING PAGE
-    hiddenLinkPage();
+    if($(window).width() <= '1200') {
+        showLinkPage();
+    }
+    else {
+        hiddenLinkPage();
+    }
     showElm('.backgroundLoad');
     showElm('.backgroundLoad__loadWeb');
     changeStyleCSS('.point__default' , {'background-color' : '#161f38'});
@@ -91,7 +96,4 @@ function showLinkPage() {
 function hiddenLinkPage() {
     $('.headerWeb').css({ transform : 'translate(0px, -20px)', visibility : 'hidden', opacity : 0, transition : '0.6s ease-in-out'});
     $('.footerWeb').css({ transform : 'translate(0px, 20px)', visibility : 'hidden', opacity : 0, transition : '0.6s ease-in-out'});
-}
-function AutoRefresh( t ) {
-    setTimeout("location.reload(true);", t);
 }
