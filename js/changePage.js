@@ -8,11 +8,14 @@ const vdHomeToProject = document.getElementById("vdHomeToProject");
 const vdProjectLoop = document.getElementById("vdProjectLoop");
 const vdProjectToHome = document.getElementById("vdProjectToHome");
 // ---------------------- LOAD PAGE INTRO
-vdHomeLoop.load();
 if($(window).width() <= '1200') {
     showElm('.video__homeLoop');
     upIndex('.video__homeLoop');
+    vdHomeLoop.load();
     vdHomeLoop.play();
+    setTimeout(function(){
+        showLinkPage();
+    }, 4000);
 }
 else {
     setTimeout(function(){

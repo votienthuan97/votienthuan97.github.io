@@ -51,6 +51,3 @@ a:hover, a:focus {
 input[type=checkbox] {
   margin: 0px;
 }
-video {
-  background-color: transparent !important;
-}

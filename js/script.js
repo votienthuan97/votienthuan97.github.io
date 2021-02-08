@@ -1,23 +1,18 @@
 $(document).ready(function () {
     // PERCENT LOADING PAGE
-    if($(window).width() <= '1200') {
-        showLinkPage();
-    }
-    else {
-        hiddenLinkPage();
-        showElm('.backgroundLoad');
-        showElm('.backgroundLoad__loadWeb');
-        changeStyleCSS('.point__default' , {'background-color' : '#161f38'});
-        hiddenElm('.border__oval');
-        showElm('.border__loading');
-        setTimeout(function() {
-            hiddenElm('.backgroundLoad');
-            hiddenElm('.backgroundLoad__loadWeb');
-            changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
-            hiddenElm('.border__loading');
-            showElm('.border__oval');
-        }, 5000);
-    }
+    hiddenLinkPage();
+    showElm('.backgroundLoad');
+    showElm('.backgroundLoad__loadWeb');
+    changeStyleCSS('.point__default' , {'background-color' : '#161f38'});
+    hiddenElm('.border__oval');
+    showElm('.border__loading');
+    setTimeout(function() {
+        hiddenElm('.backgroundLoad');
+        hiddenElm('.backgroundLoad__loadWeb');
+        changeStyleCSS('.point__default' , {'background-color' : '#F2DA87'});
+        hiddenElm('.border__loading');
+        showElm('.border__oval');
+    }, 5000);
     $('.content__text[data-percent]').each(function () {
         var progress = $(this);
         var percentage = Math.ceil($(this).attr('data-percent'));
@@ -31,20 +26,15 @@ $(document).ready(function () {
         });
     });
     // RESIZE PAGE
-    if($(window).width() <= '1200') {
-       
-    }
-    else {
-        window.addEventListener('resize', resizePage);
-        $(window).resize(function() {
-            showElm('.backgroundLoad');
-            showElm('.backgroundLoad__resize');
-            setTimeout(function() {
-                hiddenElm('.backgroundLoad');
-                hiddenElm('.backgroundLoad__resize');
-            }, 1500);
-        });
-    }
+    window.addEventListener('resize', resizePage);
+    $(window).resize(function() {
+        showElm('.backgroundLoad');
+        showElm('.backgroundLoad__resize');
+        setTimeout(function() {
+            hiddenElm('.backgroundLoad');
+            hiddenElm('.backgroundLoad__resize');
+        }, 1500);
+    });
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("sound__music");
     $('.sound__playPause').click(function() {
