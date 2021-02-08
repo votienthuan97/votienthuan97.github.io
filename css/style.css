@@ -515,7 +515,7 @@ html, body {
 .backgroundLoad .backgroundLoad__loadWeb .loadWeb__progress {
     height: 15px;
     width: 60vw;
-    border: 2px solid #161F38;
+    box-shadow: 0px 0px 0px 3px #161F38;
     border-radius: 50px;
     margin: 25px 0px 0px 0px;
 }
