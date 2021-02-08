@@ -515,16 +515,19 @@ html, body {
 .backgroundLoad .backgroundLoad__loadWeb .loadWeb__progress {
     height: 15px;
     width: 60vw;
-    box-shadow: inset 0px 0px 0px 2px #161F38;
+    border: 2px solid #161F38;
     border-radius: 50px;
-    overflow: hidden;
     margin: 25px 0px 0px 0px;
 }
 .backgroundLoad .backgroundLoad__loadWeb .progress__load {
     height: 100%;
     width: 100%;
     background: #161F38;
+    border-radius: 50px;
     animation: progress-animation 5s ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 @keyframes progress-animation {
     0% {width: 0%;}
