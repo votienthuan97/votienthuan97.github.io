@@ -1,3 +1,8 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    video { 
+        -webkit-filter: brightness(102%);
+    }
+}
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
     #vdIntro {

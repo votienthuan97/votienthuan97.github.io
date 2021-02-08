@@ -31,15 +31,20 @@ $(document).ready(function () {
         });
     });
     // RESIZE PAGE
-    window.addEventListener('resize', resizePage);
-    $(window).resize(function() {
-        showElm('.backgroundLoad');
-        showElm('.backgroundLoad__resize');
-        setTimeout(function() {
-            hiddenElm('.backgroundLoad');
-            hiddenElm('.backgroundLoad__resize');
-        }, 1500);
-    });
+    if($(window).width() <= '1200') {
+       
+    }
+    else {
+        window.addEventListener('resize', resizePage);
+        $(window).resize(function() {
+            showElm('.backgroundLoad');
+            showElm('.backgroundLoad__resize');
+            setTimeout(function() {
+                hiddenElm('.backgroundLoad');
+                hiddenElm('.backgroundLoad__resize');
+            }, 1500);
+        });
+    }
     // PLAY PAUSE MUSIC BACKGROUND
     const btnPlayPause = document.getElementById("sound__music");
     $('.sound__playPause').click(function() {
