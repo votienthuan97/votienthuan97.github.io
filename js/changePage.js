@@ -53,11 +53,14 @@ $(".left__home").click(function() {
         }, 450);
         setTimeout(function(){ 
             showElm('.video__homeLoop');
+            vdHomeLoop.load();
         }, 1250);
+        setTimeout(function(){ 
+            vdHomeLoop.load();
+        }, 2000);
         setTimeout(function(){
             downIndex('.video__contactToHome');
             upIndex('.video__homeLoop');
-            vdHomeLoop.load();
             vdHomeLoop.play();
             showLinkPage();
             showElm('.right__contact');

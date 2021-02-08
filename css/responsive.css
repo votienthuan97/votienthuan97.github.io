@@ -36,9 +36,7 @@
 }
 /* NORMAL SCREEN */
 @media screen and (min-width: 1200px) {
-    #vdHomeLoopMobile {
-        display: none;
-    }
+  
 }
 /* MEDIUM SCREEN */
 @media screen and (max-width: 1200px) {
@@ -70,33 +68,30 @@
     .video__homeToProject {
         display: none !important;
     }
-    .video__homeLoop #vdHomeLoop {
-        display: none !important;
-    }
     .video__homeLoop {
         transition: 0.8s ease-in-out;
     }
-    .video__homeLoop #vdHomeLoopMobile {
+    .video__homeLoop #vdHomeLoop {
         margin: 0px;
         display: block;
     }
 }
 /* SMALL DEVICE ROTATE */
 @media screen and (orientation:landscape) and (max-width: 992px) {
-    #vdHomeLoopMobile {
+    #vdHomeLoop {
         width: 200px;
     }
 }
 /* SMALL DEVICE */
 @media screen and (max-width: 479px) {
-    #vdHomeLoopMobile {
+    #vdHomeLoop {
         width: 300px;
     }
 }
 
 /* VERY SMALL */
 @media screen and (max-width: 374px) {
-    #vdHomeLoopMobile {
+    #vdHomeLoop {
         width: 250px;
     }
 }
