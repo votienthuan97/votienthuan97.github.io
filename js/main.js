@@ -7,10 +7,12 @@ $(document).ready(function () {
         lerp : 0.05,
         reloadOnContextChange : true,
         tablet : {
+            lerp : 0.1,
             smooth : true,
             direction : 'vertical',
         },
         smartphone: {
+            lerp : 0.1,
             smooth: true,
             direction : 'vertical'
         }
