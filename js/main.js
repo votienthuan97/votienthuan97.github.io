@@ -5,14 +5,13 @@ $(document).ready(function () {
         direction : 'horizontal',
         smooth: true,
         lerp : 0.05,
-        reloadOnContextChange : true,
         tablet : {
-            lerp : 0.1,
+            lerp : 0.02,
             smooth : true,
             direction : 'vertical',
         },
         smartphone: {
-            lerp : 0.1,
+            lerp : 0.02,
             smooth: true,
             direction : 'vertical'
         }
