@@ -111,8 +111,7 @@ html.has-scroll-dragging {
 }
 /* ---------------------- FULLWEB ---------------------- */
 .fullWeb {
-    position: relative;
-    overflow: hidden;
+    position: fixed;
 }
 /* ---------------------- HEADERWEB ---------------------- */
 .headerWeb {
