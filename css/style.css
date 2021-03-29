@@ -312,7 +312,6 @@ html.has-scroll-dragging {
 }
 .page {
     min-width: 100vh;
-    height: 100vh;
     position: relative;
     background: #FFF;
 }
