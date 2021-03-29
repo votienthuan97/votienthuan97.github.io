@@ -1,102 +1,108 @@
 /* LARGE SCREEN */
 @media screen and (min-width: 1824px) {
-    #vdIntro {
-        width: 575px;
-        margin: 80px 0px 0px 0px;
-    }
-    #vdHomeLoop {
-        width: 575px;
-        margin: 80px 0px 0px 0px;
-    }
-    #vdHomeToContact {
-        width: 630px;
-    }
-    #vdContactLoop {
-        width: 630px;
-    }
-    #vdContactToHome {
-        width: 630px;
-    }
-    /* #vdHomeToProject {
-        width: 948px;
-        object-fit: cover;
-        transform: translate(-197px, -6px);
-    }
-    #vdProjectLoop {
-        width: 504px;
-        object-fit: cover;
-        transform: translate(-107.5%, 3px);
-    }
-    #vdProjectToHome {
-        width: 941px;
-        object-fit: cover;
-        will-change: transform;
-        transform: translate(-80%, 0px);
-    } */
+  
 }
-/* NORMAL SCREEN */
-@media screen and (min-width: 1200px) {
-    #vdHomeLoopMobile {
-        display: none;
-    }
-}
-/* MEDIUM SCREEN */
 @media screen and (max-width: 1200px) {
-    .cursor {
-        display: none;
-    }
-    .headerWeb {
-        padding: 0px 15px 0px 5px;
-    }
-    .footerWeb {
-        padding: 0px 15px;
-    }
-    .headerWeb,
-    .headerWeb__left .left__home,
-    .headerWeb__left .home__logo,
-    .headerWeb__left .left__sound,
-    .headerWeb__right .right__contact,
-    .footerWeb, 
-    .footerWeb__left .left__story,
-    .footerWeb__right .right__project {
-        height: 60px;
-    }
-    .video__intro,
-    .video__homeToContact,
-    .video__contactLoop,
-    .video__contactToHome,
-    .video__homeToProject,
-    .video__projectLoop,
-    .video__homeToProject {
-        display: none !important;
-    }
-    .video__homeLoop #vdHomeLoop {
-        display: none !important;
-    }
-    .video__homeLoop {
-        transition: 0.8s ease-in-out;
-    }
-    .video__homeLoop #vdHomeLoopMobile {
-        margin: 0px;
-        display: block;
-    }
+   .cursor {
+       display: none !important;
+   }
+   .page {
+       min-height: 100vh;
+       height: auto;
+       margin: 0px 0px 30vh 0px;
+   }
+   .pageWrap {
+       flex-direction: column;
+   }
+   .project__wrap {
+        flex-direction: column;
+   }
+   .project__wrap .wrap__listProject {
+        flex-direction: column;
+   }
+   .project__wrap .wrap__title {
+       height: auto;
+   }
+   .project__wrap .wrap__listProject {
+       height: auto;
+   }
+   .intro__wrap {
+       flex-direction: column;
+   }
+   .intro__wrap .img__title {
+       top: 45vh;
+       bottom: unset;
+       left: 10vw;
+       font-size: 9vh;
+   }
+   .intro__wrap .img__backgroundAvatar {
+        width: 90vh;
+        height: 90vh;
+        top : -100px
+   }
+   .intro__wrap .wrap__content {
+       padding: 100vh 25px 0px 25px;
+       text-align: center;
+   }
+   .intro__wrap .item__textIntro {
+       font-size: 2.5vh;
+       line-height: 25px;
+   }
+   .menu.open .menu__background {
+        transform: translateX(50vw) translateY(-50vw);
+   }
+   .intro__wrap .wrap__content {
+       height: 200px;
+   }
+   .project__wrap {
+       width: 100vw;
+       align-items: flex-start;
+   }
+   .project__wrap .listProject__item {
+       margin: 0px 15px;
+       width: 100%;
+   }
+   .project__wrap .wrap__title {
+        padding: 10vw 25px 5vh 25px;
+   }
+   .project__wrap .wrap__listProject {
+       width: 100%;
+   }
+   .project__wrap .boxText__text {
+       font-size: 9vh;
+   }
+   .project__wrap .item__imgProject {
+       width: 100%;
+       height: 50vh;
+   }
+}
+@media screen and (max-width: 992px) {
+    
 }
 /* SMALL DEVICE ROTATE */
 @media screen and (orientation:landscape) and (max-width: 992px) {
-    #vdHomeLoopMobile {
-        width: 200px;
-    }
+    
 }
 /* SMALL DEVICE */
 @media screen and (max-width: 479px) {
-    #vdHomeLoopMobile {
-        width: 300px;
+    .pageWrap {
+        flex-direction: column;
     }
-}
-
+    .menu.open .content__itemLink {
+        left: 50px;
+        font-size: 5vh;
+    }
+    .menu.open .menu__background {
+        transform: translateX(70vw) translateY(-40vw);
+    }
+    .intro__wrap .img__title {
+        font-size: 7vh;
+    }
+    .project__wrap .boxText__text {
+        font-size: 7vh;
+    }
+}   
 /* VERY SMALL */
 @media screen and (max-width: 374px) {
-    #vdHomeLoopMobile {
-        width: 250px;
-    }
+   
 }

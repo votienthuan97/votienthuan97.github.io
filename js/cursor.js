@@ -1,35 +1,57 @@
 $(document).ready(function () {
-    // SCALE BORDER CURSOR WHEN LONG PRESS
-    document.onmousedown = function(){
-        mouseDown();
-    };
-    // SCALE BORDER CURSOR WHEN DEFAULT
-    document.onmouseup = function(){
-        mouseUp();
-    };
-    // DISABLE CURSOR HIGHTLIGHT, COPY TEXT
-    document.onselectstart = new Function ("return false");
-    // ONLY HIDDEN CURSOR
-    document.documentElement.style.cursor = 'none';
-    // CUSTOM CURSOR POSITION
-    const cursorPoint = document.getElementsByClassName('cursor__point');
-    const cursorBorder = document.getElementsByClassName('cursor__border');
-    window.addEventListener('mousemove', (position) => {
-        setPosition(cursorPoint, position);
-        setPosition(cursorBorder, position);
+    // CUSTOM MOUSE MOVE
+    const cursorPoint = document.querySelector('.cursor__point');
+    let mouseX = 0;
+    let mouseY = 0;
+    let innerX = 0;
+    let innerY = 0;
+    let outerX = 0;
+    let outerY = 0;
+    let loop = null;
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!loop) {
+            loop = window.requestAnimationFrame(render);
+        }
     });
+    function render() {
+        loop = null;
+        innerX = lerp(innerX, mouseX, 0.17);
+        innerY = lerp(innerY, mouseY, 0.17);
+        outerX = lerp(outerX, mouseX, 0.15);
+        outerY = lerp(outerY, mouseY, 0.15);
+        const normalX = Math.min(Math.floor((Math.abs(mouseX - outerX) / outerX) * 1000) / 1000, 1);
+        const normalY = Math.min(Math.floor((Math.abs(mouseY - outerY) / outerY) * 1000) / 1000, 1);
+        const normal  = normalX + normalY * .5;
+        cursorPoint.style.transform = `translate3d(${outerX}px, ${outerY}px, 0)`;
+        if (normal !== 0) {
+            loop = window.requestAnimationFrame(render);
+        }
+    }
+    // CUSTOM CURSOR HOVER
+    cursorHoverLink('.headerWeb__btnOpenMenu');
+    cursorHoverLink('.content__itemLink');
+    cursorHoverItem('.listProject__item');
 });
-// SET POSITION CURSOR
-function setPosition(cursor, position) {
-    cursor[0].style.top = `${position.pageY}px`;
-    cursor[0].style.left = `${position.pageX}px`;
+function lerp(s, e, t) {
+    return (1 - t) * s + t * e;
 }
-// SET SCALE BORDER CLICK
-function mouseDown() {
-    changeStyleCSS('.cursor__border' , {transform : 'scale(1.25, 1.25)'});
+function cursorHoverLink (el) {
+    $(el).hover(function() {
+        $(".cursor").addClass("hoverLink");
+    }, function() {
+        $(".cursor").removeClass("hoverLink");
+        }
+    );
 }
-function mouseUp() {
-    changeStyleCSS('.cursor__border' , {transform : 'scale(1.0, 1.0)'});
+function cursorHoverItem (el) {
+    $(el).hover(function() {
+        $(".cursor").addClass("hoverItem");
+        $(".point__textView").addClass("active");
+    }, function() {
+        $(".cursor").removeClass("hoverItem");
+        $(".point__textView").removeClass("active");
+        }
+    );
 }
-
-  

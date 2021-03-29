@@ -1,138 +1,178 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thuan Vo - Frontend Developer</title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="root" onload = "JavaScript:AutoRefresh(1);">
-        <div id="fullWeb">
-            <div class="headerWeb">
-                <div class="headerWeb__left">
-                    <div class="left__home">
-                        <input type="checkbox" id="homePage" class="checkPage" />
-                        <svg viewBox="0 0 440 100" class="home__logo">
-                            <text class="logo__text" x="60" y="175">t</text>
-                        </svg>
-                    </div>
-                    <div class="left__sound">
-                        <input type="checkbox" class="sound__playPause" />
-                        <audio loop src="audio/Magical-Piano.mp3" id="sound__music"></audio>
-                        <svg viewBox="0 0 24 24" class="sound__soundBar" >
-                            <path d="M12 7L12 17" />
-                            <path d="M15 10L15 14" />
-                            <path d="M18 8L18 16" />
-                            <path d="M21 13L21 11" />
-                            <path d="M9 4L9 20" />
-                            <path d="M6 9L6 15" />
-                            <path d="M3 13L3 11" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="headerWeb__right">
-                    <div class="right__contact">
-                        <input type="checkbox" id="contactPage" class="checkPage" />
-                        <p class="contact__link">contact.</p>
+    <div class="fullWeb">
+        <div class="fullPage" data-scroll-container>
+            <div class="pageWrap">
+                <div id="introduce" class="page">
+                    <div class="intro__wrap">
+                        <div class="wrap__img">
+                            <div class="img__backgroundAvatar" data-scroll data-scroll-speed="3" style="background-image: url(images/avatar/1.jpg);"></div>
+                            <p class="img__title" data-scroll data-scroll-speed="-2">Introduce</p>
+                        </div>
+                        <div class="wrap__content">
+                            <div class="content__introduce" data-scroll data-scroll-speed="-1">
+                                <div class="introduce__item">
+                                    <p class="item__textIntro">I'm Thuan Vo, a Web Front-End Developer</p>
+                                </div>
+                                <div class="introduce__item">
+                                    <p class="item__textIntro">A guy who loves designing frontend, writing and love cats</p>
+                                </div>
+                                <div class="introduce__item">
+                                    <p class="item__textIntro">My zodiac is the Scorpio</p>
+                                </div>
+                                <div class="introduce__item">
+                                    <p class="item__textIntro">I like time travel stories, which make me curious about how this universe works</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="mainWeb">
-                <div class="home">
-                    <p>home</p>
-                </div>
-                <div class="contact">
-                    <p>contact</p>
-                </div>
-                <div class="project">
-                    <p>project</p>
-                </div>
-                <div class="story">
-                    <p>story</p>
-                </div>
-            </div>
-            <div class="footerWeb">
-                <div class="footerWeb__left">
-                    <div class="left__story">
-                        <input type="checkbox" id="storyPage" class="checkPage" />
-                        <p class="story__link">story.</p>
+                <div id="project" class="page">
+                    <div class="project__wrap">
+                        <div class="wrap__title">
+                            <div class="title__boxText" data-scroll data-scroll-speed="2" data-scroll-direction="vertical">
+                                <p class="boxText__text">Project</p>
+                            </div>
+                        </div>
+                        <div class="wrap__listProject">
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                            <a href="" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                                <div class="item__nameProject">
+                                    <p class="nameProject__text">Ticketify</p>
+                                </div>
+                                <div class="item__imgProject">
+                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);"></div>
+                                </div>
+                                <div class="item__hastagProject">
+                                    <p class="hastagProject__text">#reactnative</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="footerWeb__right">
-                    <div class="right__project">
-                        <input type="checkbox" id="projectPage" class="checkPage" />
-                        <p class="project__link">project.</p>
-                    </div>
+                <div id="story" class="page">
+                    story
                 </div>
-            </div>
-            <div class="cursor">
-                <div class="cursor__wrap">
-                    <div class="cursor__point">
-                        <div class="point__default"></div>
-                    </div>
-                    <div class="cursor__border">
-                        <div class="border__oval"></div>
-                        <div class="border__loading"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="video">
-                <div class="video__intro">
-                    <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted autoplay playinside></video>
-                </div>
-                <div class="video__homeLoop">
-                    <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop autoplay></video>
-                    <video id="vdHomeLoopMobile" src="video/home-loop.mp4" type="video/mp4" autoplay loop muted playsinline></video>
-                </div>
-                <div class="video__homeToContact">
-                    <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted></video>
-                </div>
-                <div class="video__contactLoop">
-                    <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop></video>
-                </div>
-                <div class="video__contactToHome">
-                    <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted></video>
-                </div>
-                <div class="video__homeToProject">
-                    <video id="vdHomeToProject" src="video/home-project.mp4" type="video/mp4" muted></video>
-                    <div class="removeBackground"></div>
-                </div>
-                <div class="video__projectLoop">
-                    <video id="vdProjectLoop" src="video/project-loop.mp4" type="video/mp4" muted loop></video>
-                </div>
-                <div class="video__projectToHome">
-                    <video id="vdProjectToHome" src="video/project-home.mp4" type="video/mp4" muted></video>
-                    <div class="removeBackground"></div>
-                </div>
-            </div>
-            <div class="backgroundLoad">
-                <div class="backgroundLoad__resize">
-                    <div class="resize__content">
-                        <p class="content__text">Resizing ...</p>
-                    </div>
-                </div>
-                <div class="backgroundLoad__loadWeb">
-                    <div class="loadWeb__content">
-                        <p class="content__text" data-percent="100"></p>
-                    </div>
-                    <div class="loadWeb__progress">
-                        <div class="progress__load"></div>
-                    </div>
+                <div id="contact" class="page">
+                    contact
                 </div>
             </div>
         </div>
+        <div class="headerWeb">
+            <div class="headerWeb__btnOpenMenu">
+                <svg class="btnOpenMenu__ic" viewBox="0 0 24 24">
+                    <rect x="5" y="5" width="2" height="2"></rect>
+                    <rect x="11" y="5" width="2" height="2"></rect>
+                    <rect x="17" y="5" width="2" height="2"></rect>
+                    <rect x="5" y="11" width="2" height="2"></rect>
+                    <rect x="11" y="11" width="2" height="2"></rect>
+                    <rect x="17" y="11" width="2" height="2"></rect>
+                    <rect x="5" y="17" width="2" height="2"></rect>
+                    <rect x="11" y="17" width="2" height="2"></rect>
+                    <rect x="17" y="17" width="2" height="2"></rect>
+                    <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="menu">
+           <div class="menu__background"></div>
+           <div class="menu__content">
+               <div class="content__itemLink" data-scroll-section-id="#introduce">Introduce</div>
+               <div class="content__itemLink" data-scroll-section-id="#project">Project</div>
+               <div class="content__itemLink" data-scroll-section-id="#story">Story</div>
+               <div class="content__itemLink" data-scroll-section-id="#contact">Contact</div>
+           </div>
+        </div>
+        <div class="cursor">
+            <div class="cursor__point">
+                <p class="point__textView">View</p>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="#modal1"></div>
+        </div>
     </div>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/cursor.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/changePage.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
