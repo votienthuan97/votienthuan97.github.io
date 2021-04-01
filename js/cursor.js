@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    // DISABLE CURSOR HIGHTLIGHT, COPY TEXT
-    document.onselectstart = new Function ("return false");
     // CUSTOM MOUSE MOVE
     const cursorPoint = document.querySelector('.cursor__point');
     let mouseX = 0;
