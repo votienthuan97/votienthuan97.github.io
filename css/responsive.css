@@ -85,6 +85,9 @@
     .project__wrap .item__imgProject:hover .imgProject__img {
         transform: scale(1.0);
     }
+    .project__wrap .img__nameProject {
+        padding: 0px 0px 3vh 0px;
+    }
     .headerWeb {
         bottom: 10px;
         left: 0;

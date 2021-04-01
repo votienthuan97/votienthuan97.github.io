@@ -6,12 +6,12 @@ $(document).ready(function () {
         smooth: true,
         lerp : 0.05,
         tablet : {
-            lerp : 0.1,
+            lerp : 0.2,
             smooth : true,
             direction : 'vertical',
         },
         smartphone: {
-            lerp : 0.1,
+            lerp : 0.2,
             smooth: true,
             direction : 'vertical'
         }
