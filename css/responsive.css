@@ -49,7 +49,7 @@
     }
     .intro__wrap .item__textIntro {
         font-size: 2.5vh;
-        line-height: 25px;
+        line-height: 35px;
     }
     .menu.open .menu__background {
         transform: translateX(50vw) translateY(-50vw);

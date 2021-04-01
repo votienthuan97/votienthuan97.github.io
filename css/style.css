@@ -265,10 +265,11 @@ html.has-scroll-dragging {
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    cursor: none;
     transition: 0.3s cubic-bezier(.44,.15,0,1.54) width,0.3s cubic-bezier(.44,.15,0,1.54) height;
 }
 .cursor .cursor__point {
-    border: 2px solid #FFF;
+    background: #FFF;
     width: 100%;
     height: 100%;
     border-radius: 100%;
@@ -281,28 +282,18 @@ html.has-scroll-dragging {
     width: 80px;
     height: 80px;
 }
-.cursor.hoverLink .cursor__point,
-.cursor.hoverItem .cursor__point {
+.cursor.hoverLink .cursor__point {
     background: #FFF;
     transition: 0.3s background;
 }
-.cursor.hoverItem {
+.cursor.hoverItem  {
     width: 100px;
     height: 100px;
 }
-.cursor__point .point__textView {
-    color : #FFF;
-    text-transform: uppercase;
-    font-size: 2vh;
-    letter-spacing: 0.1rem;
-    font-family: Gilroy-Bold;
-    mix-blend-mode: difference;
-    visibility: hidden;
-    opacity: 0;
-}
-.cursor__point .point__textView.active {
-    visibility: visible;
-    opacity: 1;
+.cursor.hoverItem .cursor__point {
+    background: #FFF;
+    filter: blur(3px);
+    transition: 0.3s background;
 }
 /* ---------------------- FULLPAGE ---------------------- */
 .pageWrap {
@@ -347,12 +338,13 @@ html.has-scroll-dragging {
 .intro__wrap .img__title {
     position: absolute;
     left: 120px;
-    bottom : 20px;
+    bottom : 25px;
     z-index: 3;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFF;
-    font-size: 12vh;
+    font-family: Gilroy-Bold;
+    font-size: 11vh;
     text-transform: uppercase;
     mix-blend-mode: difference;
 }
@@ -412,9 +404,10 @@ html.has-scroll-dragging {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000;
-    font-size: 12vh;
     font-family: Gilroy-Bold;
+    font-size: 11vh;
     text-transform: uppercase;
+    mix-blend-mode: difference;
 }
 .project__wrap .wrap__listProject {
     display: flex;
