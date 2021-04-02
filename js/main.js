@@ -38,6 +38,7 @@ $(document).ready(function () {
         }
     });
     // CHANE INTRODUCE
+    setTimeout(function(){ 
     (function() {
         var quotes = $(".introduce__item");
         var quoteIndex = -1;
@@ -50,6 +51,24 @@ $(document).ready(function () {
         }
         showNextQuote();
     })();
+    }, 5500);
+     // CHANE BACKGROUND LOAD
+     (function() {
+        var quotes = $(".backgroundLoading__content");
+        var quoteIndex = -1;
+        function showNextQuote() {
+          ++quoteIndex;
+          quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(1000)
+            .delay(0)
+            .fadeOut(1000, showNextQuote);
+        }
+        showNextQuote();
+    })();
+    setTimeout(function(){ 
+        $('.backgroundLoading').css('transform', 'translate(0%, -105%) matrix(1, 0, 0, 1, 0, 0)');
+        $('.backgroundLoading').css('height', '0vh');
+    }, 3500);
     // LOCK LOCOMOTIVE SCROLL WHEN SCROLL DIV DIFFRENCE
     $('.listSelect').hover(function() {
         scroll.stop();

@@ -121,7 +121,7 @@ html.has-scroll-dragging {
     width: 58px;
     height: 58px;
     mix-blend-mode: difference;
-    z-index: 99999;
+    z-index: 9997;
     transition: 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -305,6 +305,29 @@ html.has-scroll-dragging {
     position: relative;
     background: #FFF;
 }
+/* ---------------------- PAGE PROJECT ---------------------- */
+.backgroundLoading {
+    background: #000;
+    width: 100vw;
+    height: 110vh;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s ease-out 0.2s;
+    position: relative;
+}
+.backgroundLoading .backgroundLoading__content {
+    color : #FFF;
+    font-size: 4vh;
+    font-family: Gilroy-Bold;
+    display: none;
+    margin: -10vh 0px 0px 0px;
+    transition: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0px 0px 0px 0.2rem;
+}
 /* ---------------------- PAGE INTRODUCE ---------------------- */
 #introduce {
     background: #FFF;
@@ -419,27 +442,27 @@ html.has-scroll-dragging {
 .project__wrap .listProject__item {
     margin: 0px 25px;
     position: relative;
-    width: 65vh;
+    width: 75vh;
 }
 .project__wrap .item__imgProject {
-    width: 65vh;
-    height: 75vh;
+    width: 75vh;
+    height: 70vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 15px 0px;
-    clip-path: inset(0%);
-    transition: 0.6s linear;
+    transition: 0.3s linear;
     position: relative;
+    clip-path: inset(0%);
 }
 .project__wrap .item__imgProject:hover {
-    clip-path: inset(4%);
-    transition: 0.6s linear;
+    clip-path: inset(3%);
+    transition: 0.3s linear;
 }   
 .project__wrap .item__imgProject:hover .imgProject__img {
     transform: scale(1.1);
-    transition: 0.6s linear;
+    transition: 0.3s linear;
 }
 .project__wrap .imgProject__img {
     width: 100%;
@@ -447,7 +470,7 @@ html.has-scroll-dragging {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 0.6s linear;
+    transition: 0.3s linear;
 }
 .project__wrap .img__nameProject {
     position: absolute;
@@ -461,14 +484,19 @@ html.has-scroll-dragging {
     background-image: -moz-linear-gradient(top, transparent 0%, #323751 100%);
     background-image: linear-gradient(-180deg, transparent 0%, #323751 100%);
     z-index: 0;
-    padding: 0px 0px 7vh 0px;
+    padding: 0px 0px 5vh 0px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    transition: 0.3s linear;
 }
 .project__wrap .nameProject__text {
     color : #FFF;
     font-size: 4vh;
     pointer-events: none;
     text-shadow: 0px 2px 2px #000;
+}
+.project__wrap .item__imgProject:hover .img__nameProject {
+    padding: 0px 0px 7vh 0px;
+    transition: 0.3s linear;
 }
