@@ -97,7 +97,11 @@
     }
 }
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    .modalWeb .wrap__content {
+        padding: 50px 0px;
+    }
+}
 
 /* SMALL DEVICE ROTATE */
 
@@ -121,6 +125,9 @@
     }
     .project__wrap .boxText__text {
         font-size: 7vh;
+    }
+    .modalWeb .content__text {
+        font-size: 1rem;
     }
 }
 

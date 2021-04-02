@@ -53,3 +53,6 @@ a:hover, a:focus {
 input[type=checkbox] {
   margin: 0px;
 }
+input:hover , input:focus {
+  cursor: none !important;
+}
