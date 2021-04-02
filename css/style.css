@@ -306,27 +306,32 @@ html.has-scroll-dragging {
     background: #FFF;
 }
 /* ---------------------- PAGE PROJECT ---------------------- */
-.backgroundLoading {
+.loading {
     background: #000;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     z-index: 9998;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.8s ease-out 0.2s;
-    position: relative;
+    transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1) 0.2s;
+    position: fixed;
+    top : 0;
+    left: 0;
+    transform: translateY(0vh);
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: hidden;
 }
-.backgroundLoading .backgroundLoading__content {
+.loading .loading__content {
     color : #FFF;
     font-size: 4vh;
     font-family: Gilroy-Bold;
     display: none;
-    margin: -10vh 0px 0px 0px;
     transition: none;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    padding: 0px 0px 0px 0.2rem;
+    letter-spacing: 0.3rem;
+    padding: 0px 0px 0px 0.3rem;
 }
 /* ---------------------- PAGE INTRODUCE ---------------------- */
 #introduce {
@@ -454,15 +459,6 @@ html.has-scroll-dragging {
     margin: 15px 0px;
     transition: 0.3s linear;
     position: relative;
-    clip-path: inset(0%);
-}
-.project__wrap .item__imgProject:hover {
-    clip-path: inset(3%);
-    transition: 0.3s linear;
-}   
-.project__wrap .item__imgProject:hover .imgProject__img {
-    transform: scale(1.1);
-    transition: 0.3s linear;
 }
 .project__wrap .imgProject__img {
     width: 100%;
@@ -470,7 +466,6 @@ html.has-scroll-dragging {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 0.3s linear;
 }
 .project__wrap .img__nameProject {
     position: absolute;
@@ -488,15 +483,10 @@ html.has-scroll-dragging {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    transition: 0.3s linear;
 }
 .project__wrap .nameProject__text {
     color : #FFF;
     font-size: 4vh;
     pointer-events: none;
     text-shadow: 0px 2px 2px #000;
-}
-.project__wrap .item__imgProject:hover .img__nameProject {
-    padding: 0px 0px 7vh 0px;
-    transition: 0.3s linear;
 }
