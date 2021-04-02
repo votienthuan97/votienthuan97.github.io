@@ -66,11 +66,13 @@ $(document).ready(function () {
         showNextQuote();
     })();
     setTimeout(function(){ 
-        $('.loading').css('transform', 'translateY(-150vh)');
+        $('.loading').css('transform', 'translateY(-100vh)');
+        $('.loading').css('visibility', 'hidden');
+        $('.loading').css('opacity', '0');
     }, 3500);
     setTimeout(function(){ 
         $('.loading').css('display', 'none');
-    }, 4500);
+    }, 5000);
     // LOCK LOCOMOTIVE SCROLL WHEN SCROLL DIV DIFFRENCE
     $('.listSelect').hover(function() {
         scroll.stop();
