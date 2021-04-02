@@ -40,19 +40,22 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div id="contact" class="page">
+                 
+                </div> -->
                 <div id="project" class="page">
                     <div class="project__wrap">
                         <div class="wrap__title">
-                            <div class="title__boxText" data-scroll data-scroll-speed="3" data-scroll-direction="vertical">
+                            <div class="title__boxText" data-scroll data-scroll-speed="2" data-scroll-direction="vertical">
                                 <p class="boxText__text">Project</p>
                             </div>
                         </div>
                         <div class="wrap__listProject">
-                            <a href="#ticketfy" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                            <a href="#ticketify" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
                                 <div class="item__imgProject">
                                     <div class="imgProject__img" style="background-image: url(images/project/ticketify/1.png);">
                                         <div class="img__nameProject">
-                                            <p class="nameProject__text">Ticketfy</p>
+                                            <p class="nameProject__text" data-scroll data-scroll-speed="0.5" data-scroll-direction="vertical">Ticketify</p>
                                         </div>
                                     </div>
                                 </div>
@@ -61,25 +64,7 @@
                                 <div class="item__imgProject">
                                     <div class="imgProject__img" style="background-image: url(images/project/fargo/1.png);">
                                         <div class="img__nameProject">
-                                            <p class="nameProject__text">Fargo</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
-                                <div class="item__imgProject">
-                                    <div class="imgProject__img" style="background-image: url(images/project/2.jpg);">
-                                        <div class="img__nameProject">
-                                            <p class="nameProject__text">Crypto Future</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="listProject__item" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
-                                <div class="item__imgProject">
-                                    <div class="imgProject__img" style="background-image: url(images/project/1.jpg);">
-                                        <div class="img__nameProject">
-                                            <p class="nameProject__text">Monoton</p>
+                                            <p class="nameProject__text" data-scroll data-scroll-speed="0.5" data-scroll-direction="vertical">Fargo-AU</p>
                                         </div>
                                     </div>
                                 </div>
@@ -88,10 +73,23 @@
                     </div>
                 </div>
                 <div id="story" class="page">
-                    story
-                </div>
-                <div id="contact" class="page">
-                    contact
+                    <div class="story__wrap">
+                        <div class="wrap__title">
+                            <div class="title__boxText" data-scroll data-scroll-speed="2" data-scroll-direction="vertical">
+                                <p class="boxText__text">Story</p>
+                            </div>
+                        </div>
+                        <div class="wrap__listStory">
+                            <a href="#nhung-chiec-hu-chua-hanh-phuc" class="listStory__item">
+                                <div class="item__imgStory">
+                                    <div class="imgStory__img" style="background-image: url(images/story/1.jpg)"></div>
+                                </div>
+                                <div class="item__nameStory">
+                                    <p class="nameStory__text">Những chiếc hũ chứa hạnh phúc</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +127,8 @@
         </div>
         <div class="modalWeb">
             <input type="checkbox" class="toogleDarkLight" />
-            <div id="ticketfy" class="modalWeb__item">
+            <!-- MODAL PROJECT -->
+            <div id="ticketify" class="modalWeb__item">
                 <div class="item__header">
                     <div class="header__darklight">
                         <div class="darklight__circle"></div>
@@ -146,7 +145,7 @@
                        <div class="container">
                            <div class="wrap__content">
                                <p class="content__text">
-                                Ticketfy là dự án demo về ý tưởng một ứng dụng đặt vé xem phim cho các phòng vé và các cụm rạp theo khu vực trong toàn quốc cho khách hàng. Khách hàng có thể xem trailer, xem thông tin, đặt vé cho bộ phim mình muốn xem và thanh toán trực tuyến thông qua thẻ ngân hàng được liên kết hoặc các ví điện tử như Momo, Airpay, ... Ngoài ra nó còn cung cấp một số tính năng chuyên nghiệp như : chọn chỗ ngồi, booking thức ăn, quản lí vé đã mua, đặt trước vé cho các bộ phim chưa khởi chiếu.
+                                Ticketify là dự án demo về ý tưởng một ứng dụng đặt vé xem phim cho các phòng vé và các cụm rạp theo khu vực trong toàn quốc cho khách hàng. Khách hàng có thể xem trailer, xem thông tin, đặt vé cho bộ phim mình muốn xem và thanh toán trực tuyến thông qua thẻ ngân hàng được liên kết hoặc các ví điện tử như Momo, Airpay, ... Ngoài ra nó còn cung cấp một số tính năng chuyên nghiệp như : chọn chỗ ngồi, booking thức ăn, quản lí vé đã mua, đặt trước vé cho các bộ phim chưa khởi chiếu.
                                </p>
                                <img class="content__img" src="images/project/ticketify/1.png" />
                                <img class="content__img" src="images/project/ticketify/2.png" />
@@ -181,7 +180,279 @@
                                     <a class="text__link" href="https://apps.apple.com/vn/app/fargo-au/id1520603723" target="blank">IOS</a> </p>
                                 </p>
                                <img class="content__img" src="images/project/fargo/1.png" />
-                               <!-- <video class="content__video" src="images/project/fargo/1.mp4" autoplay loop muted></video> -->
+                               <video class="content__video" src="images/project/fargo/1.mp4" autoplay loop muted></video>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <!-- MODAL STORY -->
+            <div id="nhung-chiec-hu-chua-hanh-phuc" class="modalWeb__item">
+                <div class="item__header">
+                    <div class="header__darklight">
+                        <div class="darklight__circle"></div>
+                    </div>
+                    <a href="#" class="header__close">
+                        <svg class="close__btn" viewBox="0 0 24 24">
+                            <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="item__content">
+                   <div class="content__wrap">
+                       <div class="wrap__bgImg" style="background-image: url(images/story/1.jpg);">
+                            <p class="bgImg__name">Những Chiếc Hũ Chứa Hạnh Phúc</p>
+                        </div>
+                       <div class="container">
+                           <div class="wrap__content">
+                                <div class="content__text">
+                                    <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Tấm poster viết, "Hạnh ph&uacute;c! Đựng trong hũ thuỷ tinh! Gọi ngay!" v&agrave; b&ecirc;n dưới d&ograve;ng chữ l&agrave; một số điện thoại.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i đang đi bộ về nh&agrave; sau một ng&agrave;y l&agrave;m việc d&agrave;i mệt nho&agrave;i th&igrave; liếc thấy tờ giấy gắn tr&ecirc;n c&aacute;i cột điện thoại cũ. T&ocirc;i chụp một tấm h&igrave;nh v&igrave; cho rằng chuyện n&agrave;y kh&aacute; th&uacute; vị.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i định cho vợ xem khi về tới nh&agrave;, nhưng do phải l&agrave;m v&agrave;i việc vặt n&ecirc;n t&ocirc;i qu&ecirc;n khuấy đi mất - bữa tối, rửa ch&eacute;n, giặt đồ, g&oacute;i đồ ăn nhẹ cho con g&aacute;i, đưa con b&eacute; đi ngủ, rồi cất đồ chơi của n&oacute; b&ecirc;n ngo&agrave;i ph&ograve;ng kh&aacute;ch - tối n&agrave;o cũng l&agrave; một quy tr&igrave;nh ch&iacute;nh x&aacute;c như vậy.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Ng&agrave;y h&ocirc;m sau t&ocirc;i thức dậy nằm quay lưng với vợ. T&ocirc;i lu&ocirc;n phải dậy sớm hơn c&ocirc; ấy v&igrave; c&ocirc;ng việc của m&igrave;nh, vậy n&ecirc;n t&ocirc;i khẽ kh&agrave;ng bắt đầu ng&agrave;y mới v&agrave; đi thẳng ra cửa.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Tại chỗ l&agrave;m, t&ocirc;i đang cập nhật b&aacute;o c&aacute;o chi ph&iacute; mới nhất của c&ocirc;ng ty. Hầu như ng&agrave;y n&agrave;o cũng vậy. Về cơ bản l&agrave; họ trả t&ocirc;i tiền để nh&igrave;n chằm chằm v&agrave;o m&aacute;y t&iacute;nh 9h một ng&agrave;y v&agrave; nhập số liệu l&ecirc;n tr&ecirc;n c&aacute;c bảng t&iacute;nh. T&ocirc;i ho&agrave;n th&agrave;nh c&ocirc;ng việc kh&aacute; nhanh vậy n&ecirc;n t&ocirc;i quyết định sẽ rời văn ph&ograve;ng sớm - h&ocirc;m nay l&agrave; thứ s&aacute;u, v&agrave; rất nhiều người cũng tan l&agrave;m sớm v&agrave;o cuối tuần.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Tr&ecirc;n đường về nh&agrave; t&ocirc;i nghĩ xem cuộc đời m&igrave;nh đ&atilde; trở th&agrave;nh c&aacute;i g&igrave;. T&ocirc;i đ&atilde; lu&ocirc;n mơ mộng về những chuyến đi khi c&ograve;n trẻ. T&ocirc;i muốn l&aacute;i xe đi dọc đất nước hoặc du lịch bụi quanh ch&acirc;u &Acirc;u. Rồi t&ocirc;i đ&atilde; gặp Kelsey. T&ocirc;i đ&atilde; y&ecirc;u Kelsey. Khi bạn gặp ai đ&oacute; v&agrave; rơi v&agrave;o một mối quan hệ, d&ugrave; muốn d&ugrave; kh&ocirc;ng, th&igrave; một phần kế hoạch cuộc sống c&aacute; nh&acirc;n của bạn cũng sẽ bị ngưng lại. V&agrave; sau đ&oacute; mối quan hệ chuyển qua h&ocirc;n nh&acirc;n, v&agrave; sau đ&oacute; bạn c&oacute; con, v&agrave; sau đ&oacute; bạn phải đăng k&yacute; cho con đi học mẫu gi&aacute;o, v&agrave; sau đ&oacute; bạn phải c&oacute; c&ocirc;ng việc lương cao hơn v&agrave; l&agrave;m việc th&ecirc;m nhiều hơn, v..v...</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i cố gắng kh&ocirc;ng để cho bản th&acirc;n m&igrave;nh tiếc nuối. T&ocirc;i đang chỉ n&oacute;i rằng t&ocirc;i kh&ocirc;ng ho&agrave;n to&agrave;n vừa l&ograve;ng với vị tr&iacute; của m&igrave;nh trong cuộc đời. T&ocirc;i kh&ocirc;ng thấy bản th&acirc;n m&igrave;nh l&agrave; một người hạnh ph&uacute;c.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i vẫn đi tr&ecirc;n qu&atilde;ng đường quen thuộc về nh&agrave; như mọi ng&agrave;y, t&ocirc;i lại bước qua tấm poster h&ocirc;m qua. T&ocirc;i kh&ocirc;ng biết tại sao, t&ocirc;i thực sự kh&ocirc;ng biết, nhưng t&ocirc;i quyết định gọi tới số m&aacute;y đ&oacute;. T&ocirc;i cho rằng đ&oacute; l&agrave; một tr&ograve; đ&ugrave;a. C&oacute; lẽ sẽ c&oacute; ai đ&oacute; nhấc m&aacute;y v&agrave; n&oacute;i "T&ocirc;i y&ecirc;u bạn!". Hoặc c&oacute; lẽ l&agrave; một số m&aacute;y kết nối tới c&ocirc;ng ty quảng c&aacute;o vớ vẩn n&agrave;o đ&oacute;. T&ocirc;i chẳng biết phải tr&ocirc;ng đợi g&igrave;.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i gọi. Chu&ocirc;ng reo một lần trước khi c&oacute; người nhấc m&aacute;y.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Alo?" một phụ nữ n&oacute;i.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Xin ch&agrave;o... ừm... t&ocirc;i gọi về tấm poster? Quảng c&aacute;o của bạn?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Tuyệt vời," c&ocirc; ta n&oacute;i một c&aacute;ch điềm đạm, "Khi n&agrave;o anh muốn lấy n&oacute;?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Lấy c&aacute;i g&igrave; cơ?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"C&aacute;i hũ..." c&ocirc; ta n&oacute;i, như thể đ&oacute; l&agrave; một chuyện hiển nhi&ecirc;n.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ồ, v&acirc;ng, tất nhi&ecirc;n..." rồi t&ocirc;i nhận ra m&igrave;nh đ&atilde; đi l&agrave;m sớm m&agrave; kh&ocirc;ng n&oacute;i với Kelsey, vậy n&ecirc;n t&ocirc;i c&oacute; thể đi lấy ngay b&acirc;y giờ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ch&iacute;nh x&aacute;c th&igrave; n&oacute; l&agrave; g&igrave;? Thứ bạn b&aacute;n ấy?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"T&ocirc;i đ&atilde; n&oacute;i rồi đ&oacute; th&ocirc;i. Đ&oacute; l&agrave; hạnh ph&uacute;c chứa trong một hũ thuỷ tinh. Như tr&ecirc;n poster c&oacute; n&oacute;i. Hạnh ph&uacute;c bảo quản tốt nhất l&agrave; trong hũ thuỷ tinh.."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ừm được rồi. Ch&uacute;ng ta n&ecirc;n gặp nhau đ&acirc;u đ&oacute; phải kh&ocirc;ng?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Chắc chắn rồi, n&ecirc;n gặp nhau nơi n&agrave;o c&ocirc;ng cộng đi."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Nơi c&ocirc;ng cộng ch&uacute;ng t&ocirc;i gặp nhau l&agrave; b&atilde;i đậu xe Starbucks c&aacute;ch chỗ t&ocirc;i khoảng 1 dặm.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Giờ t&ocirc;i kh&ocirc;ng nghĩ rằng t&ocirc;i thực sự sắp mua một hũ hạnh ph&uacute;c hoặc c&aacute;i g&igrave; đ&oacute;. T&ocirc;i chắc đến 90% c&ocirc; ta sẽ b&aacute;n thuốc phiện cho t&ocirc;i. C&oacute; thể l&agrave; heroine trong hũ. T&ocirc;i nhớ ra, &ocirc;i kh&ocirc;ng, 'hạnh ph&uacute;c' c&oacute; thể l&agrave; t&ecirc;n gọi kh&aacute;c của một loại thuốc phiện n&agrave;o đ&oacute; v&agrave; t&ocirc;i đang đi gặp một người b&aacute;n thuốc. Nếu c&ocirc; ta l&agrave; cớm th&igrave; sao? T&ocirc;i c&oacute; bị bắt kh&ocirc;ng? Nhưng c&oacute; thứ g&igrave; đ&oacute; b&ecirc;n trong th&ocirc;i th&uacute;c, t&ocirc;i tự nhủ rằng cứ bước tiếp, thế n&ecirc;n t&ocirc;i đ&atilde; l&agrave;m theo.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i đứng b&ecirc;n ngo&agrave;i v&agrave; nhắn tin cho c&ocirc; ta.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i: T&ocirc;i tới rồi.</div>
+                                        <div dir="auto">C&ocirc; ấy: Yay ! T&ocirc;i tới liền đ&acirc;y.</div>
+                                        <div dir="auto">T&ocirc;i: C&ocirc; l&aacute;i xe g&igrave; vậy?</div>
+                                        <div dir="auto">C&ocirc; ấy: Camry bạc.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Khi tin nhắn cuối c&ugrave;ng của c&ocirc; ấy tới th&igrave; t&ocirc;i thấy xe c&ocirc; tấp v&agrave;o. C&ocirc; ấy đỗ kh&ocirc;ng xa nơi t&ocirc;i đứng lắm. Chẳng c&oacute; ai tr&ecirc;n xe ngo&agrave;i c&ocirc; ta cả vậy n&ecirc;n nỗi sợ h&atilde;i bị bắt c&oacute;c đ&atilde; được tr&uacute;t bỏ. C&ocirc; ấy mở cửa v&agrave; đứng xuống vỉa h&egrave;, nh&igrave;n quanh cho tới khi chạm mắt t&ocirc;i. T&ocirc;i khẽ gật đầu b&aacute;o hiệu. C&ocirc; ấy đơn giản vẫy tay ra dấu cho t&ocirc;i tiến lại gần, v&agrave; t&ocirc;i đ&atilde; l&agrave;m theo.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; ấy c&ograve;n trẻ, c&oacute; lẽ khoảng 25, với m&aacute;i t&oacute;c v&agrave;ng &oacute;ng lượn s&oacute;ng. L&agrave;n da nhợt nhạt đối lập hẳn với bộ đồ m&agrave;u đen c&ocirc; ấy đang mặc.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ng&agrave;y thật tuyệt để ra ngo&agrave;i nhỉ ?" - c&ocirc; ấy n&oacute;i thay lời ch&agrave;o. "Anh l&agrave; người đ&atilde; gọi về c&aacute;i hũ phải kh&ocirc;ng?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"V&acirc;ng, ch&iacute;nh l&agrave; t&ocirc;i đ&acirc;y!"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Tuyệt, well, của anh đ&acirc;y!"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; ấy trao cho t&ocirc;i một hũ thuỷ tinh b&eacute; x&iacute;u c&oacute; nắp đậy kh&ocirc;ng cao qu&aacute; v&agrave;i cm. B&ecirc;n trong đ&oacute; l&agrave; một &aacute;nh s&aacute;ng. Kh&ocirc;ng phải l&agrave; b&oacute;ng đ&egrave;n - chỉ l&agrave; &aacute;nh s&aacute;ng th&ocirc;i. Giống như ai đ&oacute; đ&atilde; đ&oacute;ng &aacute;nh s&aacute;ng mặt trời v&agrave;o hũ vậy. N&oacute; lấp l&aacute;nh ngay dưới &aacute;nh s&aacute;ng buổi chiều. Giống như một mặt trời t&iacute; x&iacute;u, hoặc một vũ trụ t&iacute; x&iacute;u tồn tại trong một căn nh&agrave; b&eacute; nhỏ với những bức tường pha l&ecirc;. T&ocirc;i nh&igrave;n ngắm n&oacute; say sưa th&iacute;ch th&uacute; chẳng giấu đi nỗi k&iacute;nh phục tr&ecirc;n gương mặt.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"&Aacute;nh s&aacute;ng kh&aacute; đẹp phải kh&ocirc;ng?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"C&aacute;i... c&aacute;i g&igrave; đ&acirc;y?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Anh đ&atilde; hỏi c&acirc;u n&agrave;y ba lần rồi. C&acirc;u trả lời của t&ocirc;i vẫn vậy. Đ&oacute; l&agrave; hạnh ph&uacute;c. Hạnh ph&uacute;c trong hũ thuỷ tinh."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"T&ocirc;i phải l&agrave;m g&igrave; với n&oacute; đ&acirc;y?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Giữ n&oacute;," c&ocirc; ấy n&oacute;i giản đơn, "nếu c&oacute; vấn đề g&igrave; th&igrave; nhắn tin cho t&ocirc;i."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; ta chuẩn bị l&ecirc;n xe.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Đợi đ&atilde;!" T&ocirc;i n&oacute;i, "t&ocirc;i nghĩ c&ocirc; b&aacute;n thứ n&agrave;y m&agrave;? Bao nhi&ecirc;u vậy?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Đừng lo anh bạn," c&ocirc; ấy mỉm cười, "anh sẽ trả th&ocirc;i."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; đ&oacute;ng cửa xe v&agrave; t&ocirc;i bước sang một b&ecirc;n khi c&ocirc; l&ugrave;i xe rồi l&aacute;i đi mất. Chuyện qu&aacute;i g&igrave; vừa xảy ra vậy? T&ocirc;i đang giữ thứ g&igrave; đ&acirc;y? T&ocirc;i nh&igrave;n xuống c&aacute;i hũ một lần nữa. &Aacute;nh h&agrave;o quang rực rỡ thật m&ecirc; hoặc. T&ocirc;i đặt n&oacute; v&agrave;o t&uacute;i v&agrave; t&ocirc;i c&oacute; thể thấy n&oacute; khẽ &aacute;nh l&ecirc;n xuy&ecirc;n qua t&uacute;i quần t&ocirc;i. T&ocirc;i bước về nh&agrave;.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Một ng&agrave;y nắng r&aacute;o tuyệt đẹp nhanh ch&oacute;ng chuyển mưa với to&agrave;n m&acirc;y m&ugrave; tr&ecirc;n trời. Dự b&aacute;o thời tiết kh&ocirc;ng n&oacute;i trời sẽ mưa, nếu kh&ocirc;ng t&ocirc;i đ&atilde; bắt xe bus hoặc t&agrave;u điện ngầm đi l&agrave;m rồi. T&ocirc;i rảo bước về nh&agrave;, cố gắng để kh&ocirc;ng bị ướt sũng. Cuối c&ugrave;ng t&ocirc;i cũng t&igrave;m thấy một chỗ tr&uacute; khi chạy tới căn hộ nh&agrave; m&igrave;nh.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i bước tới cửa v&agrave; nhận ra ch&igrave;a kho&aacute; đ&atilde; rơi mất. Mẹ kiếp, kh&ocirc;ng thể tin được l&agrave; m&igrave;nh lại l&agrave;m mất n&oacute;, t&ocirc;i nghĩ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i g&otilde; cửa v&agrave; n&oacute;i to "Hey, vợ ơi anh đ&acirc;y, anh kh&ocirc;ng biết đ&atilde; để ch&igrave;a kho&aacute; đ&acirc;u rồi." T&ocirc;i nghe tiếng cửa mở từ b&ecirc;n trong.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Khi c&aacute;nh cửa mở ra t&ocirc;i được ch&agrave;o đ&oacute;n bởi một người đ&agrave;n &ocirc;ng to lớn với m&aacute;i t&oacute;c b&oacute;ng nhờn v&agrave; ch&ograve;m r&acirc;u b&ugrave; x&ugrave;, &ocirc;ng ta n&oacute;i, "t&ocirc;i nghĩ anh bạn đ&atilde; đi nhầm nh&agrave; rồi."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"&Ocirc;i," t&ocirc;i n&oacute;i ho&agrave;n to&agrave;n mất phương hướng, "t&ocirc;i xin lỗi. Ch&uacute;c anh buổi tối vui vẻ."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Anh ta kh&uacute;c kh&iacute;ch cười v&agrave; đ&oacute;ng cửa.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Căn hộ số 33.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i biết đ&oacute; l&agrave; căn hộ của t&ocirc;i. T&ocirc;i biết m&agrave;. T&ocirc;i đ&atilde; ở trong căn hộ 33 năm năm nay. Nhưng đ&oacute; kh&ocirc;ng phải l&agrave; căn hộ của t&ocirc;i. Từ những g&igrave; t&ocirc;i c&oacute; thể thấy b&ecirc;n trong, tất cả đồ nội thất đều kh&aacute;c biệt, n&oacute; được sơn m&agrave;u kh&aacute;c, tất cả đều kh&ocirc;ng đ&uacute;ng. T&ocirc;i cảm thấy như t&ocirc;i đ&atilde; đ&aacute;nh v&agrave;o đầu m&igrave;nh v&agrave; bị chuốc thuốc m&ecirc;. Trong khoảnh khắc đ&oacute;, kh&ocirc;ng c&oacute; g&igrave; c&oacute; nghĩa nữa.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i r&uacute;t điện thoại ra gọi cho Kelsey để c&ocirc; ấy c&oacute; thể trấn tĩnh t&ocirc;i v&agrave; n&oacute;i với t&ocirc;i rằng t&ocirc;i chỉ bối rối trong một gi&acirc;y. Nhưng số vợ t&ocirc;i kh&ocirc;ng c&oacute; trong điện thoại của t&ocirc;i. Thực tế l&agrave;, kh&ocirc;ng c&oacute; g&igrave; trong điện thoại của t&ocirc;i cả. T&ocirc;i kh&ocirc;ng c&oacute; tin nhắn với c&ocirc; ấy. Kh&ocirc;ng c&oacute; lịch sử cuộc gọi. Kh&ocirc;ng c&oacute; h&igrave;nh ảnh. Giống như điện thoại của t&ocirc;i đ&atilde; thiết lập lại c&agrave;i đặt gốc. C&oacute; phải c&ocirc; g&aacute;i đ&oacute; bằng c&aacute;ch n&agrave;o đ&oacute; đ&atilde; tr&aacute;o điện thoại của t&ocirc;i khi t&ocirc;i kh&ocirc;ng để &yacute;? T&ocirc;i sẽ tự bấm số Kelsey, nhưng t&ocirc;i kh&ocirc;ng thể nhớ ra được. T&ocirc;i đ&atilde; lu&ocirc;n thuộc l&ograve;ng số điện thoại đ&oacute; nhưng giờ th&igrave; kh&ocirc;ng c&ograve;n nữa. T&ocirc;i cần phải quay lại văn ph&ograve;ng, t&ocirc;i đ&atilde; sao lưu tất cả danh bạ tr&ecirc;n m&aacute;y t&iacute;nh l&agrave;m việc của m&igrave;nh.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">V&igrave; trời vẫn c&ograve;n mưa, n&ecirc;n t&ocirc;i nhảy l&ecirc;n chiếc xe bu&yacute;t dừng ngay trước khu chung cư. T&ocirc;i hướng về ph&iacute;a văn ph&ograve;ng, d&agrave;nh to&agrave;n bộ thời gian nh&igrave;n chằm chằm v&agrave;o đ&ocirc;i gi&agrave;y ướt của m&igrave;nh, tự hỏi chuyện qu&aacute;i g&igrave; đang xảy ra.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Ch&uacute;ng t&ocirc;i c&oacute; thẻ ra v&agrave;o t&ograve;a nh&agrave; để chỉ những người c&oacute; thẩm quyền mới c&oacute; thể v&agrave;o b&ecirc;n trong. T&ocirc;i lu&ocirc;n giữ thẻ ra v&agrave;o của m&igrave;nh trong v&iacute; của m&igrave;nh, lu&ocirc;n lu&ocirc;n l&agrave; vậy. Nhưng thật bất ngờ, thật bất ngờ - n&oacute; kh&ocirc;ng c&ograve;n ở đ&oacute;. T&ocirc;i li&ecirc;n lạc qua hệ thống loa m&agrave; ch&uacute;ng t&ocirc;i d&agrave;nh cho kh&aacute;ch c&oacute; c&aacute;c cuộc hẹn hoặc nh&acirc;n vi&ecirc;n để dự ph&ograve;ng trong trường hợp ai đ&oacute; bị mất hoặc qu&ecirc;n thẻ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">BZZZ</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"T&ocirc;i l&agrave; Tim, t&ocirc;i hẳn đ&atilde; mất thẻ. Số nh&acirc;n vi&ecirc;n của t&ocirc;i l&agrave;..." t&ocirc;i dừng lại khi trong đầu trống kh&ocirc;ng.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Một giọng n&oacute;i ph&aacute;t ra qua loa, "Tim? * Số nh&acirc;n vi&ecirc;n của anh l&agrave; g&igrave;?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ừm, t&ocirc;i kh&ocirc;ng thể nhớ, t&ocirc;i..."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Được rồi, chỉ cần cho t&ocirc;i biết t&ecirc;n đầy đủ v&agrave; bộ phận l&agrave;m việc của bạn"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ừ, t&agrave;i ch&iacute;nh. T&ocirc;i l&agrave; người nh&acirc;n vi&ecirc;n t&agrave;i ch&iacute;nh. T&ecirc;n đầy đủ của t&ocirc;i l&agrave; Tim Brooks."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Đợi ch&uacute;t."</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Khoảng ba mươi gi&acirc;y sau, người đ&agrave;n &ocirc;ng lại n&oacute;i với t&ocirc;i.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Ch&uacute;ng t&ocirc;i kh&ocirc;ng c&oacute; ai l&agrave; Tim Brooks l&agrave;m việc trong t&ograve;a nh&agrave; n&agrave;y. Anh c&oacute; hẹn với ai đ&oacute; chưa?"</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i ngạc nhi&ecirc;n l&ugrave;i lại, gần như vấp ng&atilde; tr&ecirc;n đ&ocirc;i ch&acirc;n của ch&iacute;nh m&igrave;nh. T&ocirc;i mới đến văn ph&ograve;ng đ&oacute; một hoặc hai giờ trước. Điều g&igrave; đ&atilde; xảy ra với t&ocirc;i ? . T&ocirc;i nh&igrave;n chằm chằm v&agrave;o tay m&igrave;nh, kh&ocirc;ng chắc m&igrave;nh c&oacute; đang ở đ&uacute;ng cơ thể kh&ocirc;ng. T&ocirc;i cảm thấy như thế giới xung quanh đang tan r&atilde;. T&ocirc;i kh&ocirc;ng kiểm so&aacute;t được, t&ocirc;i chỉ đơn thuần đang ở trong đầu người kh&aacute;c, nh&igrave;n thế giới qua đ&ocirc;i mắt của họ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Ngay sau đ&oacute;, t&ocirc;i nhận được một tin nhắn. T&ocirc;i nhận ra số điện thoại ngay lập tức, đ&oacute; l&agrave; c&ocirc; g&aacute;i l&uacute;c n&atilde;y. Người đ&atilde; cho t&ocirc;i c&aacute;i hũ. T&ocirc;i đ&atilde; qu&ecirc;n tất cả về n&oacute; cho đến khi t&ocirc;i nh&igrave;n thấy tin nhắn của c&ocirc; ấy.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; ấy: N&agrave;y. Thế n&agrave;o rồi?</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i nh&igrave;n v&agrave;o điện thoại của m&igrave;nh, chết lặng. T&ocirc;i tức đi&ecirc;n l&ecirc;n v&igrave; c&ocirc; ấy rất thờ ơ về việc n&agrave;y. C&ocirc; ta biết chuyện g&igrave; đang xảy ra. C&ocirc; ta đ&atilde; l&agrave;m điều n&agrave;y bằng c&aacute;ch n&agrave;o đ&oacute;.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i: C&ocirc; đ&atilde; l&agrave;m c&aacute;i qu&aacute;i g&igrave; với t&ocirc;i?!</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">C&ocirc; ta: Điều tồi tệ nhất vẫn chưa đến.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i đ&atilde; su&yacute;t n&eacute;m điện thoại xa hết mức c&oacute; thể trong sự tức giận. T&ocirc;i lấy c&aacute;i hũ ra khỏi t&uacute;i. Tr&ocirc;ng n&oacute; kh&ocirc;ng thay đổi g&igrave; cả, vẫn ph&aacute;t s&aacute;ng như vậy.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"M&agrave;y đ&atilde; l&agrave;m c&aacute;i đ&eacute;o g&igrave; vậy!" T&ocirc;i h&eacute;t với c&aacute;i hũ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Khi t&ocirc;i nh&igrave;n chằm chằm lớp thuỷ tinh lấp l&aacute;nh của n&oacute;, t&ocirc;i nhận ra một điều. T&ocirc;i kh&ocirc;ng biết vợ t&ocirc;i tr&ocirc;ng như thế n&agrave;o nữa. T&ocirc;i biết t&ecirc;n c&ocirc; ấy. T&ocirc;i biết n&oacute; bắt đầu bằng chữ K, hoặc c&oacute; thể l&agrave; chữ C. T&ocirc;i kh&ocirc;ng thể h&igrave;nh dung c&ocirc; ấy trong đầu. T&ocirc;i biết m&igrave;nh đ&atilde; c&oacute; vợ. T&ocirc;i biết chắc l&agrave; như vậy. Phải, v&igrave; t&ocirc;i đ&atilde; c&oacute; một c&ocirc; con g&aacute;i. T&ocirc;i đ&atilde; c&oacute; vợ v&agrave; một c&ocirc; con g&aacute;i. T&ocirc;i chỉ, kh&ocirc;ng thể nhớ được khu&ocirc;n mặt của họ sau đ&oacute; l&agrave; t&ecirc;n của họ, hay ng&agrave;y sinh nhật của họ, hoặc bất kỳ k&yacute; ức n&agrave;o t&ocirc;i c&oacute; với họ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i biết l&agrave; họ tồn tại. Họ đ&atilde; tồn tại. T&ocirc;i vừa mới nh&igrave;n thấy họ v&agrave;o buổi s&aacute;ng, phải kh&ocirc;ng? T&ocirc;i kh&ocirc;ng thể nhớ được c&ocirc; ấy tr&ocirc;ng như thế n&agrave;o ?. Ng&agrave;y đầu ti&ecirc;n của ch&uacute;ng t&ocirc;i l&agrave; g&igrave;? Ch&uacute;ng t&ocirc;i đ&atilde; c&oacute; một đ&aacute;m cưới, phải kh&ocirc;ng? Nụ h&ocirc;n đầu ti&ecirc;n của ch&uacute;ng ta th&igrave; sao? Con g&aacute;i t&ocirc;i hay đ&oacute; l&agrave; con trai t&ocirc;i? C&oacute; lẽ t&ocirc;i đ&atilde; chưa c&oacute; con. Nhưng vợ t&ocirc;i, hoặc bạn g&aacute;i, c&ocirc; ấy l&agrave; c&oacute; thật. T&ocirc;i biết m&agrave;. &Yacute; nghĩ đang x&eacute; toạc t&ocirc;i ra. T&ocirc;i kh&ocirc;ng thể nh&igrave;n thấy c&ocirc; ấy trong đầu. T&ocirc;i kh&ocirc;ng thể nhớ lại một chuyện g&igrave; về c&ocirc; ấy.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i đang đứng b&ecirc;n ngo&agrave;i vẫn t&ograve;a nh&agrave; đ&oacute;, nhưng t&ocirc;i kh&ocirc;ng chắc tại sao m&igrave;nh lại như vậy. T&ocirc;i đ&atilde; l&agrave;m việc ở đ&oacute;? T&ocirc;i phải l&agrave;m việc ở đ&acirc;u đ&oacute;. Mưa k&egrave;m theo một cơn gi&oacute; lạnh buốt. N&oacute; đang quất v&agrave;o mặt t&ocirc;i, l&agrave;m mũi v&agrave; m&aacute; t&ocirc;i đau nh&oacute;i. T&ocirc;i muốn về nh&agrave;, t&ocirc;i muốn ở b&ecirc;n c&ocirc; ấy. T&ocirc;i muốn được ấm &aacute;p. T&ocirc;i muốn c&oacute; một c&ocirc;ng việc văn ph&ograve;ng tồi tệ m&agrave; giữ một m&aacute;i nh&agrave; tr&ecirc;n đầu của t&ocirc;i. T&ocirc;i muốn tất cả. T&ocirc;i ướt sũng. T&ocirc;i đ&atilde; khốn khổ. T&ocirc;i kh&ocirc;ng thể nhớ cha mẹ, hoặc thời thơ ấu của t&ocirc;i. T&ocirc;i thậm ch&iacute; c&oacute; bạn b&egrave; kh&ocirc;ng? Tại sao t&ocirc;i lại đứng trong mưa?</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i nh&igrave;n xuống tay m&igrave;nh. T&ocirc;i vẫn đang nắm chặt c&aacute;i hũ. K&yacute; ức duy nhất trong cả cuộc đời t&ocirc;i c&oacute; thể nhớ một c&aacute;ch cụ thể l&agrave; c&ocirc; g&aacute;i đ&oacute; đưa n&oacute; cho t&ocirc;i. N&oacute;i với t&ocirc;i đ&oacute; l&agrave; hạnh ph&uacute;c. N&oacute; kh&ocirc;ng mang lại hạnh ph&uacute;c. N&oacute; mang lại nỗi đau. N&oacute; mang lại khốn khổ. T&ocirc;i đau khổ hơn hơn bao giờ hết. Điện thoại của t&ocirc;i rung l&ecirc;n:</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">"Đập c&aacute;i lọ đi Tim." - Tin nhắn hiện l&ecirc;n m&agrave;n h&igrave;nh từ số c&ocirc; g&aacute;i ấy</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i nh&igrave;n v&agrave;o b&agrave;n tay c&ograve;n lại của m&igrave;nh. Trong &aacute;nh s&aacute;ng của mặt trời lặn v&agrave; bầu trời mưa, chiếc b&igrave;nh ph&aacute;t s&aacute;ng rực rỡ hơn bất kỳ &aacute;nh đ&egrave;n đường n&agrave;o gần t&ocirc;i. T&ocirc;i đ&atilde; kh&ocirc;ng ph&aacute; vỡ n&oacute; bởi v&igrave; muốn l&agrave;m theo hướng dẫn của c&ocirc; ấy. T&ocirc;i đ&atilde; ph&aacute; vỡ n&oacute; v&igrave; t&ocirc;i tức giận. T&ocirc;i đ&atilde; ph&aacute; vỡ n&oacute; v&igrave; t&ocirc;i buồn. T&ocirc;i cần giải toả. T&ocirc;i giơ c&aacute;nh tay l&ecirc;n tr&ecirc;n đầu v&agrave; đưa n&oacute; xuống với một động t&aacute;c thật nhanh, đập vỡ c&aacute;i lọ tr&ecirc;n nền b&ecirc; t&ocirc;ng dưới ch&acirc;n t&ocirc;i.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Kh&ocirc;ng kh&iacute; tối tăm, lạnh lẽo đ&oacute; k&egrave;m theo cơn mưa lan tỏa như thể đ&oacute; l&agrave; s&oacute;ng xung k&iacute;ch của một quả bom ph&aacute;t nổ, v&agrave; t&ocirc;i đang ở t&acirc;m chấn. T&ocirc;i thấy &aacute;nh s&aacute;ng v&agrave;ng ấm &aacute;p từ b&ecirc;n trong c&aacute;i b&igrave;nh lan nhanh tr&ecirc;n mặt đất v&agrave; bay l&ecirc;n trời. T&ocirc;i đ&atilde; bị nhấn ch&igrave;m trong đ&oacute;. T&ocirc;i kh&ocirc;ng c&ograve;n c&oacute; thể nh&igrave;n thấy đường phố hay mưa, hay bất cứ điều g&igrave; tối tăm. T&ocirc;i cảm thấy như m&igrave;nh đang lao thẳng v&agrave;o một ng&ocirc;i sao đang đi nhanh hơn tốc độ &aacute;nh s&aacute;ng. Cảm gi&aacute;c như đang ngồi trước đống lửa trong một đ&ecirc;m m&ugrave;a đ&ocirc;ng lạnh lẽo, nhưng hơi ấm đ&oacute; bao tr&ugrave;m l&ecirc;n từng cm tr&ecirc;n cơ thể.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">V&agrave; rồi t&ocirc;i chớp mắt.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Ngay lập tức t&ocirc;i c&oacute; thể cảm nhận được những tấm ga giường b&ecirc;n dưới m&igrave;nh, v&agrave; lưng t&ocirc;i khẽ chạm v&agrave;o vợ t&ocirc;i. T&ocirc;i đang nh&igrave;n ra ngo&agrave;i cửa sổ. &Aacute;nh s&aacute;ng ban mai len lỏi qua tấm k&iacute;nh v&agrave; lấp l&aacute;nh tr&ecirc;n khu&ocirc;n mặt t&ocirc;i.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i đứng dậy từ giường v&agrave; lấy điện thoại của m&igrave;nh. Đ&oacute; l&agrave; buổi s&aacute;ng thứ s&aacute;u. T&ocirc;i đ&atilde; nhận một tin nhắn:</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">H&atilde;y cho t&ocirc;i biết nếu anh cần một hũ kh&aacute;c <span class="pq6dq46d tbxw36s4 knj5qynh kvgmc6g5 ditlmg2l oygrvhab nvdbi5me sf5mxxl7 gl3lb2sf hhz5lgdu"></span></div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i gọi b&aacute;o nghỉ ốm. T&ocirc;i lẻn v&agrave;o ph&ograve;ng con g&aacute;i m&igrave;nh v&agrave; ch&agrave;o con b&eacute; bằng một nụ h&ocirc;n v&agrave; n&oacute;i với n&oacute; rằng h&ocirc;m nay sẽ kh&ocirc;ng phải đi học mẫu gi&aacute;o. Ch&uacute;ng t&ocirc;i sẽ c&oacute; một ng&agrave;y gia đ&igrave;nh. Con b&eacute; mỉm cười v&agrave; vươn tay với một c&aacute;i ng&aacute;p trước khi cuộn tr&ograve;n v&agrave; ngủ thiếp đi.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">T&ocirc;i trở lại giường v&agrave; siết chặt vợ. T&ocirc;i đ&atilde; kh&ocirc;ng bu&ocirc;ng tay trong nhiều giờ. Con g&aacute;i của ch&uacute;ng t&ocirc;i v&agrave;o ph&ograve;ng v&agrave; đ&aacute;nh thức ch&uacute;ng t&ocirc;i dậy, cuối c&ugrave;ng n&oacute; nhảy l&ecirc;n giường v&agrave; h&eacute;t l&ecirc;n để ch&uacute;ng t&ocirc;i thức dậy. H&ocirc;m qua t&ocirc;i c&oacute; thể thấy kh&oacute; chịu. H&ocirc;m qua t&ocirc;i c&oacute; thể đ&atilde; t&igrave;m thấy rất nhiều điều g&acirc;y phiền nhiễu, đơn điệu, hoặc buồn tẻ.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">Nhưng kh&ocirc;ng phải h&ocirc;m nay. H&ocirc;m nay, t&ocirc;i k&eacute;o con b&eacute; xuống dưới lớp chăn giữa t&ocirc;i v&agrave; Kelsey.</div>
+                                        </div>
+                                        <div class="o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">
+                                        <div dir="auto">H&ocirc;m nay sẽ l&agrave; một ng&agrave;y tốt l&agrave;nh. H&ocirc;m nay, t&ocirc;i rất hạnh ph&uacute;c.</div>
+                                        </div>
+                                </div>
                            </div>
                        </div>
                    </div>

@@ -33,6 +33,7 @@ $(document).ready(function () {
     cursorHoverLink('.headerWeb__btnOpenMenu');
     cursorHoverLink('.content__itemLink');
     cursorHoverItem('.listProject__item');
+    cursorHoverItem('.listStory__item');
 });
 function lerp(s, e, t) {
     return (1 - t) * s + t * e;
