@@ -11,7 +11,7 @@ $(document).ready(function () {
             direction : 'vertical',
         },
         smartphone: {
-            lerp : 0.2,
+            lerp : 0.5,
             smooth: true,
             direction : 'vertical'
         }
@@ -69,7 +69,7 @@ $(document).ready(function () {
         $('.loading').css('transform', 'translateY(-100vh)');
         $('.loading').css('visibility', 'hidden');
         $('.loading').css('opacity', '0');
-    }, 3500);
+    }, 4000);
     setTimeout(function(){ 
         $('.loading').css('display', 'none');
     }, 5000);

@@ -158,6 +158,12 @@
     .modalWeb .content__img {
         margin: 0px 0px 25px 0px;   
     }
+    .project__wrap .item__imgProject, .story__wrap .item__imgStory {
+        height: 45vh;
+    }
+    .story__wrap .nameStory__text {
+        font-size: 3vh;
+    }
 }
 
 /* VERY SMALL */
