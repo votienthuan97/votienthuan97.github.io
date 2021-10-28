@@ -125,11 +125,14 @@
         margin: auto;
     }
     .modalWeb .item__header {
-       background: rgba(0,0,0,0.4);
-       backdrop-filter: blur(10px);
+       background: rgba(0,0,0,0.6);
+       backdrop-filter: blur(12px);
     }
     .modalWeb .content__wrap {
         padding: 50px 0px 100px 0px;
+    }
+    .item__lineProgress {
+        display: none;
     }
 }
 
