@@ -460,9 +460,11 @@ html.has-scroll-dragging {
     justify-content: center;
     transition: 0.3s linear;
     position: relative;
-    width: 65vh;
-    height: 80vh;
+    width: 100vh;
+    height: 75vh;
     box-shadow: 0px 0px 7px 2px rgb(232 232 232 / 44%);
+    border-radius: 25px;
+    overflow: hidden;
 }
 .project__wrap .imgProject__img {
     width: 100%;
@@ -472,24 +474,26 @@ html.has-scroll-dragging {
     background-repeat: no-repeat;
 }
 .project__wrap .item__infoProject {
-    width: 100%;
+    width: 40%;
     z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8vh;
-    position: relative;
-    z-index: 1;
+    height: 30vh;
+    position: absolute;
+    z-index: 2;
     overflow: hidden;
     margin: 5px 0px 0px 0px;
+    border-radius: 15px;
+    background: #fff6;
 }
-.project__wrap .item__infoProject:before {
-    content: '';
+.project__wrap .infoProject__blur {
     position: absolute;
     z-index: 0;
-    background: #111;
     width: 100%;
     height: 100%;
+    filter: blur(6px);
+    z-index: 0;
 }
 .project__wrap .infoProject__name {
     letter-spacing: 0.1rem;
@@ -500,17 +504,14 @@ html.has-scroll-dragging {
     text-transform: uppercase;
     width: 100%;
     height: 8vh;
-    color: #FFF;
+    color: #c2c2c2;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     mix-blend-mode: difference;
     padding: 0px 2vh;
-}
-.project__wrap .listProject__item:hover .item__imgProject {
-    height: 80vh;
-    transition: 0.8s cubic-bezier(0.8, 0, 0.2, 1);
-    transition-delay: 0.2s;
+    position: absolute;
+    z-index: 3;
 }
 /* ---------------------- PAGE STORY ---------------------- */
 #story {
@@ -734,18 +735,19 @@ html.has-scroll-dragging {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0px 50px;
 }
-.modalWeb .wrap__bgImg:before {
+.modalWeb .wrap__bgImg.story:before {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
     z-index: 1;
 }
 .modalWeb .wrap__bgVideo {
@@ -780,6 +782,7 @@ html.has-scroll-dragging {
     overflow-x: hidden;
     overflow-y: auto;
     transition: 0.2s all;
+    padding: 0px 0px 100px 0px;
 }
 .modalWeb .content__wrap::-webkit-scrollbar {
     width: 5px;
