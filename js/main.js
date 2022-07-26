@@ -43,9 +43,9 @@ $(document).ready(function () {
         function showNextQuote() {
           ++quoteIndex;
           quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(4000)
+            .fadeIn(5000)
             .delay(0)
-            .fadeOut(2000, showNextQuote);
+            .fadeOut(2500, showNextQuote);
         }
         showNextQuote();
     })();
