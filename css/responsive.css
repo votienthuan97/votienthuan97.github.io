@@ -159,7 +159,18 @@
 /* SMALL DEVICE ROTATE */
 
 @media screen and (orientation:landscape) and (max-width: 992px) {}
-
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+  
 /* SMALL DEVICE */
 
 @media screen and (max-width: 479px) {
