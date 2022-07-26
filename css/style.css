@@ -1,3 +1,4 @@
+
 /* ---------------------- FONT WEB ---------------------- */
 
 @font-face {
@@ -62,13 +63,21 @@ html.has-scroll-dragging {
     top: 0;
     width: 11px;
     height: 100%;
-    transform-origin: center right;
+    -webkit-transform-origin: center right;
+        -ms-transform-origin: center right;
+            transform-origin: center right;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    -o-transition: transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
     opacity: 0;
 }
 
 .c-scrollbar:hover {
-    transform: scaleX(1.45);
+    -webkit-transform: scaleX(1.45);
+        -ms-transform: scaleX(1.45);
+            transform: scaleX(1.45);
 }
 
 .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
@@ -80,11 +89,15 @@ html.has-scroll-dragging {
     height: 10px;
     top: auto;
     bottom: 0;
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
 }
 
 [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-    transform: scaleY(1.3);
+    -webkit-transform: scaleY(1.3);
+        -ms-transform: scaleY(1.3);
+            transform: scaleY(1.3);
 }
 
 .c-scrollbar_thumb {
@@ -122,18 +135,35 @@ html.has-scroll-dragging {
     height: 58px;
     mix-blend-mode: difference;
     z-index: 9997;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .headerWeb .headerWeb__btnOpenMenu {
     width: 58px;
     height: 58px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .headerWeb .btnOpenMenu__ic {
     width: 36px;
@@ -147,25 +177,37 @@ html.has-scroll-dragging {
 .headerWeb .btnOpenMenu__ic rect {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: all 0.4s linear 0.1s;
+    -o-transition: all 0.4s linear 0.1s;
     transition: all 0.4s linear 0.1s;
 }
 .headerWeb .btnOpenMenu__ic path {
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-29px);
+    -webkit-transform: translateY(-29px);
+        -ms-transform: translateY(-29px);
+            transform: translateY(-29px);
+    -webkit-transition: all 0.4s linear 0.1s;
+    -o-transition: all 0.4s linear 0.1s;
     transition: all 0.4s linear 0.1s;
     stroke-width: 2;
 }
 .headerWeb .btnOpenMenu__ic.open rect {
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-29px);
+    -webkit-transform: translateY(-29px);
+        -ms-transform: translateY(-29px);
+            transform: translateY(-29px);
 }
 .headerWeb .btnOpenMenu__ic.open path {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
 }
 /* ---------------------- MENU ---------------------- */
 .menu {
@@ -175,6 +217,8 @@ html.has-scroll-dragging {
     position: fixed;
     top: 0;
     left: 0;
+    -webkit-transition: all .5s linear;
+    -o-transition: all .5s linear;
     transition: all .5s linear;
     z-index: 1000;
     visibility: hidden;
@@ -188,17 +232,32 @@ html.has-scroll-dragging {
     position: absolute;
     top: 0px;
     right: 0px;
+    -webkit-transition: width .4s linear, opacity .4s linear, -webkit-transform .4s linear;
+    transition: width .4s linear, opacity .4s linear, -webkit-transform .4s linear;
+    -o-transition: width .4s linear, transform .4s linear,opacity .4s linear;
     transition: width .4s linear, transform .4s linear,opacity .4s linear;
-    transform: none;
+    transition: width .4s linear, transform .4s linear,opacity .4s linear, -webkit-transform .4s linear;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
     z-index: 0;
 }
 .menu .menu__content {
     width: 100vw;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 .menu .content__itemLink {
     position: relative;
@@ -212,15 +271,23 @@ html.has-scroll-dragging {
     margin: 25px 0px;
 }
 .menu .content__itemLink:nth-child(1) {
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 .menu .content__itemLink:nth-child(2) {
+    -webkit-transition: all .4s ease-in-out .1s;
+    -o-transition: all .4s ease-in-out .1s;
     transition: all .4s ease-in-out .1s;
 }
 .menu .content__itemLink:nth-child(3) {
+    -webkit-transition: all .4s ease-in-out .2s;
+    -o-transition: all .4s ease-in-out .2s;
     transition: all .4s ease-in-out .2s;
 }
 .menu .content__itemLink:nth-child(4) {
+    -webkit-transition: all .4s ease-in-out .3s;
+    -o-transition: all .4s ease-in-out .3s;
     transition: all .4s ease-in-out .3s;
 }
 .menu.open {
@@ -234,8 +301,14 @@ html.has-scroll-dragging {
     width: 240vw;
     height: 240vw;
     opacity: 1;
-    transform: translateX(120vw) translateY(-120vw);
+    -webkit-transform: translateX(120vw) translateY(-120vw);
+        -ms-transform: translateX(120vw) translateY(-120vw);
+            transform: translateX(120vw) translateY(-120vw);
+    -webkit-transition: width .5s linear .4s, opacity .5s linear .4s, -webkit-transform .5s linear .4s;
+    transition: width .5s linear .4s, opacity .5s linear .4s, -webkit-transform .5s linear .4s;
+    -o-transition: width .5s linear .4s, transform .5s linear .4s,opacity .5s linear .4s;
     transition: width .5s linear .4s, transform .5s linear .4s,opacity .5s linear .4s;
+    transition: width .5s linear .4s, transform .5s linear .4s,opacity .5s linear .4s, -webkit-transform .5s linear .4s;
 }
 .menu.open .content__itemLink {
     left: 150px;
@@ -243,15 +316,23 @@ html.has-scroll-dragging {
     font-size: 8vh;
 }
 .menu.open .content__itemLink:nth-child(1) {
+    -webkit-transition: all .4s ease-in-out .8s;
+    -o-transition: all .4s ease-in-out .8s;
     transition: all .4s ease-in-out .8s;
 }
 .menu.open .content__itemLink:nth-child(2) {
+    -webkit-transition: all .4s ease-in-out .9s;
+    -o-transition: all .4s ease-in-out .9s;
     transition: all .4s ease-in-out .9s;
 }
 .menu.open .content__itemLink:nth-child(3) {
+    -webkit-transition: all .4s ease-in-out 1s;
+    -o-transition: all .4s ease-in-out 1s;
     transition: all .4s ease-in-out 1s;
 }
 .menu.open .content__itemLink:nth-child(4) {
+    -webkit-transition: all .4s ease-in-out 1.1s;
+    -o-transition: all .4s ease-in-out 1.1s;
     transition: all .4s ease-in-out 1.1s;
 }
 /* ---------------------- CURSOR ---------------------- */
@@ -263,8 +344,12 @@ html.has-scroll-dragging {
     height: 30px;
     z-index: 9999;
     pointer-events: none;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    -webkit-transition: 0.3s cubic-bezier(.44,.15,0,1.54) width,0.3s cubic-bezier(.44,.15,0,1.54) height;
+    -o-transition: 0.3s cubic-bezier(.44,.15,0,1.54) width,0.3s cubic-bezier(.44,.15,0,1.54) height;
     transition: 0.3s cubic-bezier(.44,.15,0,1.54) width,0.3s cubic-bezier(.44,.15,0,1.54) height;
 }
 .cursor .cursor__point {
@@ -272,10 +357,18 @@ html.has-scroll-dragging {
     width: 100%;
     height: 100%;
     border-radius: 100%;
+    -webkit-transition: 0.3s background;
+    -o-transition: 0.3s background;
     transition: 0.3s background;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .cursor.hoverLink {
     width: 80px;
@@ -283,6 +376,8 @@ html.has-scroll-dragging {
 }
 .cursor.hoverLink .cursor__point {
     background: #FFF;
+    -webkit-transition: 0.3s background;
+    -o-transition: 0.3s background;
     transition: 0.3s background;
 }
 .cursor.hoverItem  {
@@ -291,11 +386,16 @@ html.has-scroll-dragging {
 }
 .cursor.hoverItem .cursor__point {
     background: #FFF;
-    filter: blur(3px);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    -webkit-transition: 0.3s background;
+    -o-transition: 0.3s background;
     transition: 0.3s background;
 }
 /* ---------------------- FULLPAGE ---------------------- */
 .pageWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background : #FFF;
 }
@@ -309,18 +409,29 @@ html.has-scroll-dragging {
     width: 100vw;
     height: 100vh;
     z-index: 9998;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
+    -o-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     position: fixed;
     top : 0;
     left: 0;
     visibility: visible;
     opacity: 1;
-    transform: translateY(0vh);
+    -webkit-transform: translateY(0vh);
+        -ms-transform: translateY(0vh);
+            transform: translateY(0vh);
     will-change: transform;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     overflow: hidden;
 }
 .loading .loading__content {
@@ -328,6 +439,8 @@ html.has-scroll-dragging {
     font-size: 4vh;
     font-family: Gilroy-Bold;
     display: none;
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -337,13 +450,23 @@ html.has-scroll-dragging {
 #introduce {
     background: #FFF;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .intro__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .wrap__img {
     width: 40vw;
@@ -359,7 +482,8 @@ html.has-scroll-dragging {
     z-index: 1;
     margin: auto;
     background: #000;
-    filter: brightness(0.4);
+    -webkit-filter: brightness(0.4);
+            filter: brightness(0.4);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -382,10 +506,19 @@ html.has-scroll-dragging {
     padding: 0px 35vw;
 }
 .intro__wrap .content__introduce {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .intro__wrap .introduce__item {
     display: none;
@@ -411,22 +544,43 @@ html.has-scroll-dragging {
     position: relative;
 }
 .project__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .project__wrap .wrap__title {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px 5vw;
 }
 .project__wrap .title__boxText {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     line-height: 50px;
 }
 .project__wrap .boxText__text {
@@ -438,32 +592,59 @@ html.has-scroll-dragging {
     text-transform: uppercase;
 }
 .project__wrap .wrap__listProject {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     height: 100vh;
     padding: 0px 5vw;
 }
 .project__wrap .listProject__item {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100%;
     margin: 0px 25px;
 }
 .project__wrap .item__imgProject {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
     transition: 0.3s linear;
     position: relative;
     width: 45vw;
     height: 100vh;
-    box-shadow: 0px 0px 7px 2px rgb(232 232 232 / 44%);
+    -webkit-box-shadow: 0px 0px 7px 2px rgb(232 232 232 / 44%);
+            box-shadow: 0px 0px 7px 2px rgb(232 232 232 / 44%);
     overflow: hidden;
 }
 .project__wrap .imgProject__img {
@@ -476,10 +657,19 @@ html.has-scroll-dragging {
 .project__wrap .item__infoProject {
     width: calc(100% - 4vh);
     z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 15vh;
     position: absolute;
     bottom: 5vh;
@@ -489,21 +679,32 @@ html.has-scroll-dragging {
     margin: 5px 0px 0px 0px;
     border-radius: 2vh;
     background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 }
 .project__wrap .infoProject__name {
     letter-spacing: 0.1rem;
+    -webkit-transition: 0.8s cubic-bezier(0.8, 0, 0.2, 1);
+    -o-transition: 0.8s cubic-bezier(0.8, 0, 0.2, 1);
     transition: 0.8s cubic-bezier(0.8, 0, 0.2, 1);
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+         -o-transition-delay: 0.2s;
+            transition-delay: 0.2s;
     font-size: 3.5vh;
     font-family: Gilroy-Bold;
     text-transform: uppercase;
     width: 100%;
     height: 8vh;
     color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 0px 3vh;
     z-index: 3;
 }
@@ -529,12 +730,16 @@ html.has-scroll-dragging {
 }
 .modalWeb .toogleDarkLight:checked ~ .modalWeb__item .item__content .content__wrap {
     background-color: #FFF;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
 }
 .modalWeb .toogleDarkLight:checked ~ .modalWeb__item .item__content .content__wrap .content__text,
 .modalWeb .toogleDarkLight:checked ~ .modalWeb__item .item__content .content__wrap .content__text .text__link,
 .modalWeb .toogleDarkLight:checked ~ .modalWeb__item .item__content .content__wrap .content__text > p {
     color : #161F38;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
 }
 .modalWeb .toogleDarkLight:checked ~ .modalWeb__item .item__header .header__darklight {
@@ -563,25 +768,40 @@ html.has-scroll-dragging {
     visibility: hidden;
     opacity: 0;
     width: 100%;
-    transform: translateY(100vh);
+    -webkit-transform: translateY(100vh);
+        -ms-transform: translateY(100vh);
+            transform: translateY(100vh);
+    -webkit-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
+    -o-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     will-change: transform;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 .modalWeb .modalWeb__item:target {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0vh);
+    -webkit-transform: translateY(0vh);
+        -ms-transform: translateY(0vh);
+            transform: translateY(0vh);
 }
 .modalWeb .item__header {
     height: 50px;
     background: transparent;
     position: fixed;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding: 0px 15px;
+    -webkit-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
+    -o-transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
     z-index: 2;
 }
@@ -599,10 +819,18 @@ html.has-scroll-dragging {
     width: 40px;
     height: 30px;
     border-radius: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 2px solid #FFF;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
     margin: 0px 0px 0px 12.5px;
 }
@@ -612,9 +840,15 @@ html.has-scroll-dragging {
     height: 30px;
     border-radius: 25px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 2px solid #FFF;
 }
 .modalWeb .darklight__circle {
@@ -624,6 +858,8 @@ html.has-scroll-dragging {
     border-radius: 25px;
     position: absolute;
     left: 6px;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 .modalWeb .wrap__bgImg {
@@ -634,9 +870,15 @@ html.has-scroll-dragging {
     background-repeat: no-repeat;
     position: relative;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px 50px;
 }
 .modalWeb .wrap__bgImg.story:before {
@@ -645,7 +887,8 @@ html.has-scroll-dragging {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
     z-index: 1;
 }
 .modalWeb .wrap__bgVideo {
@@ -671,6 +914,8 @@ html.has-scroll-dragging {
     background: #161F38;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
     padding: 0px 0px 100px 0px;
 }
@@ -692,6 +937,8 @@ html.has-scroll-dragging {
     color : #FFF;
     font-size: 1.25rem;
     margin: 0px 0px 50px 0px;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
 }
 .modalWeb .content__img {
@@ -725,6 +972,8 @@ html.has-scroll-dragging {
     color : #FFF;
     font-size: 1.25rem;
     margin: 0px 0px 25px 0px;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
     transition: 0.2s all;
 }
 /* https://ckeditor.com/ckeditor-4/demo/ */

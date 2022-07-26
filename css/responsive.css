@@ -15,15 +15,24 @@
         margin: 0px 0px 30vh 0px;
     }
     .pageWrap {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .project__wrap,
     .story__wrap {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .project__wrap .wrap__listProject,
     .story__wrap .wrap__listStory {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: auto;
     }
     .project__wrap .wrap__title,
@@ -31,7 +40,10 @@
         height: auto;
     }
     .intro__wrap {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .intro__wrap .img__title {
         top: 70vh;
@@ -54,7 +66,9 @@
         line-height: 45px;
     }
     .menu.open .menu__background {
-        transform: translateX(50vw) translateY(-50vw);
+        -webkit-transform: translateX(50vw) translateY(-50vw);
+            -ms-transform: translateX(50vw) translateY(-50vw);
+                transform: translateX(50vw) translateY(-50vw);
     }
     .intro__wrap .wrap__content {
         height: 200px;
@@ -62,7 +76,9 @@
     .project__wrap,
     .story__wrap {
         width: 100vw;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
     .project__wrap .listProject__item,
     .story__wrap .listStory__item {
@@ -91,7 +107,8 @@
         height: 55vh;
     }
     .project__wrap .item__imgProject:hover {
-        clip-path: inset(0%);
+        -webkit-clip-path: inset(0%);
+                clip-path: inset(0%);
     }
     .story__wrap .listStory__item {
         height: auto;
@@ -99,8 +116,12 @@
     .story__wrap .item__nameStory {
         border-radius: 20px;
         padding: 25px;
-        align-items: flex-end;
-        justify-content: flex-start;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
     .story__wrap .imgStory__img {
         border-radius: 20px;
@@ -127,7 +148,8 @@
     }
     .modalWeb .item__header {
        background: rgba(0,0,0,0.6);
-       backdrop-filter: blur(12px);
+       -webkit-backdrop-filter: blur(12px);
+               backdrop-filter: blur(12px);
     }
     .modalWeb .content__wrap {
         padding: 50px 0px 100px 0px;
@@ -161,8 +183,12 @@
 @media screen and (orientation:landscape) and (max-width: 992px) {}
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
     html {
-      transform: rotate(-90deg);
-      transform-origin: left top;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transform-origin: left top;
+          -ms-transform-origin: left top;
+              transform-origin: left top;
       width: 100vh;
       overflow-x: hidden;
       position: absolute;
@@ -175,14 +201,19 @@
 
 @media screen and (max-width: 479px) {
     .pageWrap {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .menu.open .content__itemLink {
         left: 50px;
         font-size: 5vh;
     }
     .menu.open .menu__background {
-        transform: translateX(70vw) translateY(-40vw);
+        -webkit-transform: translateX(70vw) translateY(-40vw);
+            -ms-transform: translateX(70vw) translateY(-40vw);
+                transform: translateX(70vw) translateY(-40vw);
     }
     .intro__wrap .img__title {
         font-size: 7vh;
