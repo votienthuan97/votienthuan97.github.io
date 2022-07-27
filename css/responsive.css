@@ -6,7 +6,7 @@
 }
 @media screen and (max-width: 1200px) {
     .project .project__listContent {
-        margin: 80px 15px;
+        margin: 80px 15px 150px 15px;
     }
     .project .listContent__listProject {
         width: 100%;
