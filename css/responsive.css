@@ -1,3 +1,5 @@
+
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     video{ -webkit-filter: brightness(102%); }
 }
@@ -35,11 +37,15 @@
     }
     .headerWeb {
         padding: 0px 20px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .footerWeb {
         padding: 0px 20px;
-        align-items: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
     }
     #vdHomeLoop {
         width: 300px;
@@ -58,31 +64,46 @@
         margin: -60px 0px 0px 0px;
     }
     .home .home__listContent {
-        align-items: flex-end;
+        height: 85vh;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
         max-width: 100%;
         min-width: 100%;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .home .content__item {
         text-align: center;
         margin: 0px 0px 120px 0px;
     }
     .headerWeb .headerWeb__contentLeft {
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
     .headerWeb .contentLeft__logo {
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         width: 40px;
     }
     .headerWeb .contentRight__contact {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
     }
   
     .footerWeb .footerWeb__contentLeft {
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
     .footerWeb .footerWeb__contentRight {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
     }
 }
 /* IP 5 XOAY NGANG */
