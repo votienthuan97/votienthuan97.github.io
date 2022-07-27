@@ -1,177 +1,317 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <title>Thuan Vo - Frontend Developer</title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="fullWeb">
-        <div class="fullPage" data-scroll-container>
-            <div class="pageWrap">
-                <div id="introduce" class="page">
-                    <div class="intro__wrap">
-                        <div class="wrap__img">
-                            <div class="img__backgroundAvatar" data-scroll data-scroll-speed="3" style="background-image: url('images/avatar/1.jpg');"></div>
-                            <p class="img__title" data-scroll data-scroll-speed="-2">Introduce</p>
+    <div id="root">
+        <div id="fullWeb">
+            <div class="headerWeb">
+                <div class="headerWeb__contentLeft">
+                    <div class="contentLeft__logo">
+                        <input type="checkbox" id="pageHome" />
+                        <img class="logo__img" src="images/logo/logo.png" />
+                    </div>
+                    <div class="contentLeft__sound">
+                        <input type="checkbox" id="soundPlayPause" />
+                        <audio loop src="audio/Magical-Piano.mp3" id="bgMusic"></audio>
+                        <div class="sound__soundBar">
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
+                            <div class="soundBar__item"></div>
                         </div>
-                        <div class="wrap__content">
-                            <div class="content__introduce" data-scroll data-scroll-speed="-1">
-                                <div class="introduce__item">
-                                    <p class="item__textIntro">I'm Thuan Vo, a Web Front-End Developer</p>
+                    </div>
+                </div>
+                <div class="headerWeb__contentRight">
+                    <div class="contentRight__contact">
+                        <input type="checkbox" id="pageContact" />
+                        <p class="contact__text">contact.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainWeb">
+                <div class="home">
+                    <div class="container">
+                        <div class="home__listContent">
+                            <p class="content__item" id="introChange">I'm Thuan Vo, a guy who loves designing frontend, writing and love cats</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="container">
+                        <div class="contact__listContent">
+                            <div class="listContent__listItem">
+                                <div class="listItem__title">
+                                    <p class="title__text">Contact for work</p>
                                 </div>
-                                <div class="introduce__item">
-                                    <p class="item__textIntro">A guy who loves designing frontend, writing and love cats</p>
+                                <div class="listItem__item">
+                                    <p class="item__label">email</p>
+                                    <p class="item__text">votienthuan97@gmail.com</p>
                                 </div>
-                                <div class="introduce__item">
-                                    <p class="item__textIntro">My zodiac is the Scorpio</p>
+                                <div class="listItem__item">
+                                    <p class="item__label">phone numbers</p>
+                                    <p class="item__text">(+84) 0398637036</p>
                                 </div>
-                                <div class="introduce__item">
-                                    <p class="item__textIntro">I like time travel stories, which make me curious about how this universe works</p>
+                                <div class="listItem__item">
+                                    <p class="item__label">social network</p>
+                                    <div class="item__listLink">
+                                        <a href="https://www.facebook.com/votienthuan97" target="blank" class="listLink__item">
+                                            <img class="item__img" src="images/icons/icFacebook.png">
+                                        </a>
+                                        <a href="https://github.com/votienthuan97/" target="blank" class="listLink__item"> 
+                                            <img class="item__img" src="images/icons/icGitHub.png">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div id="contact" class="page">
-                 
+                <div class="project">
+                    <div class="container">
+                        <div class="project__listContent">
+                            <div class="listContent__listProject">
+                                <div class="listProject__project">
+                                    <div class="project__item" data-toggle="modal" data-target="#project__xdrone">
+                                        <div class="item__number">01.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">X Drone</p>
+                                            <p class="infoProject__language">React Native</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/xdrone/1.jpg);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project__item" data-toggle="modal" data-target="#project__ancelance">
+                                        <div class="item__number">01.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">Ancelance</p>
+                                            <p class="infoProject__language">HTML/CSS3, JS</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/ticketfy/1.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project__item" data-toggle="modal" data-target="#project__ticketfy">
+                                        <div class="item__number">02.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">Ticketfy App</p>
+                                            <p class="infoProject__language">React Native</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/ticketfy/1.png);"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project__item" data-toggle="modal" data-target="#project__fargoAUApp">
+                                        <div class="item__number">02.</div>
+                                        <div class="item__infoProject">
+                                            <p class="infoProject__name">FargoAU App</p>
+                                            <p class="infoProject__language">React Native</p>
+                                        </div>
+                                        <div class="item__box">
+                                            <div class="box__thumbnail" style="background-image: url(images/projects/fargo-app/1.png);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="story">
+                    <div class="container">
+                        <p>Page Story</p>
+                    </div>
                 </div> -->
-                <div id="project" class="page">
-                    <div class="project__wrap">
-                        <div class="wrap__title">
-                            <div class="title__boxText" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
-                                <p class="boxText__text">Project</p>
+            </div>
+            <div class="footerWeb">
+                <div class="footerWeb__contentLeft">
+                    <!-- <div class="contentLeft__story">
+                        <input type="checkbox" id="pageStory" />
+                        <p class="story__text">story.</p>
+                    </div> -->
+                </div>
+                <div class="footerWeb__contentRight">
+                    <div class="contentRight__project">
+                        <input type="checkbox" id="pageProject" />
+                        <p class="project__text">project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cursor">
+                <div class="cursor__wrap">
+                    <div class="cursor__point">
+                        <div class="point__default"></div>
+                        <div class="point__backgroundIntro">
+                            <div class="backgroundIntro__percent" data-percent="100"></div>
+                        </div>
+                    </div>
+                    <div class="cursor__border">
+                        <div class="border__oval"></div>
+                        <div class="border__loading"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="video__intro">
+                    <video id="vdIntro" src="video/intro.mp4" type="video/mp4" muted playsInline></video>
+                </div>
+                <div class="video__homeLoop">
+                    <video id="vdHomeLoop" src="video/home-loop.mp4" type="video/mp4" muted loop playsInline></video>
+                </div>
+                <div class="video__homeToContact">
+                    <video id="vdHomeToContact" src="video/home-contact.mp4" type="video/mp4" muted playsInline></video>
+                </div>
+                <div class="video__contactLoop">
+                    <video id="vdContactLoop" src="video/contact-loop.mp4" type="video/mp4" muted loop playsInline></video>
+                </div>
+                <div class="video__contactToHome">
+                    <video id="vdContactToHome" src="video/contact-home.mp4" type="video/mp4" muted playsInline></video>
+                </div>
+                <div class="video__homeToProject">
+                    <video id="vdHomeToProject" src="video/home-project.mp4" type="video/mp4" muted playsInline></video>
+                    <div class="boxTransparentBefore"></div>
+                    <div class="boxTransparentAfter"></div>
+                </div>
+                <div class="video__projectLoop">
+                    <video id="vdProjectLoop" src="video/project-loop.mp4" type="video/mp4" muted loop playsInline></video>
+                </div>
+                <div class="video__projectToHome">
+                    <video id="vdProjectToHome" src="video/project-home.mp4" type="video/mp4" muted playsInline></video>
+                    <div class="boxTransparentBefore"></div>
+                    <div class="boxTransparentAfter"></div>
+                </div>
+            </div>
+            <div class="modalWeb">
+                <div class="listProjectModal">
+                    <div class="modal fade" role="dialog" id="project__xdrone">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">X Drone</p>
+                                       <p class="info__note">X Drone - Store là dự án demo về ứng dụng mua bán Offical các sản phẩm drone từ DJI <br/> Bạn có thể xem sản phẩm, đặt hàng, quản lý đơn hàng và tận hưởng các ưu đãi lớn từ DJI sớm nhất</p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/xdrone/1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="wrap__listProject">
-                            <a href="#ticketify" class="listProject__item">
-                                <div class="item__imgProject">
-                                    <div class="imgProject__img" style="background-image: url(images/project/ticketify/1.png);"></div>
-                                    <div class="item__infoProject">
-                                        <p class="infoProject__name">Ticketify</p>
-                                        <p class="infoProject__tech">React Native</p>
+                    </div>
+                    <div class="modal fade" role="dialog" id="project__ancelance">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">X Drone</p>
+                                       <p class="info__note">X Drone - Store là dự án demo về ứng dụng mua bán Offical các sản phẩm drone từ DJI <br/> Bạn có thể xem sản phẩm, đặt hàng, quản lý đơn hàng và tận hưởng các ưu đãi lớn từ DJI sớm nhất</p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/xdrone/1.jpg" />
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="#fargoapp" class="listProject__item">
-                                <div class="item__imgProject">
-                                    <div class="imgProject__img" style="background-image: url(images/project/fargo/1.png);"></div>
-                                    <div class="item__infoProject">
-                                        <p class="infoProject__name">Fargo-AU</p>
-                                        <p class="infoProject__tech">React Native</p>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="headerWeb">
-            <div class="headerWeb__btnOpenMenu">
-                <svg class="btnOpenMenu__ic" viewBox="0 0 24 24">
-                    <rect x="5" y="5" width="2" height="2"></rect>
-                    <rect x="11" y="5" width="2" height="2"></rect>
-                    <rect x="17" y="5" width="2" height="2"></rect>
-                    <rect x="5" y="11" width="2" height="2"></rect>
-                    <rect x="11" y="11" width="2" height="2"></rect>
-                    <rect x="17" y="11" width="2" height="2"></rect>
-                    <rect x="5" y="17" width="2" height="2"></rect>
-                    <rect x="11" y="17" width="2" height="2"></rect>
-                    <rect x="17" y="17" width="2" height="2"></rect>
-                    <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
-                </svg>
-            </div>
-        </div>
-        <div class="menu">
-           <div class="menu__background"></div>
-           <div class="menu__content">
-               <div class="content__itemLink" data-scroll-section-id="#introduce">Introduce</div>
-               <div class="content__itemLink" data-scroll-section-id="#project">Project</div>
-               <div class="content__itemLink" data-scroll-section-id="#contact">Contact</div>
-           </div>
-        </div>
-        <div class="loading">
-            <div class="loading__content">Hello!</div>
-            <div class="loading__content">I'm Thuan Vo</div>
-        </div>
-        <div class="cursor">
-            <div class="cursor__point"></div>
-        </div>
-        <div class="modalWeb">
-            <input type="checkbox" class="toogleDarkLight" />
-            <!-- MODAL PROJECT -->
-            <div id="ticketify" class="modalWeb__item">
-                <div class="item__header">
-                    <div class="header__darklight">
-                        <div class="darklight__circle"></div>
+                    <div class="modal fade" role="dialog" id="project__ticketfy">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal ">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">Ticketfy App</p>
+                                       <p class="info__note">Ticketfy là dự án demo về ý tưởng một ứng dụng đặt vé xem phim cho các phòng vé và các cụm rạp theo khu vực trong toàn quốc cho khách hàng. Khách hàng có thể xem trailer, xem thông tin, đặt vé cho bộ phim mình muốn xem và thanh toán trực tuyến thông qua thẻ ngân hàng được liên kết hoặc các ví điện tử như Momo, Airpay, ... Ngoài ra nó còn cung cấp một số tính năng chuyên nghiệp như : chọn chỗ ngồi, booking thức ăn, quản lí vé đã mua, đặt trước vé cho các bộ phim chưa khởi chiếu.</p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/ticketfy/1.png" />
+                                        </div>
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/ticketfy/2.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="header__close">
-                        <svg class="close__btn" viewBox="0 0 24 24">
-                            <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="item__content">
-                   <div class="content__wrap">
-                       <div class="wrap__bgImg" style="background-image: url(images/project/ticketify/1.png);"></div>
-                       <div class="container">
-                           <div class="wrap__content">
-                               <p class="content__text">
-                                Ticketify là dự án demo về ý tưởng một ứng dụng đặt vé xem phim cho các phòng vé và các cụm rạp theo khu vực trong toàn quốc cho khách hàng. Khách hàng có thể xem trailer, xem thông tin, đặt vé cho bộ phim mình muốn xem và thanh toán trực tuyến thông qua thẻ ngân hàng được liên kết hoặc các ví điện tử như Momo, Airpay, ... Ngoài ra nó còn cung cấp một số tính năng chuyên nghiệp như : chọn chỗ ngồi, booking thức ăn, quản lí vé đã mua, đặt trước vé cho các bộ phim chưa khởi chiếu.
-                               </p>
-                               <img class="content__img" src="images/project/ticketify/1.png" />
-                               <img class="content__img" src="images/project/ticketify/2.png" />
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </div>
-            <div id="fargoapp" class="modalWeb__item">
-                <div class="item__header">
-                    <div class="header__darklight">
-                        <div class="darklight__circle"></div>
+                    <div class="modal fade" role="dialog" id="project__fargoAUApp">
+                        <div class="modal-dialog boxFullModal">
+                            <div class="boxContentTool">
+                                <div class="boxContentTool__close" data-dismiss="modal">
+                                    <img class="close__img" src="images/icons/icClose.png" />
+                                </div>
+                            </div>
+                            <div class="boxContentModal">
+                                <div class="boxContentModal__title">
+                                   <div class="title__info">
+                                       <p class="info__name">FargoAU App</p>
+                                       <p class="info__note">FargoAu là một ứng dụng đếm bước chân người sử dụng khi họ di chuyển và tập luyện thể thao. Số bước chân có thể dùng để quy đổi sang AU khi hoàn thành các thử thách mỗi ngày và thử thách nhóm. AU có thể dùng để quy đổi sang các phần thưởng hoặc tích luỹ để tham gia vào hệ sinh thái tiền điện tử Fargo. Người dùng có thể quản lí số bước chân mỗi ngày, quản lí ví thưởng, nâng cấp gói package để hưởng nhiều phần thưởng lợi ích hơn, ...</p>
+                                       <p class="info__note">Hiện tại đã có thể tải xuống ứng dụng từ cửa hàng GooglePlay và Apple Store - Download  
+                                           <a class="note__link" href="https://play.google.com/store/apps/details?id=com.fargo" target="blank">Android</a>
+                                           <span> hoặc</span>
+                                           <a class="note__link" href="https://apps.apple.com/vn/app/fargo-au/id1520603723" target="blank">IOS</a>
+                                       </p>
+                                   </div>
+                                </div>
+                                <div class="boxContentModal__content">
+                                    <div class="content__project">
+                                        <div class="projectContent">
+                                            <img class="item__project" src="images/projects/fargo-app/1.png" />
+                                        </div>
+                                        <div class="projectContent">
+                                            <video class="item__project" src="images/projects/fargo-app/1.mp4" muted loop playInside autoplay></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="header__close">
-                        <svg class="close__btn" viewBox="0 0 24 24">
-                            <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="item__content">
-                   <div class="content__wrap">
-                       <div class="wrap__bgVideo">
-                            <video class="bgVideo__video" src="images/project/fargo/1.mp4" autoplay loop muted></video>
-                       </div>
-                       <div class="container">
-                           <div class="wrap__content">
-                                <p class="content__text">FargoAu là một ứng dụng đếm bước chân người sử dụng khi họ di chuyển và tập luyện thể thao. Số bước chân có thể dùng để quy đổi sang AU khi hoàn thành các thử thách mỗi ngày và thử thách nhóm. AU có thể dùng để quy đổi sang các phần thưởng hoặc tích luỹ để tham gia vào hệ sinh thái tiền điện tử Fargo. Người dùng có thể quản lí số bước chân mỗi ngày, quản lí ví thưởng, nâng cấp gói package để hưởng nhiều phần thưởng lợi ích hơn, ...</p>
-                                <p class="content__text">Hiện tại đã có thể tải xuống ứng dụng từ cửa hàng GooglePlay và Apple Store
-                                <p class="content__text">Download 
-                                    <a class="text__link" href="https://play.google.com/store/apps/details?id=com.fargo" target="blank">Android</a>
-                                    <span>hoặc</span>
-                                    <a class="text__link" href="https://apps.apple.com/vn/app/fargo-au/id1520603723" target="blank">IOS</a> </p>
-                                </p>
-                               <img class="content__img" src="images/project/fargo/1.png" />
-                               <video class="content__video" src="images/project/fargo/1.mp4" autoplay loop muted></video>
-                           </div>
-                       </div>
-                   </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/cursor.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/scroll.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/cursor.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>
+
