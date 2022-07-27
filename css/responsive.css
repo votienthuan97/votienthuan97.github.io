@@ -4,9 +4,15 @@
     video{ -webkit-filter: brightness(102%); }
 }
 @media screen and (max-width: 1200px) {
+    .project .project__listContent {
+        margin: 80px 15px;
+    }
     .project .listContent__listProject {
         width: 100%;
         margin: 50px 0px 0px 0px;
+    }
+    .project .listContent__listProject .item__box {
+        display: none;
     }
     .home .home__listContent {
         background: rgba(255,255,255,0.6);
@@ -29,33 +35,6 @@
             -ms-flex-pack: center;
                 justify-content: center;
     }
-}
-/* IPAD PRO + IPAD XOAY NGANG */
-@media screen and (min-width: 993px) and (max-width: 1267px) {
-  
-}
-/* IPAD PRO */
-@media screen and (width: 1024px) {
-}
-/* DT PLUS XOAY NGANG */
-@media screen and (min-width: 769px) and (max-width: 992px) {
-}
-/* IPAD */
-@media screen and (width: 768px) {
-}
-/* IPAD TRỞ XUỐNG */
-@media screen and (max-width: 768px) {
-  
-}
-/* DT XOAY NGANG */
-@media screen and (min-width: 641px) and (max-width: 767px) {
-}
-/*SS XOAY NGANG */
-@media screen and (width: 640px) {
-  
-}
-/* IP 6/8 PLUS TRỞ XUỐNG */
-@media screen and (max-width: 640px) {
     .cursor {
         display: none;
     }
@@ -118,6 +97,41 @@
             -ms-flex-pack: end;
                 justify-content: flex-end;
     }
+    .project .item__number {
+        width: 50px;
+        font-size: 12px;
+    }
+    .project .infoProject__name {
+        font-size: 16px;
+        margin: 0px 0px 10px 0px;
+    }
+}
+/* IPAD PRO + IPAD XOAY NGANG */
+@media screen and (min-width: 993px) and (max-width: 1267px) {
+  
+}
+/* IPAD PRO */
+@media screen and (width: 1024px) {
+}
+/* DT PLUS XOAY NGANG */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+}
+/* IPAD */
+@media screen and (width: 768px) {
+}
+/* IPAD TRỞ XUỐNG */
+@media screen and (max-width: 768px) {
+  
+}
+/* DT XOAY NGANG */
+@media screen and (min-width: 641px) and (max-width: 767px) {
+}
+/*SS XOAY NGANG */
+@media screen and (width: 640px) {
+  
+}
+/* IP 6/8 PLUS TRỞ XUỐNG */
+@media screen and (max-width: 640px) {
 }
 /* IP 5 XOAY NGANG */
 @media screen and (min-width: 568px) {
