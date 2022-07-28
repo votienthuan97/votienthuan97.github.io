@@ -926,10 +926,13 @@ html, body {
         -ms-flex-pack: center;
             justify-content: center;
     overflow: hidden;
-    -webkit-transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateY(-20px) scaleY(0.95);
+        -ms-transform: translateY(-20px) scaleY(0.95);
+            transform: translateY(-20px) scaleY(0.95);
     border-radius: 8px;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .project .box__thumbnail {
     width: 100%;
@@ -946,12 +949,13 @@ html, body {
 .project .project__item:hover .item__box {
     visibility: visible;
     opacity: 1;
-    -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-transition: 0.5s linear;
-    -o-transition: 0.5s linear;
-    transition: 0.5s linear;
+    -webkit-transform: translateY(0px) scaleY(1);
+        -ms-transform: translateY(0px) scaleY(1);
+            transform: translateY(0px) scaleY(1);
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    transform-origin: bottom center;
     will-change: transform;
 }
 /* MODAL PROJECT */
