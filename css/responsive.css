@@ -115,10 +115,15 @@
 }
 /* IPAD */
 @media screen and (width: 768px) {
+
 }
 /* IPAD TRỞ XUỐNG */
 @media screen and (max-width: 768px) {
-  
+   .home .content__item {
+        font-size: 0.75rem;
+        text-align: center;
+        margin: 0px 0px 35px 0px;
+    }
 }
 /* DT XOAY NGANG */
 @media screen and (min-width: 641px) and (max-width: 767px) {
