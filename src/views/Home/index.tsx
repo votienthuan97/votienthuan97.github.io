@@ -3,6 +3,6 @@ import React from "react";
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-  return <>Comming Soon</>;
+  return <>Coming Soon</>;
 };
 export default Home;
