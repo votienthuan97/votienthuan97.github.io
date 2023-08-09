@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'votienthuan97.github.io',
-  title: 'Thuan Vo Portfolio',
+  site_name: '',
+  title: '',
   description: '',
   locale: 'en',
 };

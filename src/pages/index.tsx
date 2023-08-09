@@ -5,7 +5,7 @@ import { Main } from "@/templates/Main";
 import WindowWrapper from "@/components/WindowWrapper";
 import Loading from "@/layouts/Loading";
 import styled from "styled-components";
-import Home from "@/views/Hero";
+import Home from "@/views/Home";
 
 interface IndexProps {}
 
@@ -17,12 +17,12 @@ const Index: FunctionComponent<IndexProps> = ({}) => {
     Promise.all([]).then(() =>
       setTimeout(() => {
         setIsLoading(false);
-      }, 0)
+      }, 2000)
     );
   }, []);
 
   return (
-    <Main meta={<Meta title="" description="" image="" />}>
+    <Main meta={<Meta title="Thuan Vo Portfolio" description="" image="" />}>
       {isLoading && <Loading />}
       <WindowWrapper>
         <BlockWrapContent>
