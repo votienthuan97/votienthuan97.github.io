@@ -1,6 +1,7 @@
 {
-  "name": "bunny-riven",
+  "name": "votienthuan97",
   "version": "1.0.0",
+  "homepage": "https://github.com/votienthuan97/votienthuan97.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,10 +15,13 @@
     "test": "jest",
     "commit": "cz",
     "prepare": "husky install",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "add": "^2.0.6",
+    "gh-pages": "^5.0.0",
     "install": "^0.13.0",
     "next": "^13.0.6",
     "next-seo": "^5.14.1",
