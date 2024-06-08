@@ -1,8 +1,7 @@
-import '../styles/global.css';
-
-import type { AppProps } from 'next/app';
-import { GoogleAnalytics } from 'nextjs-google-analytics';
-import { Fragment } from 'react';
+import type { AppProps } from "next/app";
+import { GoogleAnalytics } from "nextjs-google-analytics";
+import { Fragment } from "react";
+import "@/styles/global.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
